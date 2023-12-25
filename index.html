@@ -34,8 +34,8 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-auto-rows: minmax(50px, auto);
-      background-color: #ddd;/* Home line */
-	  /* background-image: url('sky2.jpg'); 替换为您的背景图片路径 */
+      background-color: #F5F5F5;/* Home line */
+	  /* background-image: url('sky3.jpg'); 替换为您的背景图片路径 */
       /* background-size: cover; 使背景图片充满容器 */
       padding: 10px;
     }
@@ -195,16 +195,14 @@
 
 nav {
   display: flex;
-  background-color: #F8F8FF;
   align-items: center; /* Align items vertically in the flex container */
-  
+ 
 }
 
 /* Top-level navigation */
 nav a {
   text-decoration: none;
   color: #333;
-  
   padding: 10px 8px 5px;
   transition: background-color 0.3s;
   display: flex;
@@ -212,6 +210,7 @@ nav a {
   justify-content: center;
   position: relative;
   font-size: 22px; /* Adjust the font size for top-level navigation */
+  
 }
 
 /* Second-level navigation */
@@ -265,7 +264,7 @@ nav a.home {
   position: relative;
   padding: 0.2px 12px;
   display: inline-block;
-
+  
 }
 
 .dropdown-content {
@@ -289,7 +288,7 @@ nav a.home {
 }
 
 .dropdown-content a:hover {
-  background-color: lightblue;
+  background-color: #FFEBCD;
 }
 
 
@@ -309,7 +308,7 @@ nav a.home {
 </head>
 <body>
 
-  <header style="background-image: url('sky2.jpg');">
+  <header style="background-image: url('\sky2.jpg');">
     <h1>BioMed Nav</h1>
     <section id="search">
       <!-- Bing Search Form -->
@@ -1023,6 +1022,7 @@ nav a.home {
         <div class="third-level">
           
 		  <a href="https://www.letpub.com.cn/index.php?page=journalapp" target="_blank">letpub</a>
+          <a href="https://www.edanz.com/journal-selector" target="_blank">关键词查IF</a>
           <a href="https://www.bioxbio.com/" target="_blank">IFsearch</a>
 		  
         </div>
@@ -1063,8 +1063,27 @@ nav a.home {
         </div>
       </div>
       
+	   <div class="subcategory">
+        <a href="#">实验诊断学</a>
+        <div class="third-level">
+          <a href="#" target="_blank">视频</a>
+		  <a href="#" target="_blank">案例分析</a>                
+        </div>
+      </div>
+	  
+	   <div class="subcategory">
+        <a href="#">在线习题</a>
+        <div class="third-level">
+          <a href="chapter4.html" target="_blank">便常规</a>
+		  <a href="chapter5.html" target="_blank">脑脊液检查</a> 
+          <a href="chapter6.html" target="_blank">浆膜腔</a>
+		  <a href="chapter7.html" target="_blank">生殖系统</a>
+		  <a href="chapter8.html" target="_blank">临床生化</a>
+        </div>
+      </div>
+	  
       <div class="subcategory">
-        <a href="#">教学视频</a>
+        <a href="#">教用视频</a>
         <div class="third-level">
           <a href="http://www.biblimed.com/appli/index.php?cprotect=1" target="_blank">bibliMed</a>
 		  <a href="https://www.medcram.com/" target="_blank">MedCram</a>
@@ -1102,8 +1121,6 @@ nav a.home {
           <a href="https://openi.nlm.nih.gov/" target="_blank">Open-i</a>
           <a href="https://nucleusmedicalmedia.com/" target="_blank">NucleusMedical</a>
 
-</body>
-</html>
         </div>
       </div>
     </div>
@@ -1258,7 +1275,7 @@ nav a.home {
 
   </main>
   <footer style="background-image: url('sky2.jpg');">
-    <p>&copy; 2024 BioMed Nav    The website is developed and maintained by Yinli. If you have any suggestions, please send an email to yinli@hainmc.edu.cn</p>
+    <p>&copy; 2024 BioMed Nav    This website is developed and maintained by Yinli. If you have any suggestions, please send an email to yinli@hainmc.edu.cn</p>
   </footer>
 </body>
 </html>
