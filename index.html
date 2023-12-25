@@ -34,7 +34,9 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-auto-rows: minmax(50px, auto);
-      background-color: #ddd;
+      background-color: #ddd;/* Home line */
+	  /* background-image: url('sky3.jpg'); 替换为您的背景图片路径 */
+      /* background-size: cover; 使背景图片充满容器 */
       padding: 10px;
     }
 
@@ -193,13 +195,16 @@
 
 nav {
   display: flex;
+  background-color: #F8F8FF;
   align-items: center; /* Align items vertically in the flex container */
+  
 }
 
 /* Top-level navigation */
 nav a {
   text-decoration: none;
   color: #333;
+  
   padding: 10px 8px 5px;
   transition: background-color 0.3s;
   display: flex;
@@ -1253,7 +1258,7 @@ nav a.home {
     <!-- Add more category divs as needed -->
 
   </main>
-  <footer>
+  <footer style="background-image: url('sky2.jpg');">
     <p>&copy; 2024 BioMed Nav    This website is developed and maintained by Yinli. If you have any suggestions, please send an email to yinli@hainmc.edu.cn</p>
   </footer>
 </body>
