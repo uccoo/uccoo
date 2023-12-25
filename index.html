@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EXSCSTSH2S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EXSCSTSH2S');
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BioMed NAV</title>
+  
+  <style>
+    /* Add your styles here */
+    .search-action {
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 25x; /* You can customize the font size */
+      font-weight: bold; 
+	  color: #FFDAB9;
+      /* Add any additional styling as needed */
+    }
+  </style>
+  
+  <title>BioMed Nav</title>
   <style>
     body {
       margin: 0;
@@ -285,24 +309,46 @@ nav a.home {
             background-color: #00688B; /* 使用颜色代码或其他合适的值 */
             color: #fff; /* 修改文字颜色为白色 */
             padding: 20px; /* 添加内边距，使内容不紧贴边缘 */
-        }	
+        }
+	
   </style>
 </head>
 <body>
 
   <header>
     <h1>BioMed NAV</h1>
-	 <section id="search">
-    <form action="https://www.bing.com/search" method="GET" target="_blank">
-      <input type="text" name="q" placeholder="Search Bing">
-      <button type="submit">Search Bing</button>
-    </form>
-    <form action="https://www.google.com/search" method="GET" target="_blank">
-      <input type="text" name="q" placeholder="Search Google">
-      <button type="submit">Search Google</button>
-    </form>
-  </section>
+    <section id="search">
+      <!-- Bing Search Form -->
+      <form action="https://www.bing.com/search" method="GET" target="_blank">
+        <input type="text" name="q" id="bingSearchInput" placeholder="Search Bing">
+        <!-- Engine name for Bing -->
+        <span class="search-action" onclick="submitForm('bingSearchInput', 'bing')">Bing</span>
+      </form>
+      
+      <!-- Google Search Form -->
+      <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" id="googleSearchInput" placeholder="Search Google">
+        <!-- Engine name for Google -->
+        <span class="search-action" onclick="submitForm('googleSearchInput', 'google')">Google</span>
+      </form>
+    </section>
   </header>
+
+  <script>
+    function submitForm(inputId, engine) {
+      // Get the input value
+      var inputValue = document.getElementById(inputId).value;
+
+      // Formulate the search URL based on the selected search engine
+      var searchUrl = (engine === 'bing') ? 'https://www.bing.com/search?q=' : 'https://www.google.com/search?q=';
+
+      // Concatenate the search URL with the input value
+      searchUrl += encodeURIComponent(inputValue);
+
+      // Open the search results in a new tab
+      window.open(searchUrl, '_blank');
+    }
+  </script>
 
  <nav>
   
@@ -314,7 +360,7 @@ nav a.home {
       
     </div>
   </div>
-  <a href="#">About</a>
+  <a href=" me\qa.html">About</a>
   
   <a href="#">Contact</a>
   
@@ -359,7 +405,7 @@ nav a.home {
         <a href="<a href="https://sci-hub.wf/" target="_blank">SCI-HUB</a>
 		</div>
       <div class="subcategory">
-        <a href="https://github.com/hyinli" target="_blank">GitHub</a>
+        <a href="https://github.com" target="_blank">GitHub</a>
 		</div>
       <div class="subcategory">
         <a href="https://mp.weixin.qq.com/" target="_blank">公众号</a>
@@ -371,7 +417,7 @@ nav a.home {
 	  <a href="http://firebrowse.org/" target="_blank">FIREBROWSE</a>
 	  </div>
 	  <div class="subcategory">
-	  <a href="http://www.tcmip.cn/TCMIP/index.php/Home/" target=>中医药合</a>
+	  <a href="http://www.tcmip.cn/TCMIP/index.php/Home/" target="_blank">中医药合</a>
 	  </div>
 	  <div class="subcategory">
 	  <a href="https://toppgene.cchmc.org/" target="_blank">ToppGene</a>
@@ -379,11 +425,7 @@ nav a.home {
 	  
 	  
       <div class="subcategory">
-        <a href="#">AI</a>
-        <div class="third-level">
-          <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
-          <a href="https://i.bossai.im/#/friend" target="_blank">BOSSAI</a>
-        </div>
+        <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
       </div>
     </div>
 
@@ -841,8 +883,7 @@ nav a.home {
 	  <div class="subcategory">
         <a href="#">分子对接</a>
         <div class="third-level">
-		  <a href="https://vina.scripps.edu/" target="_blank">AutodocVina</a>
-          <a href="https://pymol.org/2" target="_blank">Pymol</a>		  
+		
 		  <a href="https://www.jianshu.com/p/18b4d56dc516" target="_blank">步骤</a>
           <a href="https://www.rcsb.org/" target="_blank">PDB</a>
           <a href="https://sancdb.rubi.ru.ac.za/" target="_blank">SANCDB</a>
@@ -1107,16 +1148,16 @@ nav a.home {
 	<div class="category">
       <h2>AI相关</h2>
       <div class="subcategory">
-	    <a href="https://openai.com/chatgpt">ChatGPT</a>
+	    <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
         
        
       </div>
       <div class="subcategory">
-        <a href="https://cloud.baidu.com/product/sugar.html">百度智能云</a>
+        <a href="https://cloud.baidu.com/product/sugar.html" target="_blank">百度智能云</a>
        
       </div>
       <div class="subcategory">
-        <a href="https://i.bossai.im/#/friend">BOSS AI</a>
+        <a href="https://i.bossai.im/#/friend" target="_blank">BOSS AI</a>
         <div class="third-level">
          
         </div>
