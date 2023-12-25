@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实验诊断学在线题库</title>
+  <style>
+    button {
+      padding: 10px 20px; /* Adjust the padding to increase button size */
+      font-size: 18px;   /* Adjust the font size for better visibility */
+    }
+  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: white;
+      color: blue;
+      padding: 10px;
+      text-align: left;
+    }
+
+    nav {
+      background-color: white;
+      overflow: hidden;
+	  
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: blue;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+	  font-size:20px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>实验诊断学在线题库</h1>
+  </header>
+
+   <nav>
+    <a href="#">Home</a>
+    <a href="chapter1.html">第一章：血液学一般检查</a>
+    <a href="chapter2.html">第二章：骨髓实验室检查</a>
+    <a href="chapter3.html">第三章：止血凝血检查</a>
+    <a href="chapter4.html">第四章：便常规</a>
+	<a href="chapter5.html">第五章：脑脊液检查</a>
+    <a href="chapter6.html">第六章：浆膜腔积液检查</a>
+    <a href="chapter7.html">第七章：生殖系统体液检查</a>
+	<a href="chapter8.html">第八章：临床生物化学检查</a>
+  </nav>
+
+   <section id="chapter4">
+    <h2>第四章：便常规</h2>
+    <!-- 问题 1 到问题 5 -->
+    <div class="question">
+      <h3>问题 1：胃溃疡出血的粪便颜色一般是？</h3>
+      <form id="quizForm1">
+        <label>
+          <input type="radio" name="answer1" value="A"> A. 柏油样便
+        </label>
+        <label>
+          <input type="radio" name="answer1" value="B"> B. 鲜红色便
+        </label>
+        <label>
+          <input type="radio" name="answer1" value="C"> C. 淡黄色便
+        </label>
+        <label>
+          <input type="radio" name="answer1" value="D"> D. 黑色便
+        </label>
+        <label>
+          <input type="radio" name="answer1" value="E"> E. 浆色便
+        </label>
+        <button type="button" onclick="checkAnswer(1)">提交答案</button>
+      </form>
+      <div id="feedback1"></div>
+    </div>
+
+    <div class="question">
+      <h3>问题 2：细菌性痢疾的粪便一般是？</h3>
+      <form id="quizForm2">
+        <label>
+          <input type="radio" name="answer2" value="A"> A. 黏液附着于粪便表面
+        </label>
+        <label>
+          <input type="radio" name="answer2" value="B"> B. 粪便以红细胞为主
+        </label>
+        <label>
+          <input type="radio" name="answer2" value="C"> C. 以黏液为主
+        </label>
+        <label>
+          <input type="radio" name="answer2" value="D"> D. 以黏液及脓细胞为主
+        </label>
+        <label>
+          <input type="radio" name="answer2" value="E"> E. 黏液混合于粪便中
+        </label>
+        <button type="button" onclick="checkAnswer(2)">提交答案</button>
+      </form>
+      <div id="feedback2"></div>
+    </div>
+
+    <div class="question">
+      <h3>问题 3：胃蛋白酶缺乏者粪便中常见到？</h3>
+      <form id="quizForm3">
+        <label>
+          <input type="radio" name="answer3" value="A"> A. 淀粉样是颗粒
+        </label>
+        <label>
+          <input type="radio" name="answer3" value="B"> B. 结缔组织
+        </label>
+        <label>
+          <input type="radio" name="answer3" value="C"> C. 肌肉纤维
+        </label>
+        <label>
+          <input type="radio" name="answer3" value="D"> D. 脂肪滴
+        </label>
+        <label>
+          <input type="radio" name="answer3" value="E"> E. 植物细胞
+        </label>
+        <button type="button" onclick="checkAnswer(3)">提交答案</button>
+      </form>
+      <div id="feedback3"></div>
+    </div>
+
+    <div class="question">
+      <h3>问题 4：正常患者粪便中的细菌一般为？</h3>
+      <form id="quizForm4">
+        <label>
+          <input type="radio" name="answer4" value="A"> A. 革兰阴性菌
+        </label>
+        <label>
+          <input type="radio" name="answer4" value="B"> B. 葡萄球菌
+        </label>
+        <label>
+          <input type="radio" name="answer4" value="C"> C. 铜绿假单胞菌
+        </label>
+        <label>
+          <input type="radio" name="answer4" value="D"> D. 念珠菌
+        </label>
+        <label>
+          <input type="radio" name="answer4" value="E"> E. 大肠杆菌
+        </label>
+        <button type="button" onclick="checkAnswer(4)">提交答案</button>
+      </form>
+      <div id="feedback4"></div>
+    </div>
+
+    <div class="question">
+      <h3>问题 5：隐血试验的临床意义正确的是？</h3>
+      <form id="quizForm5">
+        <label>
+          <input type="radio" name="answer5" value="A"> A. 消化道疾病阳性率达90%
+        </label>
+        <label>
+          <input type="radio" name="answer5" value="B"> B. 消化道肿瘤阳性率可达100%
+        </label>
+        <label>
+          <input type="radio" name="answer5" value="C"> C. 肠道寄生虫病阴性
+        </label>
+        <label>
+          <input type="radio" name="answer5" value="D"> D. 口服阿斯匹林、维生素Ｃ等药物可假阳性
+        </label>
+        <label>
+          <input type="radio" name="answer5" value="E"> E. 消化道疾病阳性率40％～70%之间
+        </label>
+        <button type="button" onclick="checkAnswer(5)">提交答案</button>
+      </form>
+      <div id="feedback5"></div>
+    </div>
+
+   
+
+  </section>
+
+
+
+
+ <script>
+      function checkAnswer(questionNumber) {
+        var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+        var feedbackDiv = document.getElementById('feedback' + questionNumber);
+        var correctAnswer;
+
+        switch (questionNumber) {
+          case 1:
+            correctAnswer = 'A';
+            break;
+          case 2:
+            correctAnswer = 'D';
+            break;
+          case 3:
+            correctAnswer = 'B';
+            break;
+          case 4:
+            correctAnswer = 'E';
+            break;
+          case 5:
+            correctAnswer = 'E';
+            break;
+					
+			
+			
+			
+			
+          default:
+            break;
+        }
+
+        if (userAnswer) {
+          var userResponse = userAnswer.value;
+          if (userResponse === correctAnswer) {
+            feedbackDiv.textContent = '回答正确！';
+            feedbackDiv.style.color = 'green';
+          } else {
+            feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+            feedbackDiv.style.color = 'red';
+          }
+        } else {
+          feedbackDiv.textContent = '请选择一个答案。';
+          feedbackDiv.style.color = 'red';
+        }
+      }
+
+    
+    </script>
+
+  </section>
+
+
+</body>
+</html>

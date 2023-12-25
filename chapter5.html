@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实验诊断学在线题库</title>
+  <style>
+    button {
+      padding: 10px 20px; /* Adjust the padding to increase button size */
+      font-size: 18px;   /* Adjust the font size for better visibility */
+    }
+  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: white;
+      color: blue;
+      padding: 10px;
+      text-align: left;
+    }
+
+    nav {
+      background-color: white;
+      overflow: hidden;
+	  
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: blue;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+	  font-size:20px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>实验诊断学在线题库</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="chapter1.html">第一章：血液学一般检查</a>
+    <a href="chapter2.html">第二章：骨髓实验室检查</a>
+    <a href="chapter3.html">第三章：止血凝血检查</a>
+    <a href="chapter4.html">第四章：便常规</a>
+	<a href="chapter5.html">第五章：脑脊液检查</a>
+    <a href="chapter6.html">第六章：浆膜腔积液检查</a>
+    <a href="chapter7.html">第七章：生殖系统体液检查</a>
+	<a href="chapter8.html">第八章：临床生物化学检查</a>
+  </nav>
+
+<section id="chapter5">
+  <h2>第五章：脑脊液检查</h2>
+  <!-- 问题 1 到问题 8 -->
+  <div class="question">
+    <h3>问题 1：脑脊液性状的临床意义，错误的是？</h3>
+    <form id="quizForm1">
+      <label>
+        <input type="radio" name="answer1" value="A"> A．红色见于穿刺损伤或蛛网膜下腔出
+      </label>
+      <label>
+        <input type="radio" name="answer1" value="B"> B．损伤第一管血性，第二、三管颜色变浅
+      </label>
+      <label>
+        <input type="radio" name="answer1" value="C"> C．蛛网膜下腔出血三管均为血性
+      </label>
+      <label>
+        <input type="radio" name="answer1" value="D"> D．黄色因红细胞在脑脊液溶解
+      </label>
+      <label>
+        <input type="radio" name="answer1" value="E"> E．蛛网膜下腔出血离心后上清液为无色
+      </label>
+      <button type="button" onclick="checkAnswer(1)">提交答案</button>
+    </form>
+    <div id="feedback1"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 2：脑脊液静置12～24小时后出现纤细的薄膜可能是？</h3>
+    <form id="quizForm2">
+      <label>
+        <input type="radio" name="answer2" value="A"> A．结核性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer2" value="B"> B．蛛网膜下腔出血
+      </label>
+      <label>
+        <input type="radio" name="answer2" value="C"> C．化脓性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer2" value="D"> D．脑梗死
+      </label>
+      <label>
+        <input type="radio" name="answer2" value="E"> E．椎管炎
+      </label>
+      <button type="button" onclick="checkAnswer(2)">提交答案</button>
+    </form>
+    <div id="feedback2"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 3：正常成人脑脊液中的白细胞数是？</h3>
+    <form id="quizForm3">
+      <label>
+        <input type="radio" name="answer3" value="A"> A．（0~8）×10^6/L
+      </label>
+      <label>
+        <input type="radio" name="answer3" value="B"> B．（0~12）×10^6/L
+      </label>
+      <label>
+        <input type="radio" name="answer3" value="C"> C．（0~10）×10^6/L
+      </label>
+      <label>
+        <input type="radio" name="answer3" value="D"> D．（0~15）×10^6/L
+      </label>
+      <label>
+        <input type="radio" name="answer3" value="E"> E．以上都不是
+      </label>
+      <button type="button" onclick="checkAnswer(3)">提交答案</button>
+    </form>
+    <div id="feedback3"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 4：关于脑脊液葡萄糖含量的描述，不正确的是？</h3>
+    <form id="quizForm4">
+      <label>
+        <input type="radio" name="answer4" value="A"> A．降低可见于化脓性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer4" value="B"> B．化脓性脑膜炎脑脊液葡萄糖降低敏感性为100%
+      </label>
+      <label>
+        <input type="radio" name="answer4" value="C"> C．结核性脑膜炎轻度降低
+      </label>
+      <label>
+        <input type="radio" name="answer4" value="D"> D．脊液葡萄糖正常不能除外化脓性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer4" value="E"> E．脑脊液含量约为血的60%
+      </label>
+      <button type="button" onclick="checkAnswer(4)">提交答案</button>
+    </form>
+    <div id="feedback4"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 5：关于脑脊液氯化物含量的叙述，错误的是？</h3>
+    <form id="quizForm5">
+      <label>
+        <input type="radio" name="answer5" value="A"> A．正常脑脊液氯化物含量为120~130mmol/L
+      </label>
+      <label>
+        <input type="radio" name="answer5" value="B"> B．化脓性脑膜炎时，脑脊液氯化物含量减低
+      </label>
+      <label>
+        <input type="radio" name="answer5" value="C"> C．正常脑脊液氯化物含量高于血浆氯化物含量
+      </label>
+      <label>
+        <input type="radio" name="answer5" value="D"> D．脑脊液氯化物含量低于95mmol/L时，有可能导致呼吸中枢抑制
+      </label>
+      <label>
+        <input type="radio" name="answer5" value="E"> E．病毒性脑膜炎时，脑脊液氯化物含量正常
+      </label>
+      <button type="button" onclick="checkAnswer(5)">提交答案</button>
+    </form>
+    <div id="feedback5"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 6：化脓性脑膜炎，脑脊液细胞检查为主的细胞是？</h3>
+    <form id="quizForm6">
+      <label>
+        <input type="radio" name="answer6" value="A"> A．淋巴细胞
+      </label>
+      <label>
+        <input type="radio" name="answer6" value="B"> B．粒细胞
+      </label>
+      <label>
+        <input type="radio" name="answer6" value="C"> C．浆细胞
+      </label>
+      <label>
+        <input type="radio" name="answer6" value="D"> D．红细胞
+      </label>
+      <label>
+        <input type="radio" name="answer6" value="E"> E．巨噬细胞
+      </label>
+      <button type="button" onclick="checkAnswer(6)">提交答案</button>
+    </form>
+    <div id="feedback6"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 7：病毒性脑膜炎，脑脊液细胞检查为主的细胞是？</h3>
+    <form id="quizForm7">
+      <label>
+        <input type="radio" name="answer7" value="A"> A．红细胞
+      </label>
+      <label>
+        <input type="radio" name="answer7" value="B"> B．粒细胞
+      </label>
+      <label>
+        <input type="radio" name="answer7" value="C"> C．巨噬细胞
+      </label>
+      <label>
+        <input type="radio" name="answer7" value="D"> D．淋巴细胞
+      </label>
+      <label>
+        <input type="radio" name="answer7" value="E"> E．浆细胞
+      </label>
+      <button type="button" onclick="checkAnswer(7)">提交答案</button>
+    </form>
+    <div id="feedback7"></div>
+  </div>
+
+  <div class="question">
+    <h3>问题 8：一患者有头痛，呕吐，意识障碍，脑脊液检查发现外观混浊...</h3>
+    <form id="quizForm8">
+      <label>
+        <input type="radio" name="answer8" value="A"> A．椎管梗阻
+      </label>
+      <label>
+        <input type="radio" name="answer8" value="B"> B．蛛网膜下腔出血
+      </label>
+      <label>
+        <input type="radio" name="answer8" value="C"> C．病毒性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer8" value="D"> D．化脓性脑膜炎
+      </label>
+      <label>
+        <input type="radio" name="answer8" value="E"> E．结核性脑膜炎
+      </label>
+      <button type="button" onclick="checkAnswer(8)">提交答案</button>
+    </form>
+    <div id="feedback8"></div>
+  </div>
+</section>
+
+
+
+
+
+ <script>
+    function checkAnswer(questionNumber) {
+      var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+      var feedbackDiv = document.getElementById('feedback' + questionNumber);
+      var correctAnswer;
+
+      switch (questionNumber) {
+        case 1:
+          correctAnswer = 'E';
+          break;
+        case 2:
+          correctAnswer = 'A';
+          break;
+        case 3:
+          correctAnswer = 'A';
+          break;
+        case 4:
+          correctAnswer = 'B';
+          break;
+        case 5:
+          correctAnswer = 'D';
+          break;
+        case 6:
+          correctAnswer = 'B';
+          break;
+        case 7:
+          correctAnswer = 'D';
+          break;
+        case 8:
+          correctAnswer = 'D';
+          break;
+        default:
+          break;
+      }
+
+      if (userAnswer) {
+        var userResponse = userAnswer.value;
+        if (userResponse === correctAnswer) {
+          feedbackDiv.textContent = '回答正确！';
+          feedbackDiv.style.color = 'green';
+        } else {
+          feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+          feedbackDiv.style.color = 'red';
+        }
+      } else {
+        feedbackDiv.textContent = '请选择一个答案。';
+        feedbackDiv.style.color = 'red';
+      }
+    }
+  </script>
+</section>
+
+
+</body>
+</html>
