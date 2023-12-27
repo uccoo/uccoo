@@ -156,7 +156,7 @@
 
 <div class="search-container">
     <p>与你一同探索未知世界</p>
-    <input type="text" placeholder="在这里输入搜索内容，然后点击下面图标进行相应搜索">
+    <input type="text" placeholder="在这里输入搜索内容，然后点击下面图标进行相应搜索" onkeydown="handleEnter(event)">
     <button type="button" onclick="searchBing()" class="icon-button"><img src="icon/bing.png" alt="Bing Icon" class="small-icon"></button>
     <button type="button" onclick="searchBaidu()" class="icon-button"><img src="icon/baidu.png" alt="Baidu Icon" class="small-icon"></button>
 	<button type="button" onclick="searchGoogle()" class="icon-button"><img src="icon/google.png" alt="Google Icon" class="small-icon"></button>
@@ -188,6 +188,13 @@
 </div>
 
 <script>
+    function handleEnter(event) {
+            if (event.key === "Enter") {
+                // 如果按下的是回车键，则执行 Bing 搜索
+                searchBing();
+            }
+        }
+
     function searchBing() {
         window.open("https://www.bing.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
     }
