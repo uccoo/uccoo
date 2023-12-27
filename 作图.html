@@ -80,15 +80,17 @@
         .search-container img {
             width: 50px;
             height: 50px;
-            margin-bottom: 50px;
+			margin: 10px;
+            margin-bottom: 100px;
             top: -30px;
         }
 
         input {
             width: 100%;
+			height: 50px;
             padding: 10px;
             box-sizing: border-box;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .icon-button {
@@ -122,48 +124,6 @@
         }
 		
 		
-		/* Mobile responsiveness */
-@media only screen and (max-width: 600px) {
-    body {
-        background-size: auto; /* Adjust background size for smaller screens */
-    }
-
-    .top-icons img {
-        width: 40px; /* Adjust icon size for smaller screens */
-        height: 40px; /* Adjust icon size for smaller screens */
-    }
-
-    .search-container img {
-        width: 40px; /* Adjust icon size for smaller screens */
-        height: 40px; /* Adjust icon size for smaller screens */
-    }
-
-    input {
-        width: 80%; /* Adjust input width for smaller screens */
-    }
-
-    .icon {
-        width: 40px; /* Adjust icon size for smaller screens */
-        height: 40px; /* Adjust icon size for smaller screens */
-        flex: 0 0 calc(33.33% - 20px); /* Adjust column width for smaller screens */
-        margin: 5px;
-    }
-
-    .small-icon {
-        width: 20px; /* Adjust icon size for smaller screens */
-        height: 20px; /* Adjust icon size for smaller screens */
-    }
-
-    .logo {
-        width: 20px; /* Adjust the width as needed */
-        height: 20px; /* Adjust the height as needed */
-        margin-right: 5px; /* Adjust the margin as needed */
-    }
-
-    .bottom-text {
-        font-size: 12px; /* Adjust font size for smaller screens */
-    }
-}	
 		
 		
     </style>
@@ -182,12 +142,10 @@
 
 <div class="search-container">
     <p>知识的海洋，与你一同探索未知世界</p>
-    <p>   </p>
-    
-    <input type="text" placeholder="在这里输入搜索内容">
+    <input type="text" placeholder="在这里输入搜索内容，然后点击下面图标进行相应搜索">
     <button type="button" onclick="searchBing()" class="icon-button"><img src="icon/bing.png" alt="Bing Icon" class="small-icon"></button>
-    <button type="button" onclick="searchGoogle()" class="icon-button"><img src="icon/google.png" alt="Google Icon" class="small-icon"></button>
     <button type="button" onclick="searchBaidu()" class="icon-button"><img src="icon/baidu.png" alt="Baidu Icon" class="small-icon"></button>
+	<button type="button" onclick="searchGoogle()" class="icon-button"><img src="icon/google.png" alt="Google Icon" class="small-icon"></button>
 </div>
 
 <div class="icon-container">
@@ -208,7 +166,7 @@
     <a href="http://www.tcmip.cn/TCMIP/index.php/Home/Login/login.html" target="_blank"><img src="icon/herbs.png" alt="Herbs Icon" class="icon"></a>
     <a href="https://toppgene.cchmc.org/" target="_blank"><img src="icon/toppgene.png" alt="Toppgene Icon" class="icon"></a>
     <a href="https://cn.string-db.org/cgi/input?sessionId=br7Mgwo1uHj6&input_page_show_search=on" target="_blank"><img src="icon/string.png" alt="String Icon" class="icon"></a>
-    <a href="https://bomics.com/enrich.html" target="_blank"><img src="icon/enrichment1.png" alt="enrichment Icon" class="icon"></a>
+    <a href="https://bomics.com/enrich.html" target="_blank"><img src="icon/enrichment.png" alt="enrichment Icon" class="icon"></a>
 	<!-- 继续添加其他图标链接 -->
 	 
 </div>
