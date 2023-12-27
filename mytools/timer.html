@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMed timer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #008000; /* 改变文本颜色为绿色 */
+            font-size: 24px; /* 改变文本大小为24像素 */
+            margin-top: 10px; /* 增加上边距 */
+        }
+
+        div {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 120px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 8px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #notification {
+            margin-top: 20px;
+            color: green;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>我的计时器</h1>
+<!-- 修改颜色和大小 -->
+<h2>计时结束自动播放音乐提醒你到时间了</h2>
+
+<div>
+    <label for="minutes">分钟：</label>
+    <input type="number" id="minutes" min="1" value="1">
+    <button onclick="startTimer()">开始计时</button>
+    <button onclick="stopTimer()">停止计时</button>
+</div>
+<h2>播放的是以下音乐，你可以试听一下</h2>
+<!-- 添加controls属性以显示音频播放器 -->
+<audio id="alarm" src="timer.mp3" controls></audio>
+
+<!-- 显示提醒消息的容器 -->
+<div id="notification"></div>
+
+<script>
+    let timer;
+    let audio = document.getElementById('alarm');
+    let notification = document.getElementById('notification');
+
+    function startTimer() {
+        let minutes = document.getElementById('minutes').value;
+        let seconds = minutes * 60;
+
+        timer = setInterval(function () {
+            if (seconds <= 0) {
+                clearInterval(timer);
+                playAlarm();
+            } else {
+                seconds--;
+                updateDisplay(seconds);
+            }
+        }, 1000);
+    }
+
+    function stopTimer() {
+        clearInterval(timer);
+        resetDisplay();
+    }
+
+    function playAlarm() {
+        audio.play();
+        // 显示提醒消息
+        notification.textContent = '时间到了！';
+    }
+
+    function updateDisplay(seconds) {
+        let displayMinutes = Math.floor(seconds / 60);
+        let displaySeconds = seconds % 60;
+
+        document.title = `${displayMinutes}:${displaySeconds < 10 ? '0' : ''}${displaySeconds}`;
+    }
+
+    function resetDisplay() {
+        document.title = '计时器';
+        // 重置提醒消息
+        notification.textContent = '';
+    }
+</script>
+
+</body>
+</html>
