@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>intersection</title>
+  <title>Merge</title>
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/venn.js@0.2.18"></script>
   <style>
@@ -21,7 +21,7 @@
 
     table {
       border-collapse: collapse;
-      width: 60%;
+      width: 80%;
       margin-bottom: 20px;
     }
 
@@ -64,7 +64,7 @@
 
     .result {
       position: relative;
-      width: 60%;
+      width: 80%;
       padding: 20px;
       margin: 5px;
       background-color: #fff;
@@ -92,6 +92,12 @@
       margin-top: 20px;
     }
 
+    #vennTitle {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
     .home-link {
       margin-top: 20px;
       text-align: center;
@@ -110,7 +116,7 @@
 </head>
 <body>
 
-<h2>求交集</h2>
+<h2>求并集</h2>
 
 <table>
   <tr>
@@ -124,7 +130,7 @@
     <td><textarea id="searchData" rows="10" placeholder="输入第二列数据, one item per line"></textarea></td>
     <td><textarea id="additionalData" rows="10" placeholder="输入第三列数据, one item per line"></textarea></td>
     <td>
-      <button onclick="search()">Search</button>
+      <button onclick="union()">Merge</button>
       <button onclick="clearData()">Clear Data</button>
     </td>
   </tr>
@@ -132,78 +138,75 @@
 
 <div class="result">
   <a id="copyLink" href="javascript:void(0)" onclick="copyToClipboard()">Copy 结果</a>
-  <strong>交集:</strong>
-  <textarea id="searchResult" readonly></textarea>
+  <strong>并集:</strong>
+  <textarea id="unionResult" readonly></textarea>
   <p id="dataSummary"></p>
 </div>
 
-<div id="vennDiagram"></div>
+<div id="vennDiagram">
+  <div id="vennTitle">Venn Diagram</div>
+</div>
 
 <div class="home-link">
   <a href="https://bomics.com/">Back to Home</a>
 </div>
 
 <script>
-  function search() {
+  function union() {
     var mainData = document.getElementById("mainData").value.trim().split('\n');
     var searchData = document.getElementById("searchData").value.trim().split('\n');
     var additionalData = document.getElementById("additionalData").value.trim().split('\n');
 
-    var results = [];
-
-    searchData.forEach(function(item) {
-      var result = mainData.filter(value => value.trim() === item.trim());
-      results.push(...result);
-    });
-
-    additionalData.forEach(function(item) {
-      var result = mainData.filter(value => value.trim() === item.trim());
-      results.push(...result);
-    });
+    var unionSet = new Set([...mainData, ...searchData, ...additionalData]);
 
     var dataSummary = document.getElementById("dataSummary");
     dataSummary.innerHTML = `第一列数据数量: ${mainData.length}<br>
                              第二列数据数量: ${searchData.length}<br>
                              第三列数据数量: ${additionalData.length}<br>
-                             交集数量: ${results.length}<br>
-                             交集占比: ${((results.length / mainData.length) * 100).toFixed(2)}%`;
-    
-    document.getElementById("searchResult").value = results.join('\n');
+                             并集数量: ${unionSet.size}<br>
+                             并集占比: ${(unionSet.size / (mainData.length + searchData.length + additionalData.length) * 100).toFixed(2)}%`;
 
-    drawVennDiagram(mainData.length, searchData.length, additionalData.length, results.length);
+    document.getElementById("unionResult").value = Array.from(unionSet).join('\n');
+
+    drawVennDiagram(mainData.length, searchData.length, additionalData.length, unionSet.size);
   }
 
   function clearData() {
     document.getElementById("mainData").value = "";
     document.getElementById("searchData").value = "";
     document.getElementById("additionalData").value = "";
-    document.getElementById("searchResult").value = "";
+    document.getElementById("unionResult").value = "";
     document.getElementById("dataSummary").innerHTML = "";
     d3.select("#vennDiagram").selectAll("*").remove();
+    d3.select("#vennDiagram").append("div").attr("id", "vennTitle").text("Venn Diagram");
   }
 
-  function drawVennDiagram(mainDataCount, searchDataCount, additionalDataCount, intersectionCount) {
+  function drawVennDiagram(mainDataCount, searchDataCount, additionalDataCount, unionCount) {
     var diagram = venn.VennDiagram();
 
     var vennData = [
       {sets: ['第一列数据'], size: mainDataCount},
       {sets: ['第二列数据'], size: searchDataCount},
       {sets: ['第三列数据'], size: additionalDataCount},
-      {sets: ['第一列数据', '第二列数据'], size: intersectionCount - additionalDataCount},
-      {sets: ['第一列数据', '第三列数据'], size: additionalDataCount},
-      {sets: ['第二列数据', '第三列数据'], size: 0}, // No intersection between second and third columns
+      {sets: ['第一列数据', '第二列数据'], size: unionCount - additionalDataCount},
+      {sets: ['第一列数据', '第三列数据'], size: unionCount - searchDataCount},
+      {sets: ['第二列数据', '第三列数据'], size: unionCount - mainDataCount},
       {sets: ['第一列数据', '第二列数据', '第三列数据'], size: additionalDataCount}
     ];
 
     var div = d3.select("#vennDiagram");
+    div.selectAll("*").remove();
+    div.append("div").attr("id", "vennTitle").text("Venn Diagram");
     div.datum(vennData).call(diagram);
   }
 
   function copyToClipboard() {
-    var copyText = document.getElementById("searchResult");
+    var copyText = document.getElementById("unionResult");
     copyText.select();
+    copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    alert("Copied to clipboard!");
+
+    alert("结果已复制到剪贴板");
   }
 </script>
 
