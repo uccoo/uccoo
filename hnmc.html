@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered and Elevated Navigation Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+     .header-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .bio-icon {
+      width: 50px; /* 调整图标宽度 */
+      height: 50px; /* 调整图标高度 */
+    }
+    h2 {
+      color: #B22222; /* 红色 */
+      margin-top: 30px;
+    }
+
+    .category {
+      width: 66%; /* 三分之二宽度 */
+      padding: 20px;
+      margin-top: 10px; /* 上移10像素 */
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .subcategory {
+      margin-top: 10px;
+    }
+
+    .subcategory a {
+      text-decoration: none;
+      color: #0066cc;
+      display: block;
+      padding: 10px 0;
+      transition: color 0.3s;
+    }
+
+    .subcategory a:hover {
+      color: #004080;
+    }
+
+    .third-level a {
+      color: #009900;
+      padding: 10px 0 10px 30px;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    .third-level a:hover {
+      color: #007700;
+    }
+
+    /* FontAwesome icons */
+    .subcategory i {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  
+  <h2><a href="https://bomics.com/" target="_blank" class="header-icon"><img src="icon/home.png" alt="Bio Icon" class="bio-icon"></a></h2>
+  <h2>极简海医</h2>
+  <div class="category">
+    <div class="subcategory">
+      <a href="https://www.hainmc.edu.cn/" target="_blank"><i class="fas fa-home"></i> 海医主页</a>
+    </div>
+    <div class="subcategory">
+      <a href="#"><i class="fas fa-graduation-cap"></i> 学习平台</a>
+      <div class="third-level">
+        <a href="https://www.hngbzx.gov.cn/#/" target="_blank">干部学习</a>
+        <a href="https://www.smartedu.cn/" target="_blank">国家智教</a>
+        <a href="https://bomics.com/mytools/timer.html" target="_blank">学习计时器</a>
+      </div>
+    </div>
+    <div class="subcategory">
+      <a href="http://inf.hainmc.edu.cn/"><i class="fas fa-book"></i> 图书馆</a>
+    </div>
+    <div class="subcategory">
+      <a href="https://tk.ipmph.com/exam/a/adminlogin;JSESSIONID=8abab3b7e0fc4b648160746c5bda01b4" target="_blank"><i class="fas fa-database"></i> 人卫题库</a>
+    </div>
+    <div class="subcategory">
+      <a href="#"><i class="fas fa-edit"></i> 成绩录入</a>
+      <div class="third-level">
+        <a href="http://210.37.77.104/cas/login.action" target="_blank">青果校内</a>
+        <a href="http://202.100.211.226:9991/cas/login.action" target="_blank">青果校外</a>
+      </div>
+    </div>
+    <div class="subcategory">
+      <a href="#"><i class="fas fa-flask"></i> 科研</a>
+      <div class="third-level">
+        <a href="https://hainmc.edu.cn/kjc/index.htm" target="_blank">科技处</a>
+        <a href="https://k.histi.com.cn/egrantweb/index" target="_blank">科技综合管理</a>
+      </div>
+    </div>
+    <div class="subcategory">
+      <a href="#"><i class="fas fa-money-bill-wave"></i> 财务招标</a>
+      <div class="third-level">
+        <a href="https://asc.hainmc.edu.cn/#/" target="_blank">云杰系统</a>
+        <a href="http://210.37.79.195/jj/#draftLiNew" target="_blank">小额采购</a>
+        <a href="https://inv-veri.chinatax.gov.cn/" target="_blank">发票真伪</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
