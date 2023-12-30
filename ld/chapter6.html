@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>实验诊断学在线题库</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    button {
-      padding: 10px 20px; /* Adjust the padding to increase button size */
-      font-size: 18px;   /* Adjust the font size for better visibility */
-    }
-  
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f5f5f5;
     }
 
     header {
-      background-color: white;
-      color: blue;
+      background-color: #fff;
+      color: #007bff;
       padding: 10px;
-      text-align: left;
+      text-align: center;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     nav {
-      background-color: white;
+      background-color: #3498db;
       overflow: hidden;
-	  
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     nav a {
-      float: left;
-      display: block;
-      color: blue;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-	  font-size:20px;
+     float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s;
     }
 
     nav a:hover {
       background-color: #ddd;
-      color: black;
+      color: #333;
     }
 
     section {
       padding: 20px;
+    }
+
+    h2 {
+      color: #007bff;
     }
 
     .question {
@@ -61,112 +66,477 @@
       margin-right: 5px;
     }
 
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #79CDCD;
+      color: black;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
     #feedback {
       font-weight: bold;
       margin-top: 10px;
     }
   </style>
 </head>
+
 <body>
 
   <header>
     <h1>实验诊断学在线题库</h1>
   </header>
 
-   <nav>
+  <nav>
     <a href="LaboratoryDiagnostics.html">Home</a>
     <a href="chapter1.html">1：血液学一般检查</a>
     <a href="chapter2.html">2：骨髓实验室检查</a>
     <a href="chapter3.html">3：止血凝血检查</a>
     <a href="chapter4.html">4：便常规</a>
-	<a href="chapter5.html">5：脑脊液浆膜腔积液检查</a>
+    <a href="chapter5.html">5：脑脊液浆膜腔积液检查</a>
     <a href="chapter6.html">6：尿液检查</a>
     <a href="chapter7.html">7：生殖系统体液检查</a>
-	<a href="chapter8.html">8：临床生物化学检查</a>
-	<a href="chapter9.html">9：肝功能检查</a>
-	<a href="chapter10.html">10：肾功能检查</a>
-	<a href="chapter11.html">11：免疫学检查</a>
-	<a href="chapter12.html">12：病原微生物</a>
-	
+    <a href="chapter8.html">8：临床生物化学检查</a>
+    <a href="chapter9.html">9：肝功能检查</a>
+    <a href="chapter10.html">10：肾功能检查</a>
+    <a href="chapter11.html">11：免疫学检查</a>
+    <a href="chapter12.html">12：病原微生物</a>
   </nav>
-<section id="chapter6">
-  <h2>6：尿液检查</h2>
-  <h2 style="color: red; font-size: 26px;">题目添加中，欢迎提供题目</h2>
-  
-  
-  
-  
-  
-  
-</section>
 
+  <section id="chapter2">
+    <h2>6：尿液检查</h2>
+    <h2 style="color: red; font-size: 26px;">题目添加中，欢迎提供题目</h2>
 
+    <!-- 问题 1 到问题 5 -->
+ <div class="question">
+    <h3>1．试带法应用PH指示剂蛋白质误差原理检测：</h3>
+    <form id="quizForm1">
+        <label>
+            <input type="radio" name="answer1" value="A"> A．GLU
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="B"> B．PRO
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="C"> C．URO
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="D"> D．KET
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="E"> E．BIL
+        </label>
+        <button type="button" onclick="checkAnswer(1)">提交答案</button>
+    </form>
+    <div id="feedback1"></div>
+</div>
 
+<div class="question">
+    <h3>2．试带法主要检测的尿蛋白质是：</h3>
+    <form id="quizForm2">
+        <label>
+            <input type="radio" name="answer2" value="A"> A．白蛋白
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="B"> B．轻链
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="C"> C．重链
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="D"> D．视黄醇结合蛋白
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="E"> E．微球蛋白
+        </label>
+        <button type="button" onclick="checkAnswer(2)">提交答案</button>
+    </form>
+    <div id="feedback2"></div>
+</div>
+<!-- 以下为题目 3 到题目 15 的 HTML 结构，按照上面的格式继续添加 -->
 
- <script>
-            function checkAnswer(questionNumber) {
-        var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
-        var feedbackDiv = document.getElementById('feedback' + questionNumber);
-        var correctAnswer;
+<div class="question">
+    <h3>3．试带法应用硝基铁氰化钠法检测：</h3>
+    <form id="quizForm3">
+        <label>
+            <input type="radio" name="answer3" value="A"> A．GLU
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="B"> B．PRO
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="C"> C．URO
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="D"> D．KET
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="E"> E．BIL
+        </label>
+        <button type="button" onclick="checkAnswer(3)">提交答案</button>
+    </form>
+    <div id="feedback3"></div>
+</div>
+<div class="question">
+<h3>4．一患者体查肾区有扣击痛，行尿检PRO+++，NIT+++，尿沉渣镜检见红细胞、白细胞增加，可见闪光细胞及移行上皮细胞。提示该患者最可能是：</h3>
+    <form id="quizForm4">
+        <label>
+            <input type="radio" name="answer4" value="C"> C．急性肾盂肾炎
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="A"> A．急性肾小球肾炎
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="B"> B．急性间质性肾炎
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="D"> D．急性膀胱炎
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="E"> E．急性尿道炎
+        </label>
+        <button type="button" onclick="checkAnswer(4)">提交答案</button>
+    </form>
+    <div id="feedback4"></div>
+</div>
 
-        switch (questionNumber) {
-          case 1:
-            correctAnswer = 'D';
-            break;
-          case 2:
-            correctAnswer = 'C';
-            break;
-          case 3:
-            correctAnswer = 'E';
-            break;
-          case 4:
-            correctAnswer = 'E';
-            break;
-          case 5:
-            correctAnswer = 'B';
-            break;
-          case 6:
-            correctAnswer = 'C';
-            break;
-          case 7:
-            correctAnswer = 'B';
-            break;
-          case 8:
-            correctAnswer = 'D';
-            break;
-          case 9:
-            correctAnswer = 'C';
-            break;
-          case 10:
-            correctAnswer = 'B';
-            break;
-          case 11:
-            correctAnswer = 'D';
-            break;
-          case 12:
-            correctAnswer = 'E';
-            break;
-          default:
-            break;
-        }
+<div class="question">
+    <h3>5．尿液干化学分析仪反映细菌含量的指标是：</h3>
+    <form id="quizForm5">
+        <label>
+            <input type="radio" name="answer5" value="D"> D．NIT
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="A"> A．GLU
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="B"> B．PRO
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="C"> C．BLD
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="E"> E．WBC
+        </label>
+        <button type="button" onclick="checkAnswer(5)">提交答案</button>
+    </form>
+    <div id="feedback5"></div>
+</div>
+<!-- 继续添加问题 6 到问题 15 的 HTML 结构 -->
 
-        if (userAnswer) {
-          var userResponse = userAnswer.value;
-          if (userResponse === correctAnswer) {
-            feedbackDiv.textContent = '回答正确！';
-            feedbackDiv.style.color = 'green';
-          } else {
-            feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
-            feedbackDiv.style.color = 'red';
-          }
-        } else {
-          feedbackDiv.textContent = '请选择一个答案。';
-          feedbackDiv.style.color = 'red';
-        }
-      }
-</script>
+<div class="question">
+    <h3>6．T-H蛋白来源于</h3>
+    <form id="quizForm6">
+        <label>
+            <input type="radio" name="answer6" value="E"> E．肾小管
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="A"> A．血浆蛋白
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="B"> B．膀胱
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="C"> C．尿道
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="D"> D．前列腺
+        </label>
+        <button type="button" onclick="checkAnswer(6)">提交答案</button>
+    </form>
+    <div id="feedback6"></div>
+</div>
+
+<div class="question">
+    <h3>7．尿量增多而比重增高的是</h3>
+    <form id="quizForm7">
+        <label>
+            <input type="radio" name="answer7" value="B"> B．糖尿病
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="A"> A．尿崩症
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="C"> C．慢性肾盂肾炎
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="D"> D．急性肾小球肾炎
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="E"> E．急性肾功能衰竭
+        </label>
+        <button type="button" onclick="checkAnswer(7)">提交答案</button>
+    </form>
+    <div id="feedback7"></div>
+</div>
+
+<div class="question">
+    <h3>8．尿试带法反应尿路感染的指示是</h3>
+    <form id="quizForm8">
+        <label>
+            <input type="radio" name="answer8" value="C"> C．NIT
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="A"> A．GLU
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="B"> B．PRO
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="D"> D．KET
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="E"> E．BIL
+        </label>
+        <button type="button" onclick="checkAnswer(8)">提交答案</button>
+    </form>
+    <div id="feedback8"></div>
+</div>
+
+<div class="question">
+    <h3>9．多发性骨髓瘤患者尿中主要出现</h3>
+    <form id="quizForm9">
+        <label>
+            <input type="radio" name="answer9" value="D"> D．Ig轻链
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="A"> A．白蛋白
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="B"> B．T-H蛋白
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="C"> C．Ig重链
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="E"> E．β球蛋白
+        </label>
+        <button type="button" onclick="checkAnswer(9)">提交答案</button>
+    </form>
+    <div id="feedback9"></div>
+</div>
+
+<div class="question">
+    <h3>10．可在女性尿液中出现但无明显意义的是</h3>
+    <form id="quizForm10">
+        <label>
+            <input type="radio" name="answer10" value="D"> D．鳞状上皮细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="A"> A．白细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="B"> B．脓细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="C"> C．变形红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="E"> E．肾小管上皮细胞
+        </label>
+        <button type="button" onclick="checkAnswer(10)">提交答案</button>
+    </form>
+    <div id="feedback10"></div>
+</div>
+
+<div class="question">
+    <h3>11．急性肾小球肾炎时，尿中不易见到</h3>
+    <form id="quizForm11">
+        <label>
+            <input type="radio" name="answer11" value="C"> C．白细胞管型
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="A"> A．红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="B"> B．红细胞管型
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="D"> D．肾小管上皮细胞
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="E"> E．上皮细胞管型
+        </label>
+        <button type="button" onclick="checkAnswer(11)">提交答案</button>
+    </form>
+    <div id="feedback11"></div>
+</div>
+
+<div class="question">
+    <h3>12．不属于生理性尿液结晶的是</h3>
+    <form id="quizForm12">
+        <label>
+            <input type="radio" name="answer12" value="B"> B．酪氨酸
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="A"> A．草酸钙
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="C"> C．尿酸
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="D"> D．磷酸盐
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="E"> E．马尿酸
+        </label>
+        <button type="button" onclick="checkAnswer(12)">提交答案</button>
+    </form>
+    <div id="feedback12"></div>
+</div>
+
+<div class="question">
+    <h3>13、消化道出血粪便检查下列哪项描述是错误的</h3>
+    <form id="quizForm13">
+        <label>
+            <input type="radio" name="answer13" value="A"> A 消化道出血经粪便外观检查就可以查出
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="B"> B 上消化道出血、粪便可呈暗红色或柏油样便
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="C"> C 鲜红色便可为小肠下段出血
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="D"> D 溃疡性结肠炎常为粘液血便
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="E"> E 消化道大量出血时免疫法检测因滞后现象而出现假阴性
+        </label>
+        <button type="button" onclick="checkAnswer(13)">提交答案</button>
+    </form>
+    <div id="feedback13"></div>
+</div>
+
+<div class="question">
+    <h3>14、关于血尿的临床意义哪项是错误的</h3>
+    <form id="quizForm14">
+        <label>
+            <input type="radio" name="answer14" value="C"> C 过敏性紫癜不会出现
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="A"> A 肾小球肾炎常见
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="B"> B 肾肿瘤可见
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="D"> D 尿道结石可引起血尿
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="E"> E 尿路畸形可引起血尿
+        </label>
+        <button type="button" onclick="checkAnswer(14)">提交答案</button>
+    </form>
+    <div id="feedback14"></div>
+</div>
+
+<div class="question">
+    <h3>15、24h尿量少于多少ml时，称少尿：</h3>
+    <form id="quizForm15">
+        <label>
+            <input type="radio" name="answer15" value="A"> A 400
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="B"> B 300
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="C"> C 200
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="D"> D 100
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="E"> E 50ml
+        </label>
+        <button type="button" onclick="checkAnswer(15)">提交答案</button>
+    </form>
+    <div id="feedback15"></div>
+</div>
+
   </section>
 
+  <script>
+    function checkAnswer(questionNumber) {
+      var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+      var feedbackDiv = document.getElementById('feedback' + questionNumber);
+      var correctAnswer;
+
+      switch (questionNumber) {
+        case 1:
+    correctAnswer = 'B';
+    break;
+case 2:
+    correctAnswer = 'A';
+    break;
+case 3:
+    correctAnswer = 'D';
+    break;
+case 4:
+    correctAnswer = 'C';
+    break;
+case 5:
+    correctAnswer = 'D';
+    break;
+case 6:
+    correctAnswer = 'E';
+    break;
+case 7:
+    correctAnswer = 'B';
+    break;
+case 8:
+    correctAnswer = 'C';
+    break;
+case 9:
+    correctAnswer = 'D';
+    break;
+case 10:
+    correctAnswer = 'D';
+    break;
+case 11:
+    correctAnswer = 'C';
+    break;
+case 12:
+    correctAnswer = 'B';
+    break;
+case 13:
+    correctAnswer = 'A';
+    break;
+case 14:
+    correctAnswer = 'C';
+    break;
+case 15:
+    correctAnswer = 'B';
+    break;
+
+        // Add cases for other questions
+
+        default:
+          break;
+      }
+
+      if (userAnswer) {
+        var userResponse = userAnswer.value;
+        if (userResponse === correctAnswer) {
+          feedbackDiv.textContent = '回答正确！';
+          feedbackDiv.style.color = 'green';
+        } else {
+          feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+          feedbackDiv.style.color = 'red';
+        }
+      } else {
+        feedbackDiv.textContent = '请选择一个答案。';
+        feedbackDiv.style.color = 'red';
+      }
+    }
+  </script>
 
 </body>
+
 </html>
