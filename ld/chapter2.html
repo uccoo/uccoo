@@ -114,28 +114,602 @@
     <h2 style="color: red; font-size: 26px;">题目添加中，欢迎提供题目</h2>
 
     <!-- 问题 1 到问题 5 -->
+	<div class="question">
+    <h3>1、骨髓穿刺术禁忌症</h3>
+    <form id="quizForm1">
+        <label>
+            <input type="radio" name="answer1" value="A"> A. 发热
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="B"> B. 白细胞减少
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="C"> C. 皮肤粘膜出血点
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="D"> D. 血友病
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="E"> E. 骨骼疼痛
+        </label>
+        <button type="button" onclick="checkAnswer(1)">提交答案</button>
+    </form>
+    <div id="feedback1"></div>
+</div>
+
+<div class="question">
+    <h3>2、骨髓细胞核染色质呈粗颗粒状，有紫蓝色核仁1-2个；胞浆呈深毛蓝色...</h3>
+    <form id="quizForm2">
+        <label>
+            <input type="radio" name="answer2" value="A"> A. 原粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="B"> B. 早幼粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="C"> C. 幼单核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="D"> D. 幼淋巴细胞
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="E"> E. 原单核细胞
+        </label>
+        <button type="button" onclick="checkAnswer(2)">提交答案</button>
+    </form>
+    <div id="feedback2"></div>
+</div>
+
+<!-- 依此类推，将每一题都按照上述格式添加 -->
+<div class="question">
+    <h3>3、下列哪项对确诊急性白血病最具价值</h3>
+    <form id="quizForm3">
+        <label>
+            <input type="radio" name="answer3" value="A"> A. 外周血白细胞计数
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="B"> B. 外周血片分类中无幼稚细胞
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="C"> C. 肝、脾肿大
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="D"> D. 骨髓增生明显活跃，原始细胞比例增高
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="E"> E. 有发热及出血征象
+        </label>
+        <button type="button" onclick="checkAnswer(3)">提交答案</button>
+    </form>
+    <div id="feedback3"></div>
+</div>
+
+<div class="question">
+    <h3>4、柴捆样Auer小体可见于</h3>
+    <form id="quizForm4">
+        <label>
+            <input type="radio" name="answer4" value="A"> A. 原粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="B"> B. 早幼粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="C"> C. 幼单核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="D"> D. 幼淋巴细胞
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="E"> E. 淋巴细胞
+        </label>
+        <button type="button" onclick="checkAnswer(4)">提交答案</button>
+    </form>
+    <div id="feedback4"></div>
+</div>
+
+<div class="question">
+    <h3>5、正常骨髓细胞外铁为</h3>
+    <form id="quizForm5">
+        <label>
+            <input type="radio" name="answer5" value="A"> A. (-) ~ (+)
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="B"> B. (+) ~ (++)
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="C"> C. (++) ~ (+++)
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="D"> D. (+++) ~ (++++)
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="E"> E. (+++)
+        </label>
+        <button type="button" onclick="checkAnswer(5)">提交答案</button>
+    </form>
+    <div id="feedback5"></div>
+</div>
+
+<!-- 依此类推，将每一题都按照上述格式添加 -->
+
+<div class="question">
+    <h3>6、骨髓像表现为“核老浆幼“的贫血</h3>
+    <form id="quizForm6">
+        <label>
+            <input type="radio" name="answer6" value="A"> A. 缺铁性贫血
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="B"> B. 巨幼细胞性贫血
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="C"> C. 再生障碍性贫血
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="D"> D. 溶血性贫血
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="E"> E. 急性失血性贫血
+        </label>
+        <button type="button" onclick="checkAnswer(6)">提交答案</button>
+    </form>
+    <div id="feedback6"></div>
+</div>
+
+<div class="question">
+    <h3>7、巨幼细胞贫血最主要的血液学特征是</h3>
+    <form id="quizForm7">
+        <label>
+            <input type="radio" name="answer7" value="A"> A. 大细胞性贫血
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="B"> B. 骨髓内出现巨幼红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="C"> C. 血红蛋白降低
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="D"> D. 骨髓内红系明显增生，可见巨晚幼粒细胞和巨杆状粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="E"> E. 血小板降低
+        </label>
+        <button type="button" onclick="checkAnswer(7)">提交答案</button>
+    </form>
+    <div id="feedback7"></div>
+</div>
+
+<div class="question">
+    <h3>8、对于MM具有决定性诊断意义的是</h3>
+    <form id="quizForm8">
+        <label>
+            <input type="radio" name="answer8" value="A"> A. 血沉加快
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="B"> B. 骨髓内有大量异常浆细胞
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="C"> C. X线示广泛骨质疏松
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="D"> D. 血清钙增高
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="E"> E. 血清中出现异常免疫球蛋白
+        </label>
+        <button type="button" onclick="checkAnswer(8)">提交答案</button>
+    </form>
+    <div id="feedback8"></div>
+</div>
+
+<div class="question">
+    <h3>9、急性白血病和慢性白血病最主要的区别是</h3>
+    <form id="quizForm9">
+        <label>
+            <input type="radio" name="answer9" value="A"> A. 贫血程度
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="B"> B. 病程长短
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="C"> C. 骨髓白血病细胞的分化阶段
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="D"> D. 出血程度
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="E"> E. 周围血白细胞数目的多少
+        </label>
+        <button type="button" onclick="checkAnswer(9)">提交答案</button>
+    </form>
+    <div id="feedback9"></div>
+</div>
+
+<div class="question">
+    <h3>10、血小板产自于</h3>
+    <form id="quizForm10">
+        <label>
+            <input type="radio" name="answer10" value="A"> A. 原巨核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="B"> B. 幼巨核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="C"> C. 颗粒型巨核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="D"> D. 成熟型巨核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="E"> E. 裸核型巨核细胞
+        </label>
+        <button type="button" onclick="checkAnswer(10)">提交答案</button>
+    </form>
+    <div id="feedback10"></div>
+</div>
+
+<div class="question">
+    <h3>11、骨髓细胞过氧化酶染色反应强阳性，见于</h3>
+    <form id="quizForm11">
+        <label>
+            <input type="radio" name="answer11" value="A"> A. 急淋白血病
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="B"> B. 急单白血病
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="C"> C. 急粒白血病
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="D"> D. 红血病
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="E"> E. 巨核细胞白血病
+        </label>
+        <button type="button" onclick="checkAnswer(11)">提交答案</button>
+    </form>
+    <div id="feedback11"></div>
+</div>
+
+<div class="question">
+    <h3>12、骨髓中细胞从原始到成熟，胞体均由大变小，唯一例外的是（    ）</h3>
+    <form id="quizForm12">
+        <label>
+            <input type="radio" name="answer12" value="A"> A. 红细胞系
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="B"> B. 浆细胞系
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="C"> C. 单核细胞系
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="D"> D. 巨核细胞系
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="E"> E. 淋巴细胞系
+        </label>
+        <button type="button" onclick="checkAnswer(12)">提交答案</button>
+    </form>
+    <div id="feedback12"></div>
+</div>
+
+<div class="question">
+    <h3>13、骨髓细胞中最大的细胞是（    ）</h3>
+    <form id="quizForm13">
+        <label>
+            <input type="radio" name="answer13" value="A"> A. 成骨细胞
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="B"> B. 破骨细胞
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="C"> C. 脂肪细胞
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="D"> D. 巨核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="E"> E. 内皮细胞
+        </label>
+        <button type="button" onclick="checkAnswer(13)">提交答案</button>
+    </form>
+    <div id="feedback13"></div>
+</div>
+
+<div class="question">
+    <h3>14、骨髓巨核细胞计数值(1.5 cm×3 cm面积血膜)为（    ）</h3>
+    <form id="quizForm14">
+        <label>
+            <input type="radio" name="answer14" value="A"> A. 0-5个
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="B"> B. 5-7个
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="C"> C. 7-35个
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="D"> D. 100个
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="E"> E. 120个
+        </label>
+        <button type="button" onclick="checkAnswer(14)">提交答案</button>
+    </form>
+    <div id="feedback14"></div>
+</div>
+
+<div class="question">
+    <h3>15、进行骨髓细胞分类计数时，应先从涂片（    ）</h3>
+    <form id="quizForm15">
+        <label>
+            <input type="radio" name="answer15" value="A"> A. 头部开始计数
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="B"> B. 体部开始
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="C"> C. 头，体交界处
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="D"> D. 体尾交界处
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="E"> E. 上或下边缘处
+        </label>
+        <button type="button" onclick="checkAnswer(15)">提交答案</button>
+    </form>
+    <div id="feedback15"></div>
+</div>
+
+<div class="question">
+    <h3>16、原粒细胞胞浆的形态学特点（     ）</h3>
+    <form id="quizForm16">
+        <label>
+            <input type="radio" name="answer16" value="A"> A. 量多
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="B"> B. 天蓝色
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="C"> C. 有颗粒
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="D"> D. 有伪促
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="E"> E. 着色不均匀
+        </label>
+        <button type="button" onclick="checkAnswer(16)">提交答案</button>
+    </form>
+    <div id="feedback16"></div>
+</div>
+
+<div class="question">
+    <h3>17、鉴别类白血病和慢性髓系白血病的组织化学染色是（     ）</h3>
+    <form id="quizForm17">
+        <label>
+            <input type="radio" name="answer17" value="A"> A. PAS
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="B"> B. POX
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="C"> C. NAP
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="D"> D. 铁染色
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="E"> E. A-NAE
+        </label>
+        <button type="button" onclick="checkAnswer(17)">提交答案</button>
+    </form>
+    <div id="feedback17"></div>
+</div>
+
+<div class="question">
+    <h3>18、为了区别红白血病和巨幼红细胞性贫血，下列首选实验是（     ）</h3>
+    <form id="quizForm18">
+        <label>
+            <input type="radio" name="answer18" value="A"> A. POX染色
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="B"> B. PAS染色
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="C"> C. a-NAE染色
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="D"> D. 铁染色
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="E"> E. NAP染色
+        </label>
+        <button type="button" onclick="checkAnswer(18)">提交答案</button>
+    </form>
+    <div id="feedback18"></div>
+</div>
+
+<div class="question">
+    <h3>19、患者，男性，30岁，头昏乏力2月，牙龈渗血2周，发热伴咳嗽1周。血象：WRC：3.2×10^9/L，Hb：85g/L，BPC：54×10^9/L，，下列哪项检查对确诊最具价值（     ）</h3>
+    <form id="quizForm19">
+        <label>
+            <input type="radio" name="answer19" value="A"> A. 胸片
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="B"> B. 痰培养
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="C"> C. 骨髓细胞学检查
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="D"> D. B超肝脾是否肿大
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="E"> E. 血液细菌培养
+        </label>
+        <button type="button" onclick="checkAnswer(19)">提交答案</button>
+    </form>
+    <div id="feedback19"></div>
+</div>
+
+<div class="question">
+    <h3>20、骨髓增生极度活跃，原始细胞占30%，细胞化学染色结果是POX（+），PAS部分细胞呈颗粒状阳性，a-NAE染色（+）且不被NaF抑制，下述最可能的选择是（    ）</h3>
+    <form id="quizForm20">
+        <label>
+            <input type="radio" name="answer20" value="A"> A. 急性髓系白血病未分化型
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="B"> B. 急性淋巴细胞白血病
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="C"> C. 急性单核细胞白血病
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="D"> D. 慢性髓系白血病
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="E"> E. 急性红白血病
+        </label>
+        <button type="button" onclick="checkAnswer(20)">提交答案</button>
+    </form>
+    <div id="feedback20"></div>
+</div>
+
+<div class="question">
+    <h3>21、骨髓细胞胞浆量少，颜色呈油墨蓝的细胞是（     ）</h3>
+    <form id="quizForm21">
+        <label>
+            <input type="radio" name="answer21" value="A"> A. 原淋巴细胞
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="B"> B. 原单核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="C"> C. 原红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="D"> D. 原浆细胞
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="E"> E. 中幼红细胞
+        </label>
+        <button type="button" onclick="checkAnswer(21)">提交答案</button>
+    </form>
+    <div id="feedback21"></div>
+</div>
+<div class="question">
+    <h3>22、最适宜用来鉴别原粒和原单的细胞化学染色是（     ）</h3>
+    <form id="quizForm22">
+        <label>
+            <input type="radio" name="answer22" value="A"> A. POX染色
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="B"> B. PAS染色
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="C"> C. NAP染色
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="D"> D. a-NAE染色和NaF抑制试验
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="E"> E. NCE染色
+        </label>
+        <button type="button" onclick="checkAnswer(22)">提交答案</button>
+    </form>
+    <div id="feedback22"></div>
+</div>
+<div class="question">
+    <h3>23、环形铁粒幼细胞是指中晚幼红细胞中铁颗粒（     ）</h3>
+    <form id="quizForm23">
+        <label>
+            <input type="radio" name="answer23" value="A"> A. 2个
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="B"> B. 3个
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="C"> C. 4个
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="D"> D. 5个
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="E"> E. 6个以上
+        </label>
+        <button type="button" onclick="checkAnswer(23)">提交答案</button>
+    </form>
+    <div id="feedback23"></div>
+</div>
+<div class="question">
+    <h3>24、细胞核染色呈细颗粒状，排列平坦均匀，如一层薄纱，核仁小，3-5个清楚，此细胞为（    ）</h3>
+    <form id="quizForm24">
+        <label>
+            <input type="radio" name="answer24" value="A"> A. 原淋巴细胞
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="B"> B. 原单核细胞
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="C"> C. 原粒细胞
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="D"> D. 原红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="E"> E. 原巨核细胞
+        </label>
+        <button type="button" onclick="checkAnswer(24)">提交答案</button>
+    </form>
+    <div id="feedback24"></div>
+</div>
+<div class="question">
+    <h3>25、核染色质浓密成块，常呈车轮状或龟背状，无核仁，胞质丰富，有泡沫感，符合该特征的是（    ）</h3>
+    <form id="quizForm25">
+        <label>
+            <input type="radio" name="answer25" value="A"> A. 中幼红细胞
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="B"> B. 小淋巴细胞
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="C"> C. 原浆细胞
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="D"> D. 幼浆细胞
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="E"> E. 浆细胞
+        </label>
+        <button type="button" onclick="checkAnswer(25)">提交答案</button>
+    </form>
+    <div id="feedback25"></div>
+</div>
+	
     <div class="question">
-      <h3>问题 1：图中所示细胞是？</h3>
+      <h3>26：图中所示细胞是？</h3>
       <img src="fig/2-1.jpg" alt="2-1" style="max-width: 500px;">
       <form id="quizForm1">
         <label>
-          <input type="radio" name="answer1" value="A"> A. 中幼粒细胞
+          <input type="radio" name="answer26" value="A"> A. 中幼粒细胞
         </label>
         <label>
-          <input type="radio" name="answer1" value="B"> B. 早幼粒细胞
+          <input type="radio" name="answer26" value="B"> B. 早幼粒细胞
         </label>
         <label>
-          <input type="radio" name="answer1" value="C"> C. 中幼红细胞
+          <input type="radio" name="answer26" value="C"> C. 中幼红细胞
         </label>
         <label>
-          <input type="radio" name="answer1" value="D"> D. 晚幼粒细胞
+          <input type="radio" name="answer26" value="D"> D. 晚幼粒细胞
         </label>
         <label>
-          <input type="radio" name="answer1" value="E"> E. 早幼红细胞
+          <input type="radio" name="answer26" value="E"> E. 早幼红细胞
         </label>
-        <button type="button" onclick="checkAnswer(1)">提交答案</button>
+        <button type="button" onclick="checkAnswer(26)">提交答案</button>
       </form>
-      <div id="feedback1"></div>
+      <div id="feedback26"></div>
     </div>
 
   </section>
@@ -148,8 +722,83 @@
 
       switch (questionNumber) {
         case 1:
-          correctAnswer = 'A';
-          break;
+        correctAnswer = 'D';
+        break;
+    case 2:
+        correctAnswer = 'E';
+        break;
+    case 3:
+        correctAnswer = 'D';
+        break;
+    case 4:
+        correctAnswer = 'B';
+        break;
+    case 5:
+        correctAnswer = 'B';
+        break;
+    case 6:
+        correctAnswer = 'A';
+        break;
+    case 7:
+        correctAnswer = 'B';
+        break;
+    case 8:
+        correctAnswer = 'B';
+        break;
+    case 9:
+        correctAnswer = 'C';
+        break;
+    case 10:
+        correctAnswer = 'D';
+        break;
+    case 11:
+        correctAnswer = 'C';
+        break;
+    case 12:
+        correctAnswer = 'D';
+        break;
+    case 13:
+        correctAnswer = 'D';
+        break;
+    case 14:
+        correctAnswer = 'C';
+        break;
+    case 15:
+        correctAnswer = 'D';
+        break;
+    case 16:
+        correctAnswer = 'B';
+        break;
+    case 17:
+        correctAnswer = 'C';
+        break;
+    case 18:
+        correctAnswer = 'B';
+        break;
+    case 19:
+        correctAnswer = 'C';
+        break;
+    case 20:
+        correctAnswer = 'A';
+        break;
+    case 21:
+        correctAnswer = 'D';
+        break;
+    case 22:
+        correctAnswer = 'D';
+        break;
+    case 23:
+        correctAnswer = 'E';
+        break;
+    case 24:
+        correctAnswer = 'C';
+        break;
+    case 25:
+        correctAnswer = 'E';
+        break;
+    case 26:
+        correctAnswer = 'A';
+        break;
 
         // Add cases for other questions
 
