@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>实验诊断学在线题库</title>
+  <style>
+    button {
+      padding: 10px 20px; /* Adjust the padding to increase button size */
+      font-size: 18px;   /* Adjust the font size for better visibility */
+    }
+  
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: white;
+      color: blue;
+      padding: 10px;
+      text-align: left;
+    }
+
+    nav {
+      background-color: white;
+      overflow: hidden;
+	  
+    }
+
+    nav a {
+      float: left;
+      display: block;
+      color: blue;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+	  font-size:20px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    .question {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>实验诊断学在线题库</h1>
+  </header>
+
+   <nav>
+    <a href="LaboratoryDiagnostics.html">Home</a>
+    <a href="chapter1.html">1：血液学一般检查</a>
+    <a href="chapter2.html">2：骨髓实验室检查</a>
+    <a href="chapter3.html">3：止血凝血检查</a>
+    <a href="chapter4.html">4：便常规</a>
+	<a href="chapter5.html">5：脑脊液浆膜腔积液检查</a>
+    <a href="chapter6.html">6：尿液检查</a>
+    <a href="chapter7.html">7：生殖系统体液检查</a>
+	<a href="chapter8.html">8：临床生物化学检查</a>
+	<a href="chapter9.html">9：肝功能检查</a>
+	<a href="chapter10.html">10：肾功能检查</a>
+	<a href="chapter11.html">11：免疫学检查</a>
+	<a href="chapter12.html">12：病原微生物</a>
+  </nav>
+
+ <section id="chapter2">
+    <h2>12：病原微生物</h2>
+	<h2 style="color: red; font-size: 26px;">题目添加中，欢迎提供题目</h2>
+    
+	<!-- 问题 1 到问题 5 -->
+ <div class="question">
+    <h3>问题 1：肠炎细菌病原学检测，不宜用粪便标本作：</h3>
+    <form id="quizForm1">
+        <label>
+            <input type="radio" name="answer1" value="A"> A．直接显微镜检查
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="B"> B．分离、培养、鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="C"> C．抗原检测
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="D"> D．抗体检测
+        </label>
+        <label>
+            <input type="radio" name="answer1" value="E"> E．核酸检测
+        </label>
+        <button type="button" onclick="checkAnswer(1)">提交答案</button>
+    </form>
+    <div id="feedback1"></div>
+</div>
+<div class="question">
+    <h3>问题 2：咽喉假膜Albert染色直接显微镜检查见异染颗粒，可诊断患：</h3>
+    <form id="quizForm2">
+        <label>
+            <input type="radio" name="answer2" value="A"> A．白喉
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="B"> B．化脓性咽喉炎
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="C"> C．疱疹性咽喉炎
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="D"> D．鹅口疮
+        </label>
+        <label>
+            <input type="radio" name="answer2" value="E"> E．不能诊断
+        </label>
+        <button type="button" onclick="checkAnswer(2)">提交答案</button>
+    </form>
+    <div id="feedback2"></div>
+</div>
+
+<!-- 请按照相同格式继续完成问题3到问题30 -->
+<!-- 问题 3 -->
+<div class="question">
+    <h3>问题 3：血液细菌培养阳性，可诊断患：</h3>
+    <form id="quizForm3">
+        <label>
+            <input type="radio" name="answer3" value="A"> A．病毒血症
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="B"> B．败血症
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="C"> C．真菌血症
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="D"> D．二期梅毒
+        </label>
+        <label>
+            <input type="radio" name="answer3" value="E"> E．毒素中毒症
+        </label>
+        <button type="button" onclick="checkAnswer(3)">提交答案</button>
+    </form>
+    <div id="feedback3"></div>
+</div>
+
+<!-- 问题 4 -->
+<div class="question">
+    <h3>问题 4：二期梅毒临床实验诊断常用：</h3>
+    <form id="quizForm4">
+        <label>
+            <input type="radio" name="answer4" value="A"> A．直接显微镜检查
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="B"> B．分离、培养、鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="C"> C．抗原检测
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="D"> D．抗体检测
+        </label>
+        <label>
+            <input type="radio" name="answer4" value="E"> E．核酸检测
+        </label>
+        <button type="button" onclick="checkAnswer(4)">提交答案</button>
+    </form>
+    <div id="feedback4"></div>
+</div>
+
+<!-- 问题 5 -->
+<div class="question">
+    <h3>问题 5：采集血培养标本时，采血量与肉汤培养基的比例哪一个最佳：</h3>
+    <form id="quizForm5">
+        <label>
+            <input type="radio" name="answer5" value="A"> A．1：5
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="B"> B．1：10
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="C"> C．1：7
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="D"> D．1：4
+        </label>
+        <label>
+            <input type="radio" name="answer5" value="E"> E．1：6
+        </label>
+        <button type="button" onclick="checkAnswer(5)">提交答案</button>
+    </form>
+    <div id="feedback5"></div>
+</div>
+
+<!-- 问题 6 -->
+<div class="question">
+    <h3>问题 6：显微镜检查组织细胞内“猫头鹰”眼，有助于诊断：</h3>
+    <form id="quizForm6">
+        <label>
+            <input type="radio" name="answer6" value="A"> A．梅毒
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="B"> B．疱疹
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="C"> C．HCMV感染
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="D"> D．HIV感染
+        </label>
+        <label>
+            <input type="radio" name="answer6" value="E"> E．HBV感染
+        </label>
+        <button type="button" onclick="checkAnswer(6)">提交答案</button>
+    </form>
+    <div id="feedback6"></div>
+</div>
+
+<!-- 问题 7 -->
+<div class="question">
+    <h3>问题 7：诊断现症病毒感染，宜检测抗体类型是：</h3>
+    <form id="quizForm7">
+        <label>
+            <input type="radio" name="answer7" value="A"> A．IgA
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="B"> B．IgD
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="C"> C．IgM
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="D"> D．IgE
+        </label>
+        <label>
+            <input type="radio" name="answer7" value="E"> E．sIgA
+        </label>
+        <button type="button" onclick="checkAnswer(7)">提交答案</button>
+    </form>
+    <div id="feedback7"></div>
+</div>
+
+<!-- 问题 8 -->
+<div class="question">
+    <h3>问题 8：诊断细菌感染病原学检测“金标准”是：</h3>
+    <form id="quizForm8">
+        <label>
+            <input type="radio" name="answer8" value="A"> A．直接显微镜检查
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="B"> B．分离、培养、鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="C"> C．抗原检测
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="D"> D．抗体检测
+        </label>
+        <label>
+            <input type="radio" name="answer8" value="E"> E．核酸检测
+        </label>
+        <button type="button" onclick="checkAnswer(8)">提交答案</button>
+    </form>
+    <div id="feedback8"></div>
+</div>
+
+<!-- 问题 9 -->
+<div class="question">
+    <h3>问题 9：临床实验诊断病毒感染现常用：</h3>
+    <form id="quizForm9">
+        <label>
+            <input type="radio" name="answer9" value="A"> A．直接电子显微镜检查
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="B"> B．病毒分离、培养、鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="C"> C．抗原检测
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="D"> D．抗体检测
+        </label>
+        <label>
+            <input type="radio" name="answer9" value="E"> E．抗原+抗体+核酸检测
+        </label>
+        <button type="button" onclick="checkAnswer(9)">提交答案</button>
+    </form>
+    <div id="feedback9"></div>
+</div>
+
+<!-- 问题 10 -->
+<div class="question">
+    <h3>问题 10：临床病原学抗体检测的关键是已知抗原：</h3>
+    <form id="quizForm10">
+        <label>
+            <input type="radio" name="answer10" value="A"> A．量
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="B"> B．特异性
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="C"> C．化学组成
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="D"> D．决定簇数目
+        </label>
+        <label>
+            <input type="radio" name="answer10" value="E"> E．存在位置
+        </label>
+        <button type="button" onclick="checkAnswer(10)">提交答案</button>
+    </form>
+    <div id="feedback10"></div>
+</div>
+
+<!-- 问题 11 -->
+<div class="question">
+    <h3>问题 11：需保温保湿立即送检的临床标本是：</h3>
+    <form id="quizForm11">
+        <label>
+            <input type="radio" name="answer11" value="A"> A．可疑“菌痢”患者的脓血便
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="B"> B．可疑肺结核患者的痰
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="C"> C．可疑肾盂肾炎患者的中段尿
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="D"> D．可疑“流脑”患者的脑脊液
+        </label>
+        <label>
+            <input type="radio" name="answer11" value="E"> E．可疑败血症患者的血液
+        </label>
+        <button type="button" onclick="checkAnswer(11)">提交答案</button>
+    </form>
+    <div id="feedback11"></div>
+</div>
+
+<!-- 问题 12 -->
+<div class="question">
+    <h3>问题 12：疑是流行性脑脊髓膜炎患者的脑脊液标本应注意</h3>
+    <form id="quizForm12">
+        <label>
+            <input type="radio" name="answer12" value="A"> A. 置50%甘油盐水中保存送检
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="B"> B. 冷藏送检
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="C"> C. 立即接种于普通琼脂平板
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="D"> D. 保温，迅速送检
+        </label>
+        <label>
+            <input type="radio" name="answer12" value="E"> E. 低温存放过夜
+        </label>
+        <button type="button" onclick="checkAnswer(12)">提交答案</button>
+    </form>
+    <div id="feedback12"></div>
+</div>
+<div class="question">
+    <h3>问题 13：关于血培养的运送和处理，下列哪一点是错误的</h3>
+    <form id="quizForm13">
+        <label>
+            <input type="radio" name="answer13" value="A"> A. 血培养抽取后，立即送到微生物实验室。
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="B"> B. 如不能立即送往实验室，置4℃冰箱冷藏
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="C"> C. 如不能立即送往实验室，置35~37℃孵箱中。
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="D"> D. 如暂不能立即送往实验室，可放室温保存。
+        </label>
+        <label>
+            <input type="radio" name="answer13" value="E"> E. 实验室接受到培养瓶，应立即置35~37℃孵箱或血培养仪中。
+        </label>
+        <button type="button" onclick="checkAnswer(13)">提交答案</button>
+    </form>
+    <div id="feedback13"></div>
+</div>
+
+<div class="question">
+    <h3>问题 14：下列哪一种疾病不宜取血做微生物学检验</h3>
+    <form id="quizForm14">
+        <label>
+            <input type="radio" name="answer14" value="A"> A. 细菌性心内膜炎
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="B"> B. 流脑
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="C"> C. 伤寒
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="D"> D. 菌痢
+        </label>
+        <label>
+            <input type="radio" name="answer14" value="E"> E. 败血症
+        </label>
+        <button type="button" onclick="checkAnswer(14)">提交答案</button>
+    </form>
+    <div id="feedback14"></div>
+</div>
+
+<div class="question">
+    <h3>问题 15：疑似“淋病”病人的脓性分泌物标本，必须</h3>
+    <form id="quizForm15">
+        <label>
+            <input type="radio" name="answer15" value="A"> A. 冷藏，迅速送检
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="B"> B. 保暖保湿，迅速送检
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="C"> C. 放50％甘油盐水中保存送检
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="D"> D. 立即接种于普通琼脂平板
+        </label>
+        <label>
+            <input type="radio" name="answer15" value="E"> E. 以上都不是
+        </label>
+        <button type="button" onclick="checkAnswer(15)">提交答案</button>
+    </form>
+    <div id="feedback15"></div>
+</div>
+
+<div class="question">
+    <h3>问题 16：关于血清学试验结果的分析,错误的是</h3>
+    <form id="quizForm16">
+        <label>
+            <input type="radio" name="answer16" value="A"> A. 试验阳性说明机体接触过病原体
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="B"> B. 单次试验阳性不能完全证明新近感染
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="C"> C. 试验阴性不能完全排除相应病原体感染的可能性
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="D"> D. 试验阳性即有诊断意义
+        </label>
+        <label>
+            <input type="radio" name="answer16" value="E"> E. 双份血清标本,后期抗体效价比前期4倍或4倍以上时有诊断意义
+        </label>
+        <button type="button" onclick="checkAnswer(16)">提交答案</button>
+    </form>
+    <div id="feedback16"></div>
+</div>
+<div class="question">
+    <h3>问题 17：可引起性传播疾病的嗜血杆菌是</h3>
+    <form id="quizForm17">
+        <label>
+            <input type="radio" name="answer17" value="A"> A. 流感嗜血杆菌
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="B"> B. 埃及嗜血杆菌
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="C"> C. 溶血性嗜血杆菌
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="D"> D. 杜克嗜血杆菌
+        </label>
+        <label>
+            <input type="radio" name="answer17" value="E"> E. 副流感嗜血杆菌
+        </label>
+        <button type="button" onclick="checkAnswer(17)">提交答案</button>
+    </form>
+    <div id="feedback17"></div>
+</div>
+
+<div class="question">
+    <h3>问题 18：不属于血清学反应的试验是</h3>
+    <form id="quizForm18">
+        <label>
+            <input type="radio" name="answer18" value="A"> A. 双向琼脂扩散
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="B"> B. 补体结合试验
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="C"> C. 病毒血凝抑制试验
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="D"> D. 病毒血凝试验
+        </label>
+        <label>
+            <input type="radio" name="answer18" value="E"> E. 冷凝集试验
+        </label>
+        <button type="button" onclick="checkAnswer(18)">提交答案</button>
+    </form>
+    <div id="feedback18"></div>
+</div>
+
+<div class="question">
+    <h3>问题 19：分离流感病毒可采用患者的</h3>
+    <form id="quizForm19">
+        <label>
+            <input type="radio" name="answer19" value="A"> A. 咽漱液
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="B"> B. 尿液
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="C"> C. 粪便
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="D"> D. 血清
+        </label>
+        <label>
+            <input type="radio" name="answer19" value="E"> E. 脑脊液
+        </label>
+        <button type="button" onclick="checkAnswer(19)">提交答案</button>
+    </form>
+    <div id="feedback19"></div>
+</div>
+
+<div class="question">
+    <h3>问题 20：HIV感染确认试验是试验</h3>
+    <form id="quizForm20">
+        <label>
+            <input type="radio" name="answer20" value="A"> A. IFA
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="B"> B. WB法
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="C"> C. RIA
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="D"> D. RIP法
+        </label>
+        <label>
+            <input type="radio" name="answer20" value="E"> E. ELISA
+        </label>
+        <button type="button" onclick="checkAnswer(20)">提交答案</button>
+    </form>
+    <div id="feedback20"></div>
+</div>
+
+<div class="question">
+    <h3>问题 21：在肠杆菌科细菌鉴定中，选择使用选择性培养基主要取决于</h3>
+    <form id="quizForm21">
+        <label>
+            <input type="radio" name="answer21" value="A"> A. 标本类型
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="B"> B. 取材的时间
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="C"> C. 标本量的多少
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="D"> D. 临床要求
+        </label>
+        <label>
+            <input type="radio" name="answer21" value="E"> E. 细菌的种类
+        </label>
+        <button type="button" onclick="checkAnswer(21)">提交答案</button>
+    </form>
+    <div id="feedback21"></div>
+</div>
+
+<div class="question">
+    <h3>问题 22：导致新生儿败血症和脑膜炎的主要病原菌为</h3>
+    <form id="quizForm22">
+        <label>
+            <input type="radio" name="answer22" value="A"> A. A群链球菌
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="B"> B. B群链球菌
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="C"> C. 肺炎链球菌
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="D"> D. 肠球菌
+        </label>
+        <label>
+            <input type="radio" name="answer22" value="E"> E. 表皮葡萄球菌
+        </label>
+        <button type="button" onclick="checkAnswer(22)">提交答案</button>
+    </form>
+    <div id="feedback22"></div>
+</div>
+
+<div class="question">
+    <h3>问题 23：下列那种细菌一般不采用革兰染色法</h3>
+    <form id="quizForm23">
+        <label>
+            <input type="radio" name="answer23" value="A"> A. 大肠埃希菌
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="B"> B. 金黄色葡萄球菌
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="C"> C. 结核分枝杆菌
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="D"> D. 铜绿假单胞菌
+        </label>
+        <label>
+            <input type="radio" name="answer23" value="E"> E. 草绿色链球菌
+        </label>
+        <button type="button" onclick="checkAnswer(23)">提交答案</button>
+    </form>
+    <div id="feedback23"></div>
+</div>
+
+<div class="question">
+    <h3>问题 24：培养鉴定真菌最常用的培养基为</h3>
+    <form id="quizForm24">
+        <label>
+            <input type="radio" name="answer24" value="A"> A. 血液琼脂培养基
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="B"> B. 巧克力琼脂培养基
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="C"> C. 沙保培养基
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="D"> D. 罗氏培养基
+        </label>
+        <label>
+            <input type="radio" name="answer24" value="E"> E. 普通琼脂培养基
+        </label>
+        <button type="button" onclick="checkAnswer(24)">提交答案</button>
+    </form>
+    <div id="feedback24"></div>
+</div>
+
+<div class="question">
+    <h3>问题 25：一般送检病毒感染患者标本的最佳温度为</h3>
+    <form id="quizForm25">
+        <label>
+            <input type="radio" name="answer25" value="A"> A. 37℃
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="B"> B. 4℃
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="C"> C. －20℃
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="D"> D. －70℃
+        </label>
+        <label>
+            <input type="radio" name="answer25" value="E"> E. 25℃
+        </label>
+        <button type="button" onclick="checkAnswer(25)">提交答案</button>
+    </form>
+    <div id="feedback25"></div>
+</div>
+
+<div class="question">
+    <h3>问题 26：具有血凝素的病毒是</h3>
+    <form id="quizForm26">
+        <label>
+            <input type="radio" name="answer26" value="A"> A. CMV
+        </label>
+        <label>
+            <input type="radio" name="answer26" value="B"> B. 疱疹病毒
+        </label>
+        <label>
+            <input type="radio" name="answer26" value="C"> C. HIV
+        </label>
+        <label>
+            <input type="radio" name="answer26" value="D"> D. 呼吸道合胞病毒
+        </label>
+        <label>
+            <input type="radio" name="answer26" value="E"> E. 流感病毒
+        </label>
+        <button type="button" onclick="checkAnswer(26)">提交答案</button>
+    </form>
+    <div id="feedback26"></div>
+</div>
+
+<div class="question">
+    <h3>问题 27：白假丝酵母菌常引起</h3>
+    <form id="quizForm27">
+        <label>
+            <input type="radio" name="answer27" value="A"> A. 性病
+        </label>
+        <label>
+            <input type="radio" name="answer27" value="B"> B. 脑膜炎
+        </label>
+        <label>
+            <input type="radio" name="answer27" value="C"> C. 癣病
+        </label>
+        <label>
+            <input type="radio" name="answer27" value="D"> D. 肺部感染
+        </label>
+        <label>
+            <input type="radio" name="answer27" value="E"> E. 多种内脏及皮肤、粘膜感染
+        </label>
+        <button type="button" onclick="checkAnswer(27)">提交答案</button>
+    </form>
+    <div id="feedback27"></div>
+</div>
+
+<div class="question">
+    <h3>问题 28：浅部真菌微生物学检查最常用的方法：</h3>
+    <form id="quizForm28">
+        <label>
+            <input type="radio" name="answer28" value="A"> A. 标本直接镜检与分离培养鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer28" value="B"> B. 血清学检查
+        </label>
+        <label>
+            <input type="radio" name="answer28" value="C"> C. 生化反应鉴定
+        </label>
+        <label>
+            <input type="radio" name="answer28" value="D"> D. PCR
+        </label>
+        <label>
+            <input type="radio" name="answer28" value="E"> E. 动物试验
+        </label>
+        <button type="button" onclick="checkAnswer(28)">提交答案</button>
+    </form>
+    <div id="feedback28"></div>
+</div>
+
+<div class="question">
+    <h3>问题 29：以下哪些微生物可经输血传播：</h3>
+    <form id="quizForm29">
+        <label>
+            <input type="radio" name="answer29" value="A"> A. HEV
+        </label>
+        <label>
+            <input type="radio" name="answer29" value="B"> B. 甲型肝炎病毒
+        </label>
+        <label>
+            <input type="radio" name="answer29" value="C"> C. 丙型肝炎病毒
+        </label>
+        <label>
+            <input type="radio" name="answer29" value="D"> D. 鼻病毒
+        </label>
+        <label>
+            <input type="radio" name="answer29" value="E"> E. 恙虫病立克次体
+        </label>
+        <button type="button" onclick="checkAnswer(29)">提交答案</button>
+    </form>
+    <div id="feedback29"></div>
+</div>
+
+<div class="question">
+    <h3>问题 30：形成的包涵体对疾病的诊断有很大的意义：</h3>
+    <form id="quizForm30">
+        <label>
+            <input type="radio" name="answer30" value="A"> A. HSV-1
+        </label>
+        <label>
+            <input type="radio" name="answer30" value="B"> B. 乙型肝炎病毒
+        </label>
+        <label>
+            <input type="radio" name="answer30" value="C"> C. 肺炎支原体
+        </label>
+        <label>
+            <input type="radio" name="answer30" value="D"> D. 巨细胞病毒
+        </label>
+        <label>
+            <input type="radio" name="answer30" value="E"> E. EB病毒
+        </label>
+        <button type="button" onclick="checkAnswer(30)">提交答案</button>
+    </form>
+    <div id="feedback30"></div>
+</div>
+
+
+       
+
+
+
+
+  </section>
+
+
+
+
+ <script>
+      function checkAnswer(questionNumber) {
+        var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+        var feedbackDiv = document.getElementById('feedback' + questionNumber);
+        var correctAnswer;
+
+        switch (questionNumber) {
+          case 1:
+    correctAnswer = 'A';
+    break;
+case 2:
+    correctAnswer = 'A';
+    break;
+case 3:
+    correctAnswer = 'B';
+    break;
+case 4:
+    correctAnswer = 'D';
+    break;
+case 5:
+    correctAnswer = 'B';
+    break;
+case 6:
+    correctAnswer = 'C';
+    break;
+case 7:
+    correctAnswer = 'C';
+    break;
+case 8:
+    correctAnswer = 'B';
+    break;
+case 9:
+    correctAnswer = 'E';
+    break;
+case 10:
+    correctAnswer = 'B';
+    break;
+case 11:
+    correctAnswer = 'D';
+    break;
+case 12:
+    correctAnswer = 'D';
+    break;
+case 13:
+    correctAnswer = 'B';
+    break;
+case 14:
+    correctAnswer = 'D';
+    break;
+case 15:
+    correctAnswer = 'B';
+    break;
+case 16:
+    correctAnswer = 'D';
+    break;
+case 17:
+    correctAnswer = 'D';
+    break;
+case 18:
+    correctAnswer = 'D';
+    break;
+case 19:
+    correctAnswer = 'A';
+    break;
+case 20:
+    correctAnswer = 'B';
+    break;
+case 21:
+    correctAnswer = 'A';
+    break;
+case 22:
+    correctAnswer = 'B';
+    break;
+case 23:
+    correctAnswer = 'C';
+    break;
+case 24:
+    correctAnswer = 'C';
+    break;
+case 25:
+    correctAnswer = 'B';
+    break;
+case 26:
+    correctAnswer = 'E';
+    break;
+case 27:
+    correctAnswer = 'E';
+    break;
+case 28:
+    correctAnswer = 'A';
+    break;
+case 29:
+    correctAnswer = 'C';
+    break;
+case 30:
+    correctAnswer = 'D';
+    break;
+	
+			
+			
+			
+			
+          default:
+            break;
+        }
+
+        if (userAnswer) {
+          var userResponse = userAnswer.value;
+          if (userResponse === correctAnswer) {
+            feedbackDiv.textContent = '回答正确！';
+            feedbackDiv.style.color = 'green';
+          } else {
+            feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+            feedbackDiv.style.color = 'red';
+          }
+        } else {
+          feedbackDiv.textContent = '请选择一个答案。';
+          feedbackDiv.style.color = 'red';
+        }
+      }
+
+    
+    </script>
+
+  </section>
+
+
+</body>
+</html>
