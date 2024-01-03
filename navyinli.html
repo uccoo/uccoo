@@ -18,31 +18,40 @@
   
   <title>BioMed Nav</title>
   <style>
+  html {
+      height: 100%;
+      background-image: url('icon/bj4.png');
+      background-size: cover;
+    }
+	
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-	  
-      
+      font-family: Arial, sans-serif; 
     }
 
     header {
-      background-color: #333;
+      background-color: transparent;
       color: white;
       padding: 10px;
       text-align: center;
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  height: 100vh; /* 使 header 占据整个视口的高度 *
     }
 
     nav {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-auto-rows: minmax(50px, auto);
-      background-color: #F5F5F5;/* Home line */
+      background-color: transparent;/* Home line */
 	  /* background-image: url('sky3.jpg'); 替换为您的背景图片路径 */
       /* background-size: cover; 使背景图片充满容器 */
       padding: 10px;
     }
 
     nav a {
+	  background-color: white;
       text-decoration: none;
       color: #333;
       text-align: center;
@@ -66,7 +75,8 @@
     }
 
     main .category {
-      border: 1px solid #ddd;
+	background-color: white;
+      border: none;
       padding: 15px;
       text-align: center;
       display: grid;
@@ -82,7 +92,7 @@
     }
 
     main .subcategory {
-      border: 1px solid #ddd;
+      border: none;
       padding: 10px;
       text-align: center;
       position: relative;
@@ -129,7 +139,7 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: #333;
+      background-color: transparent;
       color: white;
       text-align: center;
       padding: 10px;
@@ -171,7 +181,7 @@
  
 	
 .yinlicolor {
-  background-color: #FDF5E6; /* 希望的颜色 */
+  background-color: transparent; /* 希望的颜色 */
 }
 	
 	
@@ -294,15 +304,9 @@ nav a.home {
 }
 
 
-/* 添加样式，修改头部背景 */
-        header {
-            background-image: url('icon/bj2.jpg');
-            background-repeat: no-repeat; /* Prevent horizontal repetition */
-            background-size: cover;
-            /* Add other styles as needed */
-        }
+
         footer {
-            background-color: #00688B; /* 使用颜色代码或其他合适的值 */
+            
             color: #fff; /* 修改文字颜色为白色 */
             padding: 20px; /* 添加内边距，使内容不紧贴边缘 */
         }
@@ -311,7 +315,7 @@ nav a.home {
 </head>
 <body>
 
-  <header style="background-image: url('icon/bj0.jpg');">
+  
     <h1>BioMed Nav</h1>
     <section id="search">
       <!-- Bing Search Form -->
@@ -1377,7 +1381,7 @@ nav a.home {
     <!-- Add more category divs as needed -->
 
   </main>
-  <footer style="background-image: url('icon/bj2.jpg');">
+  <footer style="background-image: black;">
     <p>&copy; 2024 BioMed Nav    The website is developed and maintained by Yinli. If you have any suggestions, please send an email to yinli@hainmc.edu.cn</p>
   </footer>
 </body>
