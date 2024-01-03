@@ -80,10 +80,14 @@
 <body>
     <div class="inputContainer">
         <label for="inputNumbers">输入身份证号码（每行一个）：</label>
-        <textarea id="inputNumbers" placeholder="请输入，支持多行"></textarea>
+        <textarea id="inputNumbers" placeholder="例如：
+302365898562150425
+302365898542150425
+302358938542150425"></textarea>
     </div>
 
-    <button onclick="extractAndGenerateDates()">提取日期</button>
+    <button onclick="extractAndGenerateDates()">提取年-月-日</button>
+    <button onclick="extractAndGenerateYearMonth()">提取年-月</button>
 
     <div id="resultContainer"></div>
 
@@ -103,6 +107,25 @@
                     const dayPart = inputNumber.substring(12, 14);
 
                     const extractedDate = `${yearPart}-${monthPart}-${dayPart}`;
+                    resultContainer.innerText += `${extractedDate}\n`;
+                } else if (inputNumber.length > 0) {
+                    alert(`身份证 ${index + 1} 不是有效的18位数字！`);
+                }
+            });
+        }
+
+        function extractAndGenerateYearMonth() {
+            const inputNumbers = document.getElementById('inputNumbers').value.split('\n').map(num => num.trim());
+
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerText = ''; // Clear previous results
+
+            inputNumbers.forEach((inputNumber, index) => {
+                if (inputNumber.length === 18) {
+                    const yearPart = inputNumber.substring(6, 10);
+                    const monthPart = inputNumber.substring(10, 12);
+
+                    const extractedDate = `${yearPart}-${monthPart}`;
                     resultContainer.innerText += `${extractedDate}\n`;
                 } else if (inputNumber.length > 0) {
                     alert(`身份证 ${index + 1} 不是有效的18位数字！`);
