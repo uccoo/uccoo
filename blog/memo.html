@@ -1,0 +1,157 @@
+User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memo</title>
+    <style>
+        /* 样式部分保持不变，仅增加了新的元素 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #ecf0f1;
+        }
+
+        header {
+            background-color: #2980b9;
+            color: white;
+            padding: 1em;
+            text-align: left;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            padding: 1em;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 10px;
+            margin-right: 5px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            border-radius: 4px;
+        }
+
+        nav a:last-child {
+            margin-right: 0;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #main-content {
+            width: 70%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar {
+            width: 30%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #sidebar a {
+            color: #333;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* 新增的样式 */
+        #post-content-markdown {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yinli‘s Memo</h1>
+    </header>
+
+    <nav>
+	    <a href="https://bomics.com/" onclick="filterCategory('感悟')">home</a>
+        <a href="#" onclick="filterCategory('感悟')">感悟</a>
+        <a href="#" onclick="filterCategory('教改')">教改</a>
+        <a href="#" onclick="filterCategory('科研')">科研</a>
+        <a href="#" onclick="filterCategory('memo')">memo</a>
+    </nav>
+
+    <div class="content">
+        <div id="main-content">
+            <h2 id="post-title">今天的感悟</h2>
+            <!-- 新增的元素，用于显示Markdown格式的内容 -->
+            <div id="post-content-markdown"></div>
+        </div>
+
+        <div id="sidebar">
+            <h2>分类</h2>
+            <ul>
+                <li><a href="#" onclick="filterCategory('感悟')">感悟</a></li>
+                <li><a href="#" onclick="filterCategory('教改')">教改</a></li>
+                <li><a href="#" onclick="filterCategory('科研')">科研</a></li>
+                <li><a href="#" onclick="filterCategory('memo')">memo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function filterCategory(category) {
+            var title, contentMarkdown;
+            switch (category) {
+                case '感悟':
+                    title = '今天的感悟';
+                    contentMarkdown = '今天发生了很多事情，让我感到......';
+                    break;
+                case '教改':
+                    title = '教学改革的心得';
+                    contentMarkdown = '在教学改革中，我学到了......';
+                    break;
+                case '教改':
+                    title = '教学改革的心得';
+                    contentMarkdown = '在教学改革中，我学到了......';
+                    break;
+                case 'memo':
+                    title = '一些随想';
+                    contentMarkdown = '这是一些关于生活和学习的随想......';
+                    break;
+                default:
+                    title = '今天的感悟';
+                    contentMarkdown = '今天发生了很多事情，让我感到......';
+            }
+
+            // 更新页面内容
+            document.getElementById('post-title').innerText = title;
+            
+            // 将Markdown格式的内容渲染到对应的元素中
+            document.getElementById('post-content-markdown').innerHTML = marked(contentMarkdown);
+
+            // 添加淡入效果
+            document.querySelector('.content').style.opacity = '1';
+        }
+    </script>
+
+    <!-- 引入 marked.js 来渲染 Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
