@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violin Plot Example</title>
+    <!-- Include Plotly.js library -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Violin Plot Example</h1>
+
+    <!-- Container for the violin plot -->
+    <div id="violin-plot"></div>
+
+    <script>
+        // Your data
+        var data = [
+            {
+                x: ['Group1', 'Group1', 'Group1', 'Group1', 'Group1', 'Group2', 'Group2', 'Group2', 'Group2', 'Group2'],
+                y: [
+                    34.31880094, 40.11377614, 93.3872659, 46.23596854, 47.53775627, 
+                    40.60992821, 35.95309091, 41.40206915, 52.26241618, 89.96271928
+                ],
+                type: 'violin',
+                box: {
+                    visible: true
+                },
+                line: {
+                    color: 'blue'
+                },
+                meanline: {
+                    visible: true
+                },
+                fillcolor: '#8dd3c7',
+                opacity: 0.6,
+                points: 'all',
+                pointpos: -1.8,
+                jitter: 0.3
+            }
+        ];
+
+        // Layout configuration
+        var layout = {
+            title: 'Violin Plot Example',
+            yaxis: {
+                title: 'Score'
+            },
+            violinmode: 'group'
+        };
+
+        // Plot the violin plot
+        Plotly.newPlot('violin-plot', data, layout);
+    </script>
+</body>
+</html>
