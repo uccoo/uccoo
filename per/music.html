@@ -49,8 +49,8 @@
 
     .grid-container {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      /* 3列布局 */
+      grid-template-columns: repeat(10, 1fr);
+      /* 10列布局 */
       grid-gap: 10px;
       margin: 20px auto;
       max-width: 80%;
@@ -78,11 +78,13 @@
 
     @media (max-width: 600px) {
       .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         max-width: 400px;
       }
     }
   </style>
+  
+  </script>
 </head>
 
 <body>
@@ -98,25 +100,19 @@
   <button id="randomBtn" onclick="toggleRandomPlay()">随机播放</button>
 
   <div class="grid-container">
-    <a href="#" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
-    <a href="#" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
-    <a href="#" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
-    <a href="#" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
-    <a href="#" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
-    <a href="#" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
-	<a href="#" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
-    <a href="#" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
-    <a href="#" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
-    <a href="#" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
-    <a href="#" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
-    <a href="#" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
-	<a href="#" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
-    <a href="#" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
-    <a href="#" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
-    <a href="#" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
-    <a href="#" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
-    <a href="#" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
-    <!-- 添加更多歌曲 -->
+    <a href="music/梅艳芳 - 似水流年.mp3" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
+    <a href="music/孙露 - 黄玫瑰.mp3" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
+    <a href="music/小城故事.mp3" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
+    <a href="music/张杰 - 剑心.mp3" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
+    <a href="music/真爱你的云.mp3" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
+    <a href="music/中森明菜-难破船.mp3" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
+    <a href="music/梅艳芳 - 似水流年.mp3" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
+    <a href="music/孙露 - 黄玫瑰.mp3" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
+    <a href="music/小城故事.mp3" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
+    <a href="music/张杰 - 剑心.mp3" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
+    <a href="music/真爱你的云.mp3" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
+    <a href="music/中森明菜-难破船.mp3" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
+    <!-- Add more links as needed -->
   </div>
 
   <script>
@@ -129,7 +125,12 @@
       'music/张杰 - 剑心.mp3',
       'music/真爱你的云.mp3',
       'music/中森明菜-难破船.mp3',
-      // 添加更多歌曲路径
+      'music/梅艳芳 - 似水流年.mp3',
+      'music/孙露 - 黄玫瑰.mp3',
+      'music/小城故事.mp3',
+      'music/张杰 - 剑心.mp3',
+      'music/真爱你的云.mp3',
+      'music/中森明菜-难破船.mp3'
     ];
 
     var sequentialBtn = document.getElementById('sequentialBtn');
@@ -162,13 +163,19 @@
       if (isRandomPlay) {
         toggleRandomPlay();
       } else {
+        // Implement your logic for sequential play
+        // Here, I'll just play the next song in the array
         var currentIndex = songs.indexOf(audioSource.src);
         var nextIndex = (currentIndex + 1) % songs.length;
         playSong(songs[nextIndex]);
       }
     }
 
+    // Event listener for when the audio finishes playing
     audioPlayer.addEventListener('ended', playNext);
+	
+
+  }
   </script>
 
 </body>
