@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验诊断学在线平台</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+
+        #sidebar {
+            width: 240px;
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+            height: 100vh;
+            overflow-y: auto;
+            position: fixed;
+        }
+
+        #main-content {
+            margin-left: 240px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #008080;
+        }
+        h2 {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 20px; /* 缩小字号 */
+            font-weight: bold; /* 加粗 */
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 8px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background-color: #333;
+        }
+
+        .submenu {
+            display: yes;
+            padding-left: 20px;
+        }
+
+        .submenu a {
+            padding: 8px 0;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        p {
+            line-height: 1.5;
+        }
+
+        #sidebar-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+		#content-title {
+        color: #000; /* 黑色 */
+    }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <img src="course.png" alt="实验诊断学图标" id="sidebar-icon">
+        <h1>实验诊断学在线平台</h1>
+        <!-- 左侧内容 -->
+        <ul>
+            <li><a href="#" onclick="showContent('个性化学习路径')">学习大纲</a></li>                     
+            <li><a href="#" onclick="showContent('教学视频')">教学视频</a></li>
+            <li class="menu-item">
+                <a href="#" onclick="showSubMenu('教师支持')">教师支持</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="showContent('在线导师')">在线导师</a></li>
+                    <li><a href="#" onclick="showContent('技术疑难解答')">技术疑难解答</a></li>
+                </ul>
+            </li>
+			<li><a href="#" onclick="showContent('数字化学习工具')">数字化学习工具</a></li>
+            <li><a href="#" onclick="showContent('学习分析与优化')">学习分析与优化</a></li>
+            <li><a href="#" onclick="showContent('数字化学习工具')">数字化学习工具</a></li>
+            <li><a href="#" onclick="showContent('在线评估与测验')">在线评估与测验</a></li>
+			<li class="menu-item">
+                <a href="#" onclick="showSubMenu('实时反馈机制')">实时反馈机制</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="showContent('即时成绩反馈')">即时成绩反馈</a></li>
+                    <li><a href="#" onclick="showContent('学习进度追踪')">学习进度追踪</a></li>
+                </ul>
+            </li>
+			<li><a href="#" onclick="showContent('虚拟实践环境')">虚拟实践环境</a></li>
+            <li><a href="#" onclick="showContent('在线互动社区')">在线互动社区</a></li>
+            <li><a href="#" onclick="showContent('学术资源链接')">学术资源链接</a></li>
+            <!-- 添加更多菜单项 -->
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <!-- 右侧内容 -->
+        <h1 id="content-title">欢迎来到《实验诊断学》自主学习数字化支持平台</h1>
+        <p id="content">在这里，我们致力于研究和推进数字化时代下的自主学习支持体系，为学生提供更高效的学习路径和更丰富的学习体验。</p>
+
+        <!-- 添加更多平台内容 -->
+    </div>
+
+    <script>
+        function showContent(content) {
+            document.getElementById('content-title').innerText = content;
+            document.getElementById('content').innerText = `这是关于 ${content} 的内容。`;
+        }
+
+        function showSubMenu(submenu) {
+            showContent(submenu);
+            document.querySelectorAll('.submenu').forEach(s => s.classList.remove('active'));
+            document.querySelector(`.submenu a:contains("${submenu}")`).parentNode.classList.add('active');
+        }
+
+        // 简单的 :contains 选择器，用于模拟包含文本的选择器
+        // 注意：:contains 不是标准 CSS 选择器，此处仅作演示
+        document.querySelector(':contains');
+    </script>
+</body>
+</html>
