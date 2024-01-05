@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>MedMusic</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-image: url('music/bj2.jpg');
+      /* 替换 'bj2.jpg' 为你的背景图片路径 */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #87CEFA;
+      /* 浅蓝色背景 */
+      color: #fff;
+      /* 白色文字 */
+      margin: 0;
+    }
+   
+    audio {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      /* 绿色按钮背景 */
+      color: #fff;
+      /* 白色文字 */
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+      /* 深绿色按钮背景 */
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      /* 10列布局 */
+      grid-gap: 10px;
+      margin: 20px auto;
+      max-width: 80%;
+      /* 80%宽度 */
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+      /* 深灰色文字 */
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      /* 白色框背景 */
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: #f5f5f5;
+      /* 灰白色框背景 */
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 400px;
+      }
+    }
+  </style>
+  
+  </script>
+</head>
+
+<body>
+  
+  <h1>MedMusic</h1>
+
+  <audio id="audioPlayer" controls>
+    <source src="" type="audio/mp3" id="audioSource">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="sequentialBtn" onclick="toggleSequentialPlay()">顺序播放</button>
+  <button id="randomBtn" onclick="toggleRandomPlay()">随机播放</button>
+
+  <div class="grid-container">
+    <a href="music/梅艳芳 - 似水流年.mp3" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
+    <a href="music/孙露 - 黄玫瑰.mp3" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
+    <a href="music/小城故事.mp3" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
+    <a href="music/张杰 - 剑心.mp3" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
+    <a href="music/真爱你的云.mp3" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
+    <a href="music/中森明菜-难破船.mp3" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
+    <a href="music/梅艳芳 - 似水流年.mp3" onclick="playSong('music/梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
+    <a href="music/孙露 - 黄玫瑰.mp3" onclick="playSong('music/孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
+    <a href="music/小城故事.mp3" onclick="playSong('music/小城故事.mp3'); return false;">小城故事</a>
+    <a href="music/张杰 - 剑心.mp3" onclick="playSong('music/张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
+    <a href="music/真爱你的云.mp3" onclick="playSong('music/真爱你的云.mp3'); return false;">真爱你的云</a>
+    <a href="music/中森明菜-难破船.mp3" onclick="playSong('music/中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
+    <!-- Add more links as needed -->
+  </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var audioSource = document.getElementById('audioSource');
+    var songs = [
+      'music/梅艳芳 - 似水流年.mp3',
+      'music/孙露 - 黄玫瑰.mp3',
+      'music/小城故事.mp3',
+      'music/张杰 - 剑心.mp3',
+      'music/真爱你的云.mp3',
+      'music/中森明菜-难破船.mp3',
+      'music/梅艳芳 - 似水流年.mp3',
+      'music/孙露 - 黄玫瑰.mp3',
+      'music/小城故事.mp3',
+      'music/张杰 - 剑心.mp3',
+      'music/真爱你的云.mp3',
+      'music/中森明菜-难破船.mp3'
+    ];
+
+    var sequentialBtn = document.getElementById('sequentialBtn');
+    var randomBtn = document.getElementById('randomBtn');
+    var isRandomPlay = false;
+
+    function playSong(song) {
+      audioSource.src = song;
+      audioPlayer.load();
+      audioPlayer.play();
+    }
+
+    function toggleRandomPlay() {
+      isRandomPlay = true;
+      sequentialBtn.disabled = false;
+      randomBtn.disabled = true;
+      var randomIndex = Math.floor(Math.random() * songs.length);
+      var randomSong = songs[randomIndex];
+      playSong(randomSong);
+    }
+
+    function toggleSequentialPlay() {
+      isRandomPlay = false;
+      sequentialBtn.disabled = true;
+      randomBtn.disabled = false;
+      playNext();
+    }
+
+    function playNext() {
+      if (isRandomPlay) {
+        toggleRandomPlay();
+      } else {
+        // Implement your logic for sequential play
+        // Here, I'll just play the next song in the array
+        var currentIndex = songs.indexOf(audioSource.src);
+        var nextIndex = (currentIndex + 1) % songs.length;
+        playSong(songs[nextIndex]);
+      }
+    }
+
+    // Event listener for when the audio finishes playing
+    audioPlayer.addEventListener('ended', playNext);
+	
+
+  }
+  </script>
+
+</body>
+
+</html>

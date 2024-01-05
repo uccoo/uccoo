@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>点歌台</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-image: url('img.jpg'); /* 替换 'bj2.jpg' 为你的背景图片路径 */
+      background-size: cover;
+      background-position: center;
+      color: #fff; /* 文字颜色设置为白色，以适应背景图片 */
+      margin: 0; /* 去掉页面默认的边距，使背景图片充满整个页面 */
+    }
+
+    audio {
+      width: 100%;
+      max-width: 400px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, 0.7); /* 设置背景颜色透明度，以便文字更清晰可读 */
+      transition: background-color 0.3s;
+    }
+
+    a:hover {
+      background-color: rgba(255, 255, 255, 0.9); /* 鼠标悬停时的透明度 */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MyMusic</h1>
+
+  <audio id="audioPlayer" controls>
+    <source src="" type="audio/mp3" id="audioSource">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button id="sequentialBtn" onclick="toggleSequentialPlay()">顺序播放</button>
+  <button id="randomBtn" onclick="toggleRandomPlay()">随机播放</button>
+
+  <div class="grid-container">
+    <a href="梅艳芳 - 似水流年.mp3" onclick="playSong('梅艳芳 - 似水流年.mp3'); return false;">梅艳芳 - 似水流年</a>
+    <a href="孙露 - 黄玫瑰.mp3" onclick="playSong('孙露 - 黄玫瑰.mp3'); return false;">孙露 - 黄玫瑰</a>
+    <a href="小城故事.mp3" onclick="playSong('小城故事.mp3'); return false;">小城故事</a>
+    <a href="张杰 - 剑心.mp3" onclick="playSong('张杰 - 剑心.mp3'); return false;">张杰 - 剑心</a>
+    <a href="真爱你的云.mp3" onclick="playSong('真爱你的云.mp3'); return false;">真爱你的云</a>
+    <a href="中森明菜-难破船.mp3" onclick="playSong('中森明菜-难破船.mp3'); return false;">中森明菜-难破船</a>
+    <!-- Add more links as needed -->
+  </div>
+
+  <script>
+    var audioPlayer = document.getElementById('audioPlayer');
+    var audioSource = document.getElementById('audioSource');
+    var songs = [
+      '梅艳芳 - 似水流年.mp3',
+      '孙露 - 黄玫瑰.mp3',
+      '小城故事.mp3',
+      '张杰 - 剑心.mp3',
+      '真爱你的云.mp3',
+      '中森明菜-难破船.mp3'
+    ];
+
+    var sequentialBtn = document.getElementById('sequentialBtn');
+    var randomBtn = document.getElementById('randomBtn');
+    var isRandomPlay = false;
+
+    function playSong(song) {
+      audioSource.src = song;
+      audioPlayer.load();
+      audioPlayer.play();
+    }
+
+    function toggleRandomPlay() {
+      isRandomPlay = true;
+      sequentialBtn.disabled = false;
+      randomBtn.disabled = true;
+      var randomIndex = Math.floor(Math.random() * songs.length);
+      var randomSong = songs[randomIndex];
+      playSong(randomSong);
+    }
+
+    function toggleSequentialPlay() {
+      isRandomPlay = false;
+      sequentialBtn.disabled = true;
+      randomBtn.disabled = false;
+      playNext();
+    }
+
+    function playNext() {
+      if (isRandomPlay) {
+        toggleRandomPlay();
+      } else {
+        // Implement your logic for sequential play
+        // Here, I'll just play the next song in the array
+        var currentIndex = songs.indexOf(audioSource.src);
+        var nextIndex = (currentIndex + 1) % songs.length;
+        playSong(songs[nextIndex]);
+      }
+    }
+
+    // Event listener for when the audio finishes playing
+    audioPlayer.addEventListener('ended', playNext);
+  </script>
+
+</body>
+</html>
