@@ -155,6 +155,25 @@
     }
 
     audioPlayer.addEventListener('ended', playNext);
+	
+	document.getElementById('sequentialBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleSequentialPlay();
+});
+
+document.getElementById('randomBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    toggleRandomPlay();
+});
+
+document.querySelectorAll('.grid-container a').forEach(function(link) {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+        var songPath = this.getAttribute('data-song');
+        playSong(songPath);
+    });
+});
+
   </script>
 
 </body>
