@@ -1,158 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- For modern browsers -->
-<link rel="icon" sizes="192x192" href="icon/footerlogo1.png">
-<!-- For iPhone -->
-<link rel="apple-touch-icon" sizes="180x180" href="icon/footerlogo1.png">
-<!-- For iPad -->
-<link rel="apple-touch-icon" sizes="152x152" href="icon/footerlogo1.png">
-
+    <link rel="icon" sizes="192x192" href="icon/footerlogo1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/footerlogo1.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/footerlogo1.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BioMed</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column; /* 让内容垂直居中 */
-            height: 100vh;
-            margin: 0;
-            background-image: url('icon/10.jpg');
-            background-size: cover;
-        }
-         #welcome-text {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            font-size: 16px;
-            color: #B5B5B5;
-        }
-        .top-icons {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            padding: 20px;
-            margin-bottom: 20px; /* Add margin-bottom to separate from the search container */
-        }
-
-        .top-icons a {
-            margin: 5px;
-        }
-        .top-icons img {
-             width: 60px; /* Adjust the size as needed */
-             height: 60px; /* Adjust the size as needed */
-}
-        .search-container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            position: relative;
-        }
-
-        .search-container p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-        .logo {
-            width: 20px; /* Adjust the width as needed */
-            height: 20px; /* Adjust the height as needed */
-            margin-right: 5px; /* Adjust the margin as needed */
-        }
-        .bottom-text {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 14px;
-            color: white;
-			display: flex;
-            align-items: center;
-        }
-
-        body p {
-            font-size: 14px;
-            color: #B5B5B5;
-        }
-
-        .search-container img {
-            width: 50px;
-            height: 50px;
-			margin: 10px;
-            margin-bottom: 100px;
-            top: -30px;
-        }
-
-        input {
-            width: 100%;
-			height: 60px;
-            padding: 10px;
-            box-sizing: border-box;
-			margin: 0 auto; /* 设置左右边距为自动，实现水平居中 */
-            margin-bottom: 20px;
-			border-radius: 30px; /* 添加圆角 */
-			
-        }
-
-        .icon-button {
-            background: none;
-            border: none;
-            padding: 0;
-            cursor: pointer;
-        }
-        
-        .icon-container {
-		    width: 50%; /* 50% of the viewport width */
-            display: flex;
-			flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        
-
-        .icon {
-            width: 50px;
-            height: 50px;
-			margin: 5px;
-			flex: 0 0 calc(20% - 20px);
-			
-        }
-
-        .small-icon {
-            width: 30px;
-            height: 30px;
-        }
-		
-	/* Media Query for screens smaller than 600px (typical mobile phones) */
-        @media only screen and (max-width: 600px) {
-            .search-container img {
-                margin-bottom: 100px;
-            }
-
-            input {
-                width: 100%;
-            }
-
-            .icon {
-                width: 30px;
-                height: 30px;
-            }
-        }	
-		
-		
-    </style>
-	
-
-	
-	
-	
+    <link rel="stylesheet" href="css/biomed.css">
 </head>
 <body>
-<div id="welcome-text">欢迎访问BioMed</div>
+    <div id="welcome-text">欢迎访问BioMed</div>
 <div class="top-icons">
     <a href="nav.html" target="_blank"><img src="icon/home.png" alt="Home Icon" class="small-icon"></a>
     <a href="mailto:yinli@hainmc.edu.cn" target="_blank"><img src="icon/email.png" alt="Email Icon" class="small-icon"></a>
@@ -187,13 +45,14 @@
 	<a href="https://wordtohtml.net/" target="_blank"><img src="icon/w2h.png" alt="wh.pngIcon" class="icon"></a>
 	<!-- 继续添加其他图标链接 -->
 
-    <!-- 第二行图标链接 -->
-	
+    
+	<!-- 第二行图标链接 -->
     <a href="hnmc.html" target="_blank"><img src="icon/hainmc.png" alt="Hainmc Icon" class="icon"></a>
+	<a href="files/pdfs.html" target="_blank"><img src="icon/file.png" alt="Hainmc Icon" class="icon"></a>
     <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank"><img src="icon/pubmed.png" alt="PubMed Icon" class="icon"></a>
 	<a href="http://firebrowse.org/" target="_blank"><img src="icon/fire.png" alt="fire Icon" class="icon"></a>
 	<a href="https://www.cbioportal.org/" target="_blank"><img src="icon/bio.png" alt="cbio Icon" class="icon"></a>
-	
+	<a href="http://gepia.cancer-pku.cn/index.html" target="_blank"><img src="icon/centre.png" alt="gepia Icon" class="icon"></a>
 	
     <a href="https://cn.string-db.org/cgi/input?sessionId=br7Mgwo1uHj6&input_page_show_search=on" target="_blank"><img src="icon/string1.png" alt="String Icon" class="icon"></a>
     <a href="https://bomics.com/enrich.html" target="_blank"><img src="icon/enrichment.png" alt="enrich Icon" class="icon"></a>
@@ -213,32 +72,11 @@
 	<!-- 继续添加其他图标链接 -->
 	 
 </div>
-
-<script>
-    function handleEnter(event) {
-            if (event.key === "Enter") {
-                // 如果按下的是回车键，则执行 Bing 搜索
-                searchBing();
-            }
-        }
-
-    function searchBing() {
-        window.open("https://www.bing.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-    }
-
-    function searchGoogle() {
-        window.open("https://www.google.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-    }
-
-    function searchBaidu() {
-        window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-    }
-</script>
-
-<div class="bottom-text">
+    <script src="scripts/biomed.js"></script>
+	
+	<div class="bottom-text">
     <img src="icon/footerlogo1.png" alt="BioMed Logo" class="logo">
     <p>&copy; 2024 BioMed By Yinli</p>
 </div>
-
 </body>
 </html>
