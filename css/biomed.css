@@ -27,8 +27,8 @@
             margin: 5px;
         }
         .top-icons img {
-             width: 60px; /* Adjust the size as needed */
-             height: 60px; /* Adjust the size as needed */
+             width: 65px; /* Adjust the size as needed */
+             height: 65px; /* Adjust the size as needed */
 }
         .search-container {
             text-align: center;
@@ -70,6 +70,7 @@
             margin-bottom: 100px;
             top: -30px;
         }
+
 
         input {
             width: 100%;

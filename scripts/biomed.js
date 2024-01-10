@@ -17,3 +17,5 @@ function searchGoogle() {
 function searchBaidu() {
     window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(document.querySelector('input').value), "_blank");
 }
+
+   

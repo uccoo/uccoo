@@ -4,6 +4,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  
   background-color: #f5f5f5;
 }
 
@@ -13,7 +14,7 @@ header {
   color: white;
   padding: 10px;
   text-align: center;
-  background-image: url('icon/bj4.png'); /* Add background image for header */
+  background-image: url('../icon/bj4.png'); /* Add background image for header */
   background-repeat: no-repeat;
   background-size: cover;
  
@@ -153,11 +154,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: steelblue;
+  
   color: white;
-  font-size: 10px;
+  font-size: 12px;
   padding: 10px;
-  background-image: url('icon/10.jpg');
+  background-image: url('../icon/bj4.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
