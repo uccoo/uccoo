@@ -67,8 +67,8 @@ nav a:hover {
   text-decoration: none;
   display: block;
   white-space: nowrap;
-  font-size:15px;
-  color:blue;
+  font-size:13px;
+  color:grey;
 }
 
 .dropdown-content a:hover {
@@ -175,14 +175,17 @@ footer {
 #search {
   text-align: center;
   margin-top: 12px;
+  
 }
 
 #search form {
   display: inline-block;
   margin-right: 25px;
+  
 }
 
 #search input[type="text"] {
+  border-radius: 15px;
   padding: 8px;
   margin: 2px 2px;
   border: none;
