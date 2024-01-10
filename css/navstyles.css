@@ -13,7 +13,7 @@ header {
   color: white;
   padding: 10px;
   text-align: center;
-  background-image: url('icon/bj1.jpg'); /* Add background image for header */
+  background-image: url('icon/bj4.png'); /* Add background image for header */
   background-repeat: no-repeat;
   background-size: cover;
  
@@ -144,18 +144,31 @@ main .subcategory .third-level:hover {
 }
 
 /* Footer Styles */
+
 footer {
   position: fixed;
-  background-color: transparent;
   bottom: 0;
   left: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: steelblue;
   color: white;
-  text-align: center;
+  font-size: 10px;
   padding: 10px;
-  background-image: url('icon/bj2.jpg'); /* Add background image for footer */
+  background-image: url('icon/10.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+}
+
+
+/* Add media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+  footer {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
 }
 
 /* Search Section Styles */
