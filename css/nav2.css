@@ -1,0 +1,51 @@
+  body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+        #sidebar {
+            background-color: #343a40;
+            color: #fff;
+            height: 100%;
+            width: 15%;
+            position: fixed;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        #content {
+            margin-left: 15%;
+            padding: 20px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .nav-item {
+            list-style: none;
+        }
+
+        /* 调整二级菜单的缩进 */
+        .nav-second-level {
+            padding-left: 2em;
+        }
+
+        /* 为一级菜单添加图标 */
+        .nav-icon {
+            margin-right: 0.5em;
+        }
+
+        /* 鼠标悬停时修改下箭头符号颜色 */
+        .nav-item-has-submenu:hover .fa-caret-down {
+            color: #ddd;
+        }

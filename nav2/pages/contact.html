@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/navstyles.css"> <!-- Link to external CSS file -->
+  <title>BioMed Nav</title>
+</head>
+<body>
+  <header>
+    <h1>BioMed Nav</h1>
+    <section id="search">
+      <!-- Bing Search Form -->
+      <form action="https://www.bing.com/search" method="GET" target="_blank">
+        <input type="text"  name="q" id="bingSearchInput" placeholder="Search Bing" onkeydown="handleEnter(event)">
+        <!-- Engine name for Bing -->
+        <span class="search-action" onclick="submitForm('bingSearchInput', 'bing')">Bing</span>
+      </form>
+      
+      <!-- Google Search Form -->
+      <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text"  name="q" id="googleSearchInput" placeholder="Search Google" onkeydown="handleEnter(event)">
+        <!-- Engine name for Google -->
+        <span class="search-action" onclick="submitForm('googleSearchInput', 'google')">Google</span>
+      </form>
+    </section>
+	<base target="_blank">
+  </header>
+ <nav>   
+    <nav>
+  <div class="dropdown">
+    <a href="https://bomics.com/">Home</a>
+    <div class="dropdown-content">
+      
+    </div>
+  </div> 
+ <div class="dropdown">
+    <a href="#">About</a>
+    <div class="dropdown-content">
+      <a href=" #">About</a>
+    </div>
+  </div>
+ 
+ <div class="dropdown">
+    <a href="#">Contact</a>
+    <div class="dropdown-content">
+      <a href="mailto:yinli@hainmc.edu.cn" target="_blank">发邮件给我</a>
+      
+
+      <!-- Add more subpages as needed -->
+    </div>
+  </div>
+  
+  
+  <div class="dropdown">
+    <a href="#">MyTools</a>
+    <div class="dropdown-content">
+	  
+	  <a href="mytools/timer.html" target="_blank">简单计时器</a>
+	  <a href="mytools/venn.html" target="_blank">求交集</a>
+	  <a href="mytools/merge.html" target="_blank">合并去重复</a>
+	  <a href="mytools/id.html" target="_blank">身份证提取年月日</a>
+	  <a href="per/medmusic.html" target="_blank">Medmusic</a>
+	  <a href="per/medtv.html" target="_blank">MedTV</a>
+      <a href="mytools/genetarget.html" target="_blank">查靶向某基因的药</a>
+      
+      <!-- Add more subpages as needed -->
+    </div>
+  </div>
+  
+  
+  
+  <!-- Add more nav items as needed -->
+  
+</nav>
+    
+    <!-- Add more nav items as needed -->
+  </nav>
+
+
+
+  <main>
+    
+	<div class="category yinlicolor">
+      
+      <div class="subcategory">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+      </div>
+	  
+	   <div class="subcategory">
+        <a href="<a href="https://sci-hub.wf/" target="_blank">SCI-HUB</a>
+		</div>
+      <div class="subcategory">
+        <a href="https://github.com" target="_blank">GitHub</a>
+		</div>
+      
+      <div class="subcategory">
+        <a href="https://cn.string-db.org/cgi/input?sessionId=br7Mgwo1uHj6&input_page_show_search=on" target="_blank">STRING</a>    
+      </div>
+	  <div class="subcategory">
+	  <a href="http://firebrowse.org/" target="_blank">FIREBROWSE</a>
+	  </div>
+	  <div class="subcategory">
+	  <a href="http://www.tcmip.cn/TCMIP/index.php/Home/" target="_blank">中医药合</a>
+	  </div>
+	  <div class="subcategory">
+	  <a href="https://toppgene.cchmc.org/" target="_blank">ToppGene</a>
+	  </div>
+	  <div class="subcategory">
+	  <a href="enrich.html" target="_blank">富集分析</a>
+	  </div>
+      <div class="subcategory">
+        <a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
+      </div>
+    </div>
+
+
+
+    <div class="category">
+      <h2>海医人</h2>	  
+      <div class="subcategory">
+        <a href="https://www.hainmc.edu.cn/" target="_blank">海医主页</a> 
+      </div>
+	 <div class="subcategory">
+        <a href="https://asc.hainmc.edu.cn/#/" target="_blank">掌上海医</a> 
+      </div> 
+	  
+      <div class="subcategory">
+        <a href="#">学习平台</a>
+        <div class="third-level">
+          <a href="https://www.hngbzx.gov.cn/#/" target="_blank">干部学习</a>
+          <a href="https://www.smartedu.cn/" target="_blank">国家智教</a>
+          <a href="https://bomics.com/mytools/timer.html" target="_blank">学习计时器</a>
+        </div>
+      </div>
+      
+	  <div class="subcategory">
+        <a href="http://inf.hainmc.edu.cn/">图书馆</a>
+      </div>
+	  <div class="subcategory">
+        <a href="#">出题成绩</a>
+        <div class="third-level">
+		  <a href="https://tk.ipmph.com/exam/a/adminlogin;JSESSIONID=8abab3b7e0fc4b648160746c5bda01b4" target="_blank">人卫题库</a>
+          <a href="http://210.37.77.104/cas/login.action" target="_blank">青果校内</a>
+          <a href="http://jwglxt.hainmc.edu.cn/cas/login.action" target="_blank">青果校外</a>
+          <a href="#" target="_blank"></a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">教研</a>
+        <div class="third-level">
+          <a href="https://gj.eduyun.cn/" target="_blank">智教中国</a>
+          <a href="http://124.225.62.14/" target="_blank">海南省高校科研项目全程管理系统</a>
+		  <a href="https://gj.eduyun.cn/" target="_blank">智教中国-虚拟仿真</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">科研</a>
+        <div class="third-level">
+          <a href="https://hainmc.edu.cn/kjc/index.htm" target="_blank">科技处</a>
+          <a href="https://k.histi.com.cn/egrantweb/index" target="_blank">科技综合管理</a>
+		<a href="http://58.205.211.36/fpds/login.html" target="_blank">产学研基金申报系统</a>
+		<a href="http://124.225.62.14/" target="_blank">海南省高校科研项目全程管理系统</a>
+		
+        </div>
+      </div>
+	  
+	  
+	  
+	  <div class="subcategory">
+        <a href="#">财务招标</a>
+        <div class="third-level">
+          <a href="https://asc.hainmc.edu.cn/#/" target="_blank">云杰系统</a>
+          <a href="http://210.37.79.195/jj/#draftLiNew" target="_blank">小额采购</a>
+          <a href="https://inv-veri.chinatax.gov.cn/" target="_blank">发票真伪</a>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	
+	
+	<div class="category">
+      <h2>生信工具</h2>
+	  
+	  <div class="subcategory">
+        <a href="#">基因组</a>
+        <div class="third-level">
+          <a href="https://genome.ucsc.edu/index.html" target="_blank">UCSC</a>
+          <a href="https://www.ensembl.org/index.html" target="_blank">Ensembl</a>
+          <a href="https://igv.org/doc/desktop/##igv-website" target="_blank">可视化</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">序列分析</a>
+        <div class="third-level">
+		  <a href="http://ibs.biocuckoo.org/" title="序列相关模式图">IBS-序列模式图</a>
+          <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi" target="_blank">BLAST</a>
+          <li><a href="http://www.ebi.ac.uk/Tools/msa/clustalw2/" title="多重序列比对">ClustalW2</a></li>
+          <a href="http://www.clustal.org/" target="_blank">ClustalW</a>
+		  <a href="https://weblogo.berkeley.edu/logo.cgi" target="_blank">保守序列logo</a>
+          <a href="https://meme-suite.org/meme/" target="_blank">MEME</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">系统生物</a>
+        <div class="third-level">
+          <a href="https://copasi.org/" target="_blank">COPASI</a>
+          <a href="http://www.celldesigner.org/" target="_blank">CellDesigner</a>
+          
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">转录组</a>
+        <div class="third-level">
+		  <a href="https://chipster.csc.fi/manual/tools.html#normalization" target="_blank">芯片数据</a>
+          <a href="https://biopython.org/" target="_blank">BioPython</a>
+          <a href="https://www.bioconductor.org/" target="_blank">Bioconductor</a>
+          
+        </div>
+      </div>
+	  
+      
+ 
+	  <div class="subcategory">
+        <a href="#">查基因</a>
+        <div class="third-level">
+		  <a href="https://targetmine.mizuguchilab.org/bluegenes/targetmine" target="_blank">TargetMine</a>
+          <a href="https://www.genecards.org/" target="_blank">GeneCards</a>
+		  <a href="https://www.genenames.org/" target="_blank">HGNC</a>
+          <a href="https://www.ebi.ac.uk/gxa/home" target="_blank">多物种表达</a>
+		  <a href="http://biogps.org/#goto=welcome" target="_blank">bioGPS</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">基因ID转</a>
+        <div class="third-level">
+          <a href="http://biogps.org/#goto=genereport&id=3083" target="_blank">biogps</a>
+		  <a href="https://www.genetolist.com/" target="_blank">基因名转换</a>
+          <a href="https://www.uniprot.org/id-mapping" target="_blank">Uniprot</a>
+          <a href="https://biodbnet-abcc.ncifcrf.gov/db/db2db.php" target="_blank">biodbnet</a>
+		  <a href="http://llama.mshri.on.ca/synergizer/translate/" target="_blank">SYNERGIZER</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">同源比对</a>
+        <div class="third-level">
+          <a href="https://source-search.princeton.edu/" target="_blank">同源比对</a>
+          <a href="http://www.treefam.org/download#tabview=tab1" target="_blank">treefam</a>
+          <a href="https://www.r-bloggers.com/2016/10/converting-mouse-to-human-gene-names-with-biomart-package/" target="_blank">鼠人转换</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">共表达</a>
+        <div class="third-level">
+		  <a href="https://www.cbioportal.org/" target="_blank">bioportal</a>
+		  <a href="http://genemania.org/" target="_blank">GeneMANIA</a>
+          <a href="https://hb.flatironinstitute.org/" target="_blank">humanbase</a>
+		  <a href="https://coxpresdb.jp/" target="_blank">coxpres</a>
+		  <a href="https://www.coexpedia.org/index.php" target="_blank">Coexpedia </a>
+		  <a href="https://www.genefriends.org/" target="_blank">genefriends</a>
+		  <a href="http://genemania.org/" target="_blank">GeneMANIA</a>
+          
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">系统发育</a>
+        <div class="third-level">
+		  <li><a href="https://itol.embl.de/" title="系统发育分析，进化树美化">iTOL</a></li>
+          <li><a href="https://www.e-rna.org/r-chie/">RNA弧形图</a></li> 		  
+        </div>
+      </div>
+	 <div class="subcategory">
+        <a href="#">N转P</a>
+        <div class="third-level">
+		  <li><a href="https://web.expasy.org/translate/" title="DNA、RNA核苷酸序列转蛋白质序列" target="_blank" >核酸->蛋白序列</a><br></li>		  
+        </div>
+      </div> 
+	  
+    </div>
+	
+	
+	
+	<div class="category">
+      <h2>各种预测</h2>
+      <div class="subcategory">
+        <a href="#">蛋白结构</a>
+        <div class="third-level">
+          <a href="https://swissmodel.expasy.org/" target="_blank">SWISS-MODEL</a>
+          <a href="https://pymol.org/" target="_blank">PyMOL</a>
+        </div>
+      </div>
+	  
+	 
+	  <div class="subcategory">
+        <a href="#">转录相关</a>
+        <div class="third-level">
+		<a href="http://www.cbs.dtu.dk/services/Promoter/" target="_blank">Promoter2.0</a>
+          <a href="http://www.softberry.com/berry.phtml?topic=nsitepl&group=programs&subgroup=gfind" target="_blank">NSITE-PL</a>
+          <a href="https://epd.epfl.ch/" target="_blank">EPD真核</a>
+		  <a href="https://epd.expasy.org/epd/index.php" target="_blank">EPD</a>启动子</a>
+		  <a href="https://hemi.biocuckoo.cn/" target="_blank">hemi</a>转录后修饰</a>
+		  <a href="http://cope.gao-lab.org/" target="_blank">hemi</a>COPE-TF</a>
+		  <li><a href="https://www-bimas.cit.nih.gov/molbio/proscan">Promoter Scan</a></li>
+          <li><a href="http://lisa.cistrome.org/">共同转录因子预测</a></li>
+		  <a href="http://gene-regulation.com/pub/databases.html#transfac" target="_blank">真核TF</a>
+		  <a href="https://jaspar.elixir.no/" target="_blank">hemi</a>TF结合域</a>
+		  <li><a href="https://www.ncbi.nlm.nih.gov/orffinder/" title="开放阅读框预测">ORF Finder</a></li>
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">结构域</a>
+        <div class="third-level">
+          <a href="https://pfam.xfam.org/" target="_blank">Pfam</a>
+          <a href="http://smart.embl-heidelberg.de/" target="_blank">SMART</a>
+          <a href="https://www.ebi.ac.uk/interpro/" target="_blank">InterPro</a>
+          
+        </div>
+      </div>
+	                
+                    
+              
+                    
+                    
+	  <div class="subcategory">
+        <a href="#">磷酸化</a>
+        <div class="third-level">
+          <li><a href="http://www.cbs.dtu.dk/services/NetPhos/" title="蛋白质磷酸化位点预测">磷酸化位点预测</a></li>
+          
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">亚细胞定位</a>
+        <div class="third-level">
+          <li><a href="http://www.jci-bioinfo.cn/pLoc-mAnimal/" title="动物蛋白质亚细胞定位预测">亚细胞定位预测</a></li>
+          
+        </div>
+      </div>
+	  
+	  
+      <div class="subcategory">
+        <a href="#">信号肽</a>
+        <div class="third-level">
+          <a href="http://www.cbs.dtu.dk/services/SignalP/" target="_blank">SignalP</a>
+          <a href="http://www.cbs.dtu.dk/services/TargetP/" target="_blank">TargetP</a>
+          <a href="https://ccb-compute2.cs.uni-saarland.de/deepsig/" target="_blank">DeepSig</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">密码子</a>
+        <div class="third-level">
+          <a href="http://www.kazusa.or.jp/codon/" target="_blank">Codon Usage Database</a>
+          <a href="https://www.genscript.com/tools/codon-usage-bias-analysis" target="_blank">Bias Analysis</a>
+		  <a href="https://www.jcat.de/" target="_blank">condonAdaption</a>
+		  <a href="https://codonw.sourceforge.net/#Downloading%20and%20Installation" target="_blank">Correspondence</a>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	<div class="category">
+      <h2>转录组</h2>
+      <div class="subcategory">
+        <a href="#">数据集</a>
+        <div class="third-level">
+          <a href="https://www.ncbi.nlm.nih.gov/geo/" target="_blank">GEO</a>
+		  <a href="https://www.ncbi.nlm.nih.gov/sra/" target="_blank">SRA</a>
+          <a href="https://portal.gdc.cancer.gov/" target="_blank">TCGA</a>
+		  <a href="https://portal.gdc.cancer.gov/" target="_blank">GDC</a>
+		  <li><a href="https://www.ncbi.nlm.nih.gov/genbank/">GenBank</a></li>
+         <li><a href="https://www.ebi.ac.uk">EMBL</a></li>
+                      
+         <li><a href="https://www.ddbj.nig.ac.jp/index-e.html">DDBJ</a></li>
+         <li><a href="https://db.cngb.org" title="中国国家数据库">CNGB</a></li>
+          <li><a href="http://www.ensembl.org" title="欧洲生物信息中心">Ensembl</a></li>
+           <li><a href="http://genome.ucsc.edu" title="UCSC Genome Browser">UCSC</a></li>
+		  <a href="https://www.cbioportal.org/" target="_blank">cbioportal</a>
+		  <a href="https://proteomecentral.proteomexchange.org/ui" target="_blank">蛋白组</a>
+		  <a href="https://amigo.geneontology.org/amigo/landing" target="_blank">细胞器</a>
+          <a href="https://www.burkholderia.com/" target="_blank">类鼻疽</a>
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">分析平台</a>
+        <div class="third-level">
+		  <a href="https://toppgene.cchmc.org/" target="_blank">ToppGene</a>
+          <a href="http://firebrowse.org/" target="_blank">FIREBROWSE</a>
+          <a href="https://www.cbioportal.org/" target="_blank">cbioportal</a>
+          <a href="https://xena.ucsc.edu/" target="_blank">UCSC</a>
+		  <a href="https://gtexportal.org/home/" target="_blank">GTEx</a>
+		  <a href="http://gepia.cancer-pku.cn" target="_blank">GEPIA</a>
+		  <a href="https://www.proteinatlas.org/" target="_blank">蛋白表达</a>
+		  <a href="https://dcode.org/" target="_blank">dcode</a>
+		  <a href="https://molbiol-tools.ca/" target="_blank">多工具</a>
+        </div>
+      </div>
+	  
+	   <div class="subcategory">
+        <a href="#">方法流程</a>
+        <div class="third-level">
+          <a href="https://www.jianshu.com/p/e8cd62ba14fe" target="_blank">COSMIC</a>RNA-seq</a>
+		  <a href="https://www.jianshu.com/p/4771c5fa7db4" target="_blank">mutation</a>芯片</a>
+		  <a href="https://sbc.shef.ac.uk/workshops/2019-03-04-rna-seq/04_wgcna_tutorial.nb.html" target="_blank">WGCNA-RNA-seq1</a>
+		  <a href="https://alexslemonade.github.io/refinebio-examples/04-advanced-topics/network-analysis_rnaseq_01_wgcna.html" target="_blank">WGCNA-RNA-seq2</a>
+        </div>
+       </div>
+	  
+	  <div class="subcategory">
+        <a href="enrich.html" target="_blank">表达</a>
+        <div class="third-level">
+		  <a href="http://biogps.org/#goto=welcome" target="_blank">BioGPS</a>
+          <a href="https://www.cbioportal.org/" target="_blank">bioportal</a>
+		  <a href="http://firebrowse.org/" target="_blank">firebrowse</a>
+		  <a href="http://gepia.cancer-pku.cn/index.html" target="_blank"></a>
+		  
+          
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="enrich.html" target="_blank">富集分析</a>
+        <div class="third-level">
+		  <a href="https://www.geneontology.org/" target="_blank">GO</a>
+          <a href="https://www.genome.jp/kegg/" target="_blank">KEGG</a>
+		  <a href="https://yulab-smu.top/biomedical-knowledge-mining-book/index.html" target="_blank">clusterProfiler</a>
+          <a href="https://toppgene.cchmc.org/" target="_blank">ToppGene</a>
+		  <a href="https://fuma.ctglab.nl/gene2func" target="_blank">FUMA</a>
+		  <li><a href="http://wego.genomics.org.cn" title="华大在线GO分析，作图">WeGO注释</a></li>
+          <li><a href="http://bioinfo.org/kobas" title="KOBAS">KOBAS</a></li>
+          <a href="https://string-db.org/" target="_blank">STRING</a>
+          <a href="https://reactome.org/" target="_blank">Reactome</a>
+          <a href="http://www.funrich.org/" target="_blank">FunRich</a>
+		  <a href="http://revigo.irb.hr/" target="_blank">revigo</a>
+		  <a href="https://www.gsea-msigdb.org/gsea/msigdb" target="_blank">MSigDB</a>
+		  <a href="https://david.ncifcrf.gov/" target="_blank">DAVID</a>
+          <a href="http://www.pantherdb.org/" target="_blank">PANTHER</a>
+          <a href="http://www.webgestalt.org/" target="_blank">WebGestalt</a>
+          <a href="http://great.stanford.edu/" target="_blank">GREAT</a>
+          <li><a href="http://metascape.org">MetaScape</a></li>
+		  <a href="http://omicslab.genetics.ac.cn/GOEAST/advance.php" target="_blank">Goeast</a>
+		  
+		  
+          
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">PPI</a>
+        <div class="third-level">
+          <a href="https://cytoscape.org/" target="_blank">Cytoscape</a>
+          <a href="https://string-db.org/" target="_blank">STRING</a>
+		  <a href="http://www.gersteinlab.org/proj/bottleneck/" target="_blank">bottleneck</a>
+		  <a href="https://www.networkanalyst.ca/faces/home.xhtml" target="_blank">NetworkAnalyst</a>
+		  <a href="https://iid.ophid.utoronto.ca/SearchPPIs/protein/" target="_blank">在线PPI</a>
+		  <a href="https://string-db.org/" target="_blank">STRING</a>
+
+          <a href="https://thebiogrid.org/" target="_blank">BioGRID</a>
+          <a href="https://www.ebi.ac.uk/intact/" target="_blank">IntAct</a>
+          <a href="https://mint.bio.uniroma2.it/" target="_blank">MINT</a>
+          
+        </div>
+      </div>
+	  
+	  
+	  <div class="subcategory">
+        <a href="#">生存分析</a>
+        <div class="third-level">
+          <a href="https://kmplot.com/analysis/" target="_blank">KMplotter</a>
+		  <a href="http://gepia.cancer-pku.cn" target="_blank">GEPIA</a>
+          <a href="http://bioinformatica.mty.itesm.mx/SurvExpress" target="_blank">SurvExpress</a>
+          <a href="http://www.oncolnc.org/" target="_blank">OncoLnc</a>
+		  <a href="https://www.cbioportal.org" target="_blank">cBioPortal</a>
+        </div>
+      </div>
+	  
+	  
+	  
+	  <div class="subcategory">
+        <a href="#">ncRNA</a>
+        <div class="third-level">
+		<a href="http://www.noncode.org/index.php" target="_blank">ncRNA数据库</a>
+          <a href="http://bioinfo.life.hust.edu.cn/miR_path/index.html" target="_blank">tumor-miRNA</a>
+          <a href="https://dianalab.e-ce.uth.gr/tarbasev9" target="_blank">TarBase</a>
+		  <a href="http://cis.hku.hk/miRNACancerMAP/" target="_blank">miRNACancerMAP</a>
+		  <a href="https://bioinformatics.mdanderson.org/public-software/tanric/" target="_blank">肿瘤ncRNA库</a>
+          <a href="https://mirbase.org/" target="_blank">miRBase</a>
+		  <a href="https://bibiserv.cebitec.uni-bielefeld.de/rnahybrid" target="_blank">miRNA基于E预靶标</a>
+		   
+          <li><a href="http://starbase.sysu.edu.cn/">Starbase</a></li>
+          <li><a href="http://mirtarbase.cuhk.edu.cn/php/index.php" title="实验验证的miRNA-靶相互作用数据库">miRTarBase</a></li>          
+          <li><a href="http://www.mir2disease.org/7" title="与人类疾病相关的miRNA">miR2Disease</a></li>
+          <li><a href="http://pirnabank.ibab.ac.in">piRNAbank</a></li>
+		  <a href="http://www.mir2disease.org/" target="_blank">miR2Disease</a>
+          <a href="https://oncomir.org/index.html" target="_blank">OncomiR</a>PAN-Cancer miRNA</a>
+		  <li><a href="http://rna.tbi.univie.ac.at//cgi-bin/RNAWebSuite/RNAfold.cgi">miRNA二级结构</a></li>
+          <li><a href="http://www.targetscan.org/vert_72/">TargetScan</a></li>
+          <li><a href="http://plantgrn.noble.org/psRNATarget/">植物sRNA靶分析</a></li>
+          <li><a href="https://mircarta.cs.uni-saarland.de/mirbase_conversion/">miRNA名字版本转换</a></li>
+ 
+		  <a href="https://www.targetscan.org/vert_71/" target="_blank">TargetScan</a>
+          <a href="http://diana.imis.athena-innovation.gr/DianaTools/index.php?r=site/page&view=software" target="_blank">DIANA</a>
+		  
+		  <a href="https://spar.lisanwanglab.org/" target="_blank">SPAP</a>
+          <a href="https://dashr2.lisanwanglab.org/" target="_blank">DASHR</a>ncRNA</a>
+		  <a href="https://ccb-web.cs.uni-saarland.de/asra/" target="_blank">ASRA</a>ncRNA</a>
+		  <a href="http://annolnc.gao-lab.org/" target="_blank">AnnoLnc2</a>
+		  <a href="http://circbase.org/" target="_blank">circRNAs</a>
+          <a href="https://circinteractome.nia.nih.gov/" target="_blank">CircularRNA </a>ncRNA</a>
+		  <li><a href="http://www.circbase.org">circBase</a></li>
+          <li><a href="http://cgga.org.cn:9091/circRNADisease/" title="实验支持的人类circRNA-疾病数据库">circRNADisease</a></li>
+          <li><a href="https://circinteractome.nia.nih.gov/" title="环状RNA与RBP以及miRNA结合的数据库">CircInteractome</a></li>
+          <li><a href="http://ibi.zju.edu.cn/plantcircbase/index.php" title="植物circRNA数据库">Plantcircbase</a></li>
+		  <a href="https://ccb-web.cs.uni-saarland.de/asra/" target="_blank">ASRA</a>ncRNA</a>
+		  
+		  <a href="https://rnacentral.org/" target="_blank">ncRNA序列</a>
+		  <a href="https://rnasysu.com/encori/" target="_blank">RNA-RNA作用</a>
+		  <li><a href="http://lowelab.ucsc.edu/tRNAscan-SE/" title="tRNA预测">tRNAScan-SE</a></li>
+          <li><a href="http://trna.bioinf.uni-leipzig.de/DataOutput/Search">tRNA二级结构</a></li>
+		  <a href="http://rbpdb.ccbr.utoronto.ca/" target="_blank">RNA-蛋白结合</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">单细胞</a>
+        <div class="third-level">
+		  <a href="http://tisch.comp-genomics.org/home/" target="_blank">TISCH</a>
+          <a href="http://biocc.hrbmu.edu.cn/CancerSEA/" target="_blank">CancerSEA</a>表达富集可视化</a>
+          <a href="https://singlecell.broadinstitute.org/" target="_blank">SC Portal</a>
+          <a href="https://www.ebi.ac.uk/gxa/sc/home" target="_blank">SCExpression Atlas</a>
+          <a href="https://cells.ucsc.edu/" target="_blank">UCSC Cell Browser</a>
+          <a href="https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/what-is-cell-ranger" target="_blank">Cell Ranger</a>10x Genomics</a>
+          <a href="https://satijalab.org/seurat/" target="_blank">Seurat</a>R package</a>
+          <a href="https://scanpy.readthedocs.io/en/stable/" target="_blank">Scanpy</a>Python</a>
+          <a href="https://singlecell.zymergen.com/" target="_blank">Single Cell Analysis Portal</a>
+
+		
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">空间转录组</a>
+        <div class="third-level">
+          <a href="https://www.spatialomics.org/SpatialDB/" target="_blank">ST database</a>
+          <a href="https://www.spatialomics.org/SpatialDB/viewer.html" target="_blank">ST Viewer</a>
+          <a href="https://portal.brain-map.org/atlases-and-data/rnaseq" target="_blank">Spatial转录组</a>
+          <a href="http://merfish-dev.caltech.edu/" target="_blank">MERFISH</a>
+          <a href="https://spacetx-starfish.readthedocs.io/en/stable/index.html" target="_blank">ST-Python</a>
+          <a href="https://spatial.libd.org/" target="_blank">spatialLIBD</a>
+          <a href="https://www.nanostring.com/products/geomx-dsp" target="_blank">GeoMxDSP</a>
+          <a href="https://seahorsebio.com/" target="_blank">Seahorse-SP</a>
+          <a href="https://www.10xgenomics.com/products/spatial-gene-expression" target="_blank">10xGenomics</a>
+
+
+        </div>
+      </div>
+	  
+	  
+	
+	 
+    </div>
+	
+
+	
+	<div class="category">
+      <h2>网络药毒理</h2>
+      <div class="subcategory">
+        <a href="#">中医药D</a>
+        <div class="third-level">
+          <a href="#" target="_blank">ETCM</a>
+          <a href="http://tcmsp-e.com/">TCMSP</a> - 中药材、中药成分、中医方剂</a>
+          <a href="http://www.symmap.org/" target="_blank">SymMap</a>-症候关联</a>
+		  <a href="http://tcm.cmu.edu.tw/">TCM</a> -中药材、中药方剂、中医药成分</a>
+          <a href="http://bionet.ncpsb.org.cn/batman-tcm/">BATMAN-TCM</a> -中药成分与疾病、蛋白质等互作</a>
+          <a href="#" target="_blank">SymMap</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">中药成分</a>
+        <div class="third-level">
+          <a href="https://pubchem.ncbi.nlm.nih.gov/" target="_blank">PubChem</a>
+          <a href="http://tcmsp-e.com/">TCMSP</a> - 中药材、中药成分、中医方剂</a>
+          <a href="http://www.symmap.org/" target="_blank">SymMap</a>-症候关联</a>
+		  <a href="http://tcm.cmu.edu.tw/">TCM</a> -中药材、中药方剂、中医药成分</a>
+          <a href="http://bionet.ncpsb.org.cn/batman-tcm/">BATMAN-TCM</a> -中药成分与疾病、蛋白质等互作</a>
+          <a href="https://sancdb.rubi.ru.ac.za/" target="_blank">SANCDB</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">西药相关</a>
+        <div class="third-level">
+          <a href="https://www.pharmgkb.org/" target="_blank">pharmgkb</a>
+          <a href="https://go.drugbank.com/">DrugBank</a> - 中药材、中药成分、中医方剂</a>
+          <a href="http://www.symmap.org/" target="_blank">SymMap</a>-症候关联</a>
+		  <a href="http://tcm.cmu.edu.tw/">TCM</a> -中药材、中药方剂、中医药成分</a>
+          <a href="http://bionet.ncpsb.org.cn/batman-tcm/">BATMAN-TCM</a> -中药成分与疾病、蛋白质等互作</a>
+          <a href="https://www.chemsrc.com/" target="_blank">化源网</a>
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">生物相关</a>
+        <div class="third-level">
+          <a href="https://www.genecards.org/" target="_blank">GeneCards</a>
+          <a href="https://www.uniprot.org/" target="_blank">UniProt</a>
+          
+        </div>
+      </div>
+      
+	  <div class="subcategory">
+        <a href="#">疾病相关</a>
+        <div class="third-level">
+          <a href="https://omim.org/" target="_blank">OMIM</a>
+          <a href="https://www.disgenet.org/" target="_blank">DisGeNET</a>
+		  <a href="https://www.malacards.org/" target="_blank">MalaCards</a>
+		  <a href="https://www.ncbi.nlm.nih.gov/gene/" target="_blank">NCBI Gene</a>
+		  <a href="https://medlineplus.gov/genetics/" target="_blank">medlineplus</a>
+		  <a href="https://www.orpha.net/" target="_blank">Orphanet</a>
+		  <a href="http://210.107.182.61/geneSearch/" target="_blank">DigSee</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">常用靶标</a>
+        <div class="third-level">
+          <a href="https://www.ebi.ac.uk/chembl/" target="_blank">ChEMBL</a>
+		  <a href="https://www.bindingdb.org/rwd/bind/index.jsp" target="_blank">BindingDB</a>蛋白smiles，inchi</a>
+          <a href="https://go.drugbank.com/" target="_blank">drugbank</a>
+          <a href="http://targetnet.scbdd.com/home/index/" target="_blank">TargetNet</a>
+		  <a href="https://www.bindingdb.org/rwd/bind/index.jsp" target="_blank">BindingDB</a>蛋白smiles，inchi</a>
+          <a href="https://go.drugbank.com/" target="_blank">drugbank</a>
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">预测靶标</a>
+        <div class="third-level">
+          <a href="http://stitch.embl.de/" target="_blank">STITCH</a>- 名字或SMILE</a>
+		  <a href="http://swisstargetprediction.ch/" target="_blank">SWISS</a>prediction</a>
+          <a href="https://www.lilab-ecust.cn/pharmmapper/" target="_blank">PharmMapper</a>
+          <a href="https://prediction.charite.de/" target="_blank">SuperPred</a>
+        </div>
+      </div>
+	  
+	  
+	  
+	
+	  
+	  <div class="subcategory">
+        <a href="#">网络毒理</a>
+        <div class="third-level">
+          <a href="http://www.t3db.ca/" target="_blank">毒物及靶标</a>
+		  <a href="https://files.toxplanet.com/cpdb/cpdb.html" target="_blank">致癌化合物</a>
+		  <a href="https://wwwn.cdc.gov/TSP/index.aspx" target="_blank">毒物与疾病</a>
+          <a href="https://tox-new.charite.de/protox_II/" target="_blank">protox_II</a>
+          <a href="https://lazar.in-silico.ch/predict" target="_blank">lazar2</a>
+		  <a href="http://lmmd.ecust.edu.cn/admetsar2" target="_blank">admetsar2</a>
+          <a href="https://admetmesh.scbdd.com/service/evaluation/index" target="_blank">ADMETlab</a>
+        </div>
+      </div>
+    
+	  <div class="subcategory">
+        <a href="#">分子对接</a>
+        <div class="third-level">
+		
+		  <a href="https://www.jianshu.com/p/18b4d56dc516" target="_blank">步骤</a>
+          <a href="https://www.rcsb.org/" target="_blank">PDB</a>
+          <a href="https://sancdb.rubi.ru.ac.za/" target="_blank">SANCDB</a>
+          <a href="https://organchem.csdb.cn/scdb/default.asp" target="_blank">化学</a>
+		  <a href="https://www.novopro.cn/tools/smiles2pdb" target="_blank">smiles2pdb</a>
+          <a href="https://sancdb.rubi.ru.ac.za/" target="_blank">SANCDB</a>
+          <a href="https://swissmodel.expasy.org/" target="_blank">三维结构预测</a>
+		  <a href="http://lmmd.ecust.edu.cn/admetsar2" target="_blank">预测性质</a>
+		  
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">其他</a>
+        <div class="third-level">
+          <a href="http://sideeffects.embl.de/" target="_blank">副作用</a>
+          
+        </div>
+      </div>
+	</div>
+	
+	<div class="category">
+      <h2>其他分析</h2>
+      <div class="subcategory">
+        <a href="#">蛋白组</a>
+        <div class="third-level">
+          <a href="https://www.rcsb.org/" target="_blank">Protein Data Bank (PDB)</a>
+		  <a href="https://proteomecentral.proteomexchange.org/ui" target="_blank">蛋白组</a>
+          <a href="https://www.uniprot.org/" target="_blank">UniProt</a>
+		  <a href="https://www.peptideatlas.org/" target="_blank">多肽</a>
+          <a href="https://www.expasy.org/proteomics" target="_blank">ExPASy</a>
+          <a href="https://www.ebi.ac.uk/pride/archive/" target="_blank">PRIDE</a>
+          <a href="https://pax-db.org/" target="_blank">PaxDb</a>
+          <a href="https://swissmodel.expasy.org/repository" target="_blank">SWISS-MODEL</a>
+          <a href="http://www.proteomexchange.org/" target="_blank">ProteomeXchange</a>
+
+          
+
+		 
+		  
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">代谢组</a>
+        <div class="third-level">
+		<a href="https://hmdb.ca/" target="_blank">HMDB</a>
+        <a href="https://www.ebi.ac.uk/metabolights/" target="_blank">MetaboLights</a>
+        <a href="https://www.metabolomicsworkbench.org/" target="_blank">M-Workbench</a>
+        <a href="https://www.metabolome-express.org/" target="_blank">M-Express</a>
+        <a href="http://www.msea.ca/" target="_blank">M-Enrichment)</a>
+        <a href="http://exposome-explorer.iarc.fr/" target="_blank">环境M</a>
+        </div>
+      </div>
+	   <div class="subcategory">
+        <a href="#">突变</a>
+        <div class="third-level">
+          <a href="https://cancer.sanger.ac.uk/cosmic" target="_blank">COSMIC</a>
+		  <a href="http://mutationaligner.org/" target="_blank">mutation</a>
+		  <a href="https://compbio.uthsc.edu/SomamiR/" target="_blank">SomamiR</a>
+        </div>
+       </div>
+	  
+	  <div class="subcategory">
+        <a href="#">甲基化</a>
+        <div class="third-level">
+          <a href="http://firebrowse.org/" target="_blank">FIREBROWSE</a>甲基化</a>
+          <a href="https://mexpress.ugent.be/" target="_blank">MEXPRESS</a>甲基化</a>
+        </div>
+       </div>
+	  <div class="subcategory">
+        <a href="#">肿瘤免疫</a>
+        <div class="third-level">
+          <a href="https://cistrome.shinyapps.io/timer/" target="_blank">TIMER</a>
+          <a href="http://tide.dfci.harvard.edu/login/" target="_blank">TIDE</a>
+		  <a href="http://cis.hku.hk/TISIDB/index.php" target="_blank">TISIDB</a>
+		  
+		  <a href="https://cibersortx.stanford.edu/" target="_blank">CIBERSORT</a>
+          <a href="http://bioinfo.life.hust.edu.cn/ImmuCellAI#!/" target="_blank">ImmuCellAI</a>
+		  <a href="http://www.biozhong.cn/categories/study/immuneai.html" target="_blank">web</a>
+		 
+		  
+        </div>
+       </div>  
+	  
+	  <div class="subcategory">
+        <a href="#">GWAS</a>
+        <div class="third-level">
+          <a href="https://easygwas.biochem.mpg.de/" target="_blank">easyGWAS</a>
+          <a href="https://zhuanlan.zhihu.com/p/356927396" target="_blank">blog</a>
+		  <a href="https://eforge.altiusinstitute.org" target="_blank">EFORCE</a>
+        </div>
+       </div>
+	   <div class="subcategory">
+        <a href="#">耐药</a>
+        <div class="third-level">
+          <a href="https://www.cancerrxgene.org/" target="_blank">GDSC</a>
+         
+
+
+        </div>
+      </div>
+	   <div class="subcategory">
+        <a href="#">其他</a>
+        <div class="third-level">
+		  <a href="https://www.burkholderia.com/" target="_blank">类鼻疽</a>
+          <a href="http://bio-bigdata.hrbmu.edu.cn/CellMarker/" target="_blank">CellMarker/</a>标记物</a>
+          <a href="https://www.cancerimagingarchive.net/" target="_blank">cancerImage/</a>影像</a>
+		  <a href="https://genomeportal.stanford.edu/pan-tcga/" target="_blank">genomeportal/</a>分期</a>
+		  <a href="https://www.recurrenceonline.com/" target="_blank">recurrence/</a>乳腺癌机器学习</a>
+		  <a href="https://www.novopro.cn/tools/" target="_blank">生物小工具全</a>
+        </div>
+      </div>
+	  
+	 <div class="subcategory">
+        <a href="#">宏基因组</a>
+        <div class="third-level">
+		 <li><a href="https://www.linuli.com/url/?li=1&n=readnovel&l=1&i=1">NNDS</a></li>
+         <li><a href="http://huttenhower.sph.harvard.edu/galaxy/">LEfSe</a></li> 
+        </div>
+       </div>
+	   
+	   <div class="subcategory">
+        <a href="#">waiting</a>
+        
+       </div>
+	 
+    </div>
+
+
+	<div class="category">
+      <h2>论文课题</h2>
+	  
+	  <div class="subcategory">
+        <a href="#">文献</a>
+        <div class="third-level">
+          <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>
+          <a href="https://sci-hub.wf/" target="_blank">SCI-HUB</a>
+          <a href="https://www.cnki.net/" target="_blank">中国知网</a>
+		  <a href="https://gfsoso.99lb.net/" target="_blank">谷粉学术</a>
+          <a href="https://www.semanticscholar.org/" target="_blank">SEMANTIC SCHOLAR</a>
+          
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">著名杂志</a>
+        <div class="third-level">
+          <li><a href="http://www.cell.com">Cell</a></li>
+                    <li><a href="https://www.nature.com/nature/articles">Nature</a></li>
+                    <li><a href="https://www.sciencemag.org/">Science</a></li>
+                    
+                    <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/">PubMed</a></li>
+                    <li><a href="https://academic.oup.com/bioinformatics/">Bioinformatics</a></li>
+                    <li><a href="https://nature.com/ncomms/" title="Nature Communications">Nature Commu</a></li>
+                    
+                    <li><a href="https://bmcbioinformatics.biomedcentral.com" title="BMC Bioinformatics">BMC生物信息学</a></li>
+                    <li><a href="https://academic.oup.com/nar/">核酸研究（NAR）</a></li>
+                    <li><a href="http://www.ploscompbiol.org" title="PLoS computational biology">PLoS计算生物学</a></li>
+                    
+                    <li><a href="https://www.bio-itworld.com/" title="bio-itworld">Bio-ITworld</a></li>
+                    <li><a href="https://www.biorxiv.org/" title="biorxiv">Biorxiv</a></li>
+          
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">文献管理</a>
+        <div class="third-level">
+          <a href="https://endnote.com/downloads" target="_blank">EndNote</a>
+          
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">投稿</a>
+        <div class="third-level">
+          <a href="https://jane.biosemantics.org/" target="_blank">jane查询</a>
+          <a href="https://mjl.clarivate.com/home?PC=MASTER&Error=1" target="_blank">Clarivate</a>
+		  <a href="https://www.jstor.org/analyze/" target="_blank">查重</a>
+          <a href="https://www.fenqubiao.com/Default.aspx" target="_blank">中科院分区</a>
+          <a href="https://mjl.clarivate.com/home?PC=MASTER&Error=1" target="_blank">Clarivate</a>
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">影响因子</a>
+        <div class="third-level">
+          
+		  <a href="https://www.letpub.com.cn/index.php?page=journalapp" target="_blank">letpub</a>
+          <a href="https://www.edanz.com/journal-selector" target="_blank">关键词查IF</a>
+          <a href="https://www.bioxbio.com/" target="_blank">IFsearch</a>
+		  
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">课题</a>
+        <div class="third-level">
+          <a href="https://www.nsfc.gov.cn/" target="_blank">基金委</a>
+          <a href="https://grants.nsfc.gov.cn/pmpweb/psn-index" target="_blank">科学基金网络信息系统登录平台</a>
+		  
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="category">
+      <h2>教育教学</h2>
+	  <div class="subcategory">
+        <a href="#">在线课程</a>
+        <div class="third-level">
+          <a href="https://www.icourse163.org/" target="_blank">中国大学 MOOC</a>
+          <a href="https://www.icourses.cn/home/">爱课程</a>
+		  <a href="https://study.163.com/" target="_blank">网易云课堂</a>
+          <a href="https://ke.qq.com/" target="_blank">腾讯课堂</a>
+          <a href="https://www.imooc.com/" target="_blank">慕课网</a>
+          <a href="https://edu.51cto.com/" target="_blank">51CTO 学院</a>
+		  <a href="https://www.coursera.org/" target="_blank">Coursera</a>
+          <a href="https://www.edx.org/" target="_blank">edX</a>
+          <a href="https://www.udacity.com/" target="_blank">Udacity</a>
+		  <a href="https://www.linkedin.com/learning/" target="_blank">LinkedIn Learning</a>
+          <a href="https://www.khanacademy.org/" target="_blank">Khan Academy</a>
+          <a href="https://www.udemy.com/" target="_blank">Udemy</a>
+          <a href="https://www.codecademy.com/" target="_blank">Codecademy</a>
+          <a href="https://www.skillshare.com/" target="_blank">Skillshare</a>
+          <a href="https://www.futurelearn.com/" target="_blank">FutureLearn</a>
+          <a href="https://www.pluralsight.com/" target="_blank">Pluralsight</a>
+          
+          
+        </div>
+      </div>
+	  
+	   <div class="subcategory">
+        <a href="#">虚拟仿真</a>
+        <div class="third-level">
+          <a href="https://aframe.io/" target="_blank">aFrame</a>
+		  <a href="https://moodle.org/" target="_blank">moodle</a>
+          <a href="https://threejs.org/" target="_blank">threejs</a>
+          <a href="https://webvr.info/" target="_blank">webvr</a>
+
+         
+        </div>
+      </div>
+	   
+	  
+      <div class="subcategory">
+        <a href="#">医学视频</a>
+        <div class="third-level">
+          <a href="http://www.biblimed.com/appli/index.php?cprotect=1" target="_blank">bibliMed</a>
+		  <a href="https://www.medcram.com/" target="_blank">MedCram</a>
+          <a href="https://www.osmosis.org/" target="_blank">Osmosis</a>
+          <a href="https://www.kenhub.com/" target="_blank">Kenhub</a>
+          <a href="https://stanfordmedicine25.stanford.edu/" target="_blank">Stanford</a>
+          <a href="https://www.nejm.org/multimedia/videos-in-clinical-medicine" target="_blank">临床视频</a>
+          <a href="https://www.youtube.com/user/armandohasudungan" target="_blank">医学视频</a>
+
+         
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">知识图谱</a>
+        <div class="third-level">
+          <a href="https://citespace.podia.com/" target="_blank">citespace</a>
+		  <a href="https://www.microsoft.com/en-us/research/project/microsoft-academic-graph/" target="_blank">Ms Academic Graph</a>
+          <a href="https://neo4j.com/" target="_blank">Neo4j</a>
+          <a href="https://www.wikidata.org/" target="_blank">Wikidata</a>
+          <a href="https://wiki.dbpedia.org/" target="_blank">DBpedia</a>
+          <a href="https://developers.google.com/knowledge-graph" target="_blank">Google知识图谱</a>
+          <a href="https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/yago/" target="_blank">YAGO</a>         
+          
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">合作学习</a>
+        <div class="third-level">
+                
+          
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">医学强图</a>
+        <div class="third-level">
+          <a href="https://www.zygotebody.com/" target="_blank">zygotebody</a>
+          <a href="https://www.netterimages.com/" target="_blank">Netter Images</a>
+          <a href="https://radiopaedia.org/" target="_blank">Radiopaedia</a>
+          <a href="https://www.visiblebody.com/" target="_blank">Visible Body</a>
+          <a href="https://www.dermnetnz.org/" target="_blank">DermNet NZ</a>
+          <a href="https://openi.nlm.nih.gov/" target="_blank">Open-i</a>
+          <a href="https://nucleusmedicalmedia.com/" target="_blank">NucleusMedical</a>
+
+        </div>
+      </div>
+    </div>
+	
+	
+	<div class="category">
+	  <h2><a href="ld\LaboratoryDiagnostics.html" style="text-decoration:none; color:inherit;">实验诊断学</a></h2>
+	   
+	   <div class="subcategory">
+        <a href="#">教学视频</a>
+        <div class="third-level">
+        </div>
+       </div>
+
+     <div class="subcategory">
+        <a href="#">案例分析</a>
+        <div class="third-level">
+          
+
+        </div>
+      </div>
+
+
+	  <div class="subcategory">
+        <a href="https://bomics.com/ld/LaboratoryDiagnostics.html">在线习题</a>
+      </div>   
+     
+	 <div class="subcategory">
+        <a href="#">诊断图谱</a>
+        <div class="third-level">
+          
+
+        </div>
+      </div>
+	 
+	 <div class="subcategory">
+        <a href="#">化验单分析</a>
+        <div class="third-level">
+          
+
+        </div>
+      </div>
+	 
+	  <div class="subcategory">
+        <a href="#">课程思政</a>
+        <div class="third-level">
+          
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">拓展资源</a>
+        <div class="third-level">
+          
+
+        </div>
+      </div>
+	  
+	  
+    </div>
+	
+	<div class="category">
+      <h2>小工具</h2>
+	  
+	   <div class="subcategory">
+        <a href="#">AI</a>
+        <div class="third-level">
+		<a href="https://openai.com/chatgpt" target="_blank">ChatGPT</a>
+        <a href="https://cloud.baidu.com/product/sugar.html" target="_blank">百度智能云</a>
+		<a href="http://naotu.baidu.com" title="百度脑图">思维导图</a>
+        <a href="https://i.bossai.im/#/friend" target="_blank">BOSS AI</a>
+		<a href="https://xinghuo.xfyun.cn/desk" target="_blank">讯飞星火</a>
+		<a href="https://yiyan.baidu.com/welcome" target="_blank">文心一言</a>
+		<a href="https://gamma.app/?lng=zh-CN" target="_blank">Gamma</a>
+		<a href="https://www.wujieai.com/" target="_blank">无界AI</a>
+		<a href="https://magicstudio.com/zh/" target="_blank">Photo</a>
+		<a href="https://ai-bot.cn/" target="_blank">集合</a>
+        </div>
+      </div>
+	  
+      <div class="subcategory">
+        <a href="#">统计可视图</a>
+        <div class="third-level">
+		  <a href="https://www.bic.ac.cn/ImageGP/" target="_blank">imageGP</a>
+		  <a href="https://reactome.org/" target="_blank">医学专业作图</a>
+          <a href="https://matrix2png.msl.ubc.ca/" target="_blank">数据热图</a>
+		  <a href="https://datamatic.io/index.html" target="_blank">多种统计图</a>
+		  <a href="https://www.sanger.ac.uk/tool/dnaplotter/" target="_blank">环形图</a>
+        </div>
+      </div>
+      
+	  <div class="subcategory">
+        <a href="#">做图周边</a>
+        <div class="third-level">
+		  <a href="https://reactome.org/" target="_blank">医学专业作图</a>
+          <a href="https://app.diagrams.net/" target="_blank">流程图</a>
+		  <a href="https://app.diagrams.net/" target="_blank">流程图</a>
+		  
+		 
+          <a href="https://www.codeeeee.com/color/rgb.html" target="_blank">颜色代码</a>
+          <a href="https://bigjpg.com/" target="_blank">AI图片放大</a>
+		  <a href="https://wordart.com/create" target="_blank">文字云</a>		  
+		  <a href="http://www.biovenn.nl/" target="_blank">多维恩图</a>
+		  <a href="https://www.flaticon.com/" target="_blank">icon</a>
+		  <a href="https://www.aigei.com/s?q=icon" target="_blank">爱给网</a>
+		  <a href="https://www.iconfont.cn/" target="_blank">iconfont</a>
+		  <a href="https://wallspic.com/cn" target="_blank">高清壁纸</a>
+		  <a href="https://fontawesome.com.cn/v4/icons" target="_blank">fontawesome</a>
+		  
+		  
+        </div>
+      </div>
+	  
+	  <div class="subcategory">
+        <a href="#">格式转换</a>
+        <div class="third-level">
+          <a href="https://tools.pdf24.org/zh/webpage-to-pdf" target="_blank">网页转PDF</a>
+		  <a href="https://smallpdf.com/cn" target="_blank">pdf各种转</a>
+		  
+          <a href="https://www.ilovepdf.com/zh-cn" target="_blank">IlovePDF</a>
+          <a href="https://products.aspose.app/cells/zh/conversion/json-to-xlsx" target="_blank">JSON2EXCEL</a>
+        </div>
+      </div>
+	  <div class="subcategory">
+        <a href="#">书籍下载</a>
+        <div class="third-level">
+          <a href="https://zh.z-library.se/?afterGeoRedirection=1" target="_blank">Zlibrary</a>
+          <a href="https://www.jiumodiary.com/" target="_blank">鸠摩</a>
+          <a href="#" target="_blank">Third-level 3.1.3</a>
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">专利下载</a>
+        <div class="third-level">
+          <a href="https://www.drugfuture.com/cnpat/cn_patent.asp" target="_blank">专利下载</a>
+          
+        </div>
+      </div>
+      
+    </div>
+	
+	<div class="category">
+      <h2>业余学习</h2>
+	  
+	  <div class="subcategory">
+        <a href="#">R学习</a>
+        <div class="third-level">
+          <a href="https://r-graph-gallery.com/" target="_blank">R绘图</a>
+          <a href="http://www.sthda.com/english/" target="_blank">sthda</a>
+		  <a href="https://genomicsclass.github.io/book/pages/dplyr_tutorial.html" target="_blank">dplyr_tutorial</a>
+		  <a href="https://endmemo.com/r/index.php" target="_blank">R手册</a>
+          <a href="http://www.sthda.com/english/" target="_blank">sthda</a>
+          <a href="https://r-statistics.co/Top50-Ggplot2-Visualizations-MasterList-R-Code.html" target="_blank">Top50</a>
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">网站建设</a>
+        <div class="third-level">
+          <a href="https://beautifytools.com/css-beautifier.php" target="_blank">Github</a>
+		  
+		
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="#">音视频购</a>
+        <div class="third-level">
+          <a href="https://y.qq.com/" target="_blank">QQ音乐</a>
+          <a href="https://music.163.com/" target="_blank">网易云音乐</a>
+	      <a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
+          <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+		  <a href="http://www.77ring.com/" target="_blank">77mp3下载</a>
+		  <a href="http://voflix.me/" target="_blank">美剧</a>
+		  <a href="https://www.meijutt.cc/" target="_blank">美剧天堂</a>
+	      <a href="https://www.jd.com/" target="_blank">京东</a>
+	 
+        </div>
+      </div>
+      <div class="subcategory">
+        <a href="medtv.html">医学美剧</a>
+        <div class="third-level">
+            <a href="https://www.meijutt.cc/meijutt/7886.html" target="_blank">豪斯医生House, M.D.</a>
+	        <a href="https://www.meijutt.cc/meijutt/7782.html" target="_blank">实习医生格蕾Grey's Anatomy</a>
+	        <a href="https://www.meijutt.cc/meijutt/8306.html" target="_blank">急诊室的故事ER</a>
+			<a href="https://www.meijutt.cc/meijutt/9988.html" target="_blank">外科医生</a>
+			<a href="https://www.meijutt.cc/meijutt/4152.html" target="_blank">芝加哥急救</a>
+			<a href="https://www.meijutt.cc/meijutt/5766.html" target="_blank">周一清晨Monday Mornings</a>
+	        <a href="https://www.meijutt.cc/meijutt/3732.html" target="_blank">外科医生马丁</a>
+			<a href="https://www.meijutt.cc/meijutt/5305.html" target="_blank">逍遥神医</a>
+			<a href="https://www.meijutt.cc/meijutt/7205.html" target="_blank">护士当家</a>
+			<a href="https://www.meijutt.cc/meijutt/6229.html" target="_blank">医缘（宅女医生）</a>
+			
+			<a href="https://www.meijutt.cc/meijutt/7379.html" target="_blank">in treatment扪心问诊-心理</a>
+			<a href="https://www.meijutt.cc/meijutt/8083.html" target="_blank">Scrubs实习医生风云</a>			
+			<a href="https://www.meijutt.cc/meijutt/2883.html" target="_blank">The Resident驻院医生</a>
+			<a href="https://www.meijutt.cc/meijutt/5294.html" target="_blank">The Night Shift夜班医生</a>
+			<a href="https://www.meijutt.cc/meijutt/4862.html" target="_blank">Code Black黑色警报</a>
+			<a href="https://www.meijutt.cc/meijutt/724.html" target="_blank">天才女医生</a>
+			<a href="https://www.meijutt.cc/" target="_blank">仁心仁术Mercy</a>			
+			<a href="https://www.meijutt.cc/" target="_blank">扶伤Trauma急救</a>
+			<a href="https://www.meijutt.cc/" target="_blank">纪念-检验Remedy</a>
+	        <a href="https://www.meijutt.cc/" target="_blank">急诊室医生Code Black</a>
+			<a href="https://www.meijutt.cc/" target="_blank">医疗急救组-检验Medical Investigation</a>
+			<a href="https://www.meijutt.cc/meijutt/7171.html" target="_blank">绝望主妇</a>
+			<a href="https://www.meijutt.cc/meijutt/7821.html" target="_blank">越狱</a>
+			<a href="https://www.meijutt.cc/meijutt/7171.html" target="_blank">绝望主妇</a>
+			<a href="https://www.meijutt.cc/meijutt/3664.html" target="_blank">小谢尔顿</a>
+        </div>
+      </div>
+	 <div class="subcategory">
+        <a href="#">知识web</a>
+        <div class="third-level">
+            <a href="https://wenku.baidu.com/" target="_blank">百度文库</a>
+            <a href="https://www.zhihu.com/" target="_blank">知乎</a>
+	        <a href="https://www.jianshu.com/" target="_blank">简书</a>
+	        <a href="https://www.brainyquote.com/" target="_blank">BrainyQuote</a>
+			
+        </div>
+      </div>
+      
+	  <div class="subcategory">
+        <a href="https://mp.weixin.qq.com/" target="_blank">公众号</a>
+      </div>
+	  
+    </div>
+    <!-- Add more category divs as needed -->
+
+  </main>
+  <footer>
+    <p>&copy; 2024 BioMed Nav    The website is developed and maintained by Yinli. If you have any suggestions, please send an email to yinli@hainmc.edu.cn</p>
+  </footer>
+  <script src="scripts/navscript.js"></script> <!-- Link to external JavaScript file -->
+</body>
+</html>
