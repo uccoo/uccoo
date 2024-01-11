@@ -1,236 +1,244 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- For modern browsers -->
+<link rel="icon" sizes="192x192" href="icon/footerlogo1.png">
+<!-- For iPhone -->
+<link rel="apple-touch-icon" sizes="180x180" href="icon/footerlogo1.png">
+<!-- For iPad -->
+<link rel="apple-touch-icon" sizes="152x152" href="icon/footerlogo1.png">
+
     <meta charset="UTF-8">
-    <title>发布文章</title>
-
-    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-    <script src="css/wangEditor.min.js"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioMed</title>
     <style>
-        .mainHeader{
-
-            padding-top: 1px;
-            padding-bottom: 1px;
-            background-color: white !important;
-            border-bottom: 5px solid #0b6cb8;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* 让内容垂直居中 */
+            height: 100vh;
+            margin: 0;
+            background-image: url('icon/bj1.jpg');
+            background-size: cover;
+        }
+         #welcome-text {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: #B5B5B5;
+        }
+        .top-icons {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 20px; /* Add margin-bottom to separate from the search container */
         }
 
-        .logo_icon{
-
-            height: 38px;
+        .top-icons a {
+            margin: 5px;
+        }
+        .top-icons img {
+             width: 60px; /* Adjust the size as needed */
+             height: 60px; /* Adjust the size as needed */
+}
+        .search-container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            position: relative;
         }
 
-        .liColor{
-            color: #4f4f4f
-
+        .search-container p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .logo {
+            width: 20px; /* Adjust the width as needed */
+            height: 20px; /* Adjust the height as needed */
+            margin-right: 5px; /* Adjust the margin as needed */
+        }
+        .bottom-text {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: white;
+			display: flex;
+            align-items: center;
         }
 
-        .toolbar {
-            border: 1px solid #ccc;
+        body p {
+            font-size: 14px;
+            color: #B5B5B5;
         }
-        .text {
-            border: 1px solid #ccc;
-            height: 500px;
+
+        .search-container img {
+            width: 50px;
+            height: 50px;
+			margin: 10px;
+            margin-bottom: 100px;
+            top: -30px;
         }
+
+        input {
+            width: 100%;
+			height: 60px;
+            padding: 10px;
+            box-sizing: border-box;
+			margin: 0 auto; /* 设置左右边距为自动，实现水平居中 */
+            margin-bottom: 20px;
+			border-radius: 30px; /* 添加圆角 */
+			
+        }
+
+        .icon-button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        
+        .icon-container {
+		    width: 50%; /* 50% of the viewport width */
+            display: flex;
+			flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        
+
+        .icon {
+            width: 50px;
+            height: 50px;
+			margin: 5px;
+			flex: 0 0 calc(20% - 20px);
+			
+        }
+
+        .small-icon {
+            width: 30px;
+            height: 30px;
+        }
+		
+	/* Media Query for screens smaller than 600px (typical mobile phones) */
+        @media only screen and (max-width: 600px) {
+            .search-container img {
+                margin-bottom: 100px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            .icon {
+                width: 30px;
+                height: 30px;
+            }
+        }	
+		
+		
     </style>
+	
 
-    <script>
-        $(function () {
-            //富文本编辑器初始化代码
-            var E = window.wangEditor;
-            var editor = new E('#div1', '#div2');
-
-            editor.customConfig.uploadImgShowBase64 = true;   // 使用 base64 保存图片
-            editor.create();
-
-            //创建replaceAll()函数,用于替换字符串中出现的所有某个字符
-            String.prototype.replaceAll = function (FindText, RepText) {
-                return this.replace(new RegExp(FindText, "g"), RepText);
-            };
-
-            //发布文章按钮的点击事件，即封装数据，向后台传递
-            $("#publishBtn").click(function () {
-                console.info("click");
-                var postData={};
-                postData.title=$("#titleInput").val();
-                postData.category=$("#categoryInput").val();
-
-                //替换双引号为两个单引号，方便编写SQL语句插入数据库中
-                var content=editor.txt.html().replaceAll("\"","\'\'");
-                postData.content=content;
-
-                console.info(content);
-                postData.author_acc="123";
-                postData.author_name="admin";
-                postData.create_time=new Date().toLocaleDateString();
-                postData.last_edit_time=new Date().toLocaleDateString();
-                console.info(postData);
-
-                //向后台传递数据，需要根据具体后台来改
-                $.post("http://localhost:8099/publishArticle",postData,function (data) {
-
-                    alert(data);
-                })
-
-            })
-
-        })
-
-    </script>
-
+	
+	
+	
 </head>
-<body style="background-color: whitesmoke">
+<body>
+<div id="welcome-text">欢迎访问BioMed</div>
+<div class="top-icons">
+    <a href="nav.html" target="_blank"><img src="icon/home.png" alt="Home Icon" class="small-icon"></a>
+    <a href="mailto:yinli@hainmc.edu.cn" target="_blank"><img src="icon/email.png" alt="Email Icon" class="small-icon"></a>
+</div>
 
-<div class="container-fluid">
-    <!--    顶部导航栏-->
-    <div class="row">
-        <div class="col-md-12" style="padding: 0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light mainHeader">
-                <!--                <a class="navbar-brand" href="#">Navbar w/ text</a>-->
-                <div class="logoDiv" id="logoIcon" style="cursor:pointer">
-                    <img class="logo_icon" src="logo_icon_white.png"/>
-                </div>
+<div class="search-container">
+    <p>探索未知世界</p>
+    <input type="text" placeholder="在这里输入，点击下面图标进行相应搜索,回车默认bing" onkeydown="handleEnter(event)">
+    <button type="button" onclick="searchBing()" class="icon-button"><img src="icon/bing.png" alt="Bing Icon" class="small-icon"></button>
+    <button type="button" onclick="searchBaidu()" class="icon-button"><img src="icon/baidu.png" alt="Baidu Icon" class="small-icon"></button>
+	<button type="button" onclick="searchGoogle()" class="icon-button"><img src="icon/google.png" alt="Google Icon" class="small-icon"></button>
+</div>
 
-                <div class="logoDiv" id="logoText">
-                    <img class="logo_icon" src="logo_text_white.png"/>
-                </div>
+<div class="icon-container">
+    <!-- 第一行图标链接 -->
+	<a href="mytools/timer.html" target="_blank"><img src="icon/timer.png" alt="timer Icon" class="icon"></a>
+    <a href="mytools/venn.html" target="_blank"><img src="icon/venn.png" alt="venn Icon" class="icon"></a>
+	<a href="mytools/merge.html" target="_blank"><img src="icon/merge.png" alt="merge Icon" class="icon"></a>
+	<a href="https://github.com/" target="_blank"><img src="icon/github.png" alt="GitHub Icon" class="icon"></a>
+    <a href="https://mp.weixin.qq.com/" target="_blank"><img src="icon/wechat.png" alt="WeChat Icon" class="icon"></a>
+    <a href="https://chat.openai.com/" target="_blank"><img src="icon/chatgpt.png" alt="ChatGPT Icon" class="icon"></a>
+    <a href="https://www.youtube.com/" target="_blank"><img src="icon/youtube.png" alt="YouTube Icon" class="icon"></a>
+    <a href="https://www.bilibili.com/" target="_blank"><img src="icon/bilibili.png" alt="Bilibili Icon" class="icon"></a>
+    <a href="https://www.jianshu.com/" target="_blank"><img src="icon/jianshu.png" alt="JianShu Icon" class="icon"></a>
+	<a href="https://y.qq.com/" target="_blank"><img src="icon/qqmusic.png" alt="QQ music Icon" class="icon"></a>
+	<a href="https://weixin.sogou.com/" target="_blank"><img src="icon/sogou.png" alt="sougo Icon" class="icon"></a>
+	<a href="https://dict.youdao.com/" target="_blank"><img src="icon/youdao.png" alt="youdao Icon" class="icon"></a>
+	<a href="https://exmail.qq.com/cgi-bin/loginpage?s=session_timeout&from=&r=422a57a47ac23cf4af4abe54e6402f57" target="_blank"><img src="icon/qiyeyou.png" alt="tengxunqiyeyou" class="icon"></a>
+    <a href="per/medmusic.html" target="_blank"><img src="icon/medmusic.png" alt="music Icon" class="icon"></a>
+	<a href="per/medtv.html" target="_blank"><img src="icon/tv.png" alt="tv Icon" class="icon"></a>
+	<a href="https://dillinger.io/" target="_blank"><img src="icon/transform.png" alt="Dillinger.pngIcon" class="icon"></a>
+	<a href="https://wordtohtml.net/" target="_blank"><img src="icon/w2h.png" alt="wh.pngIcon" class="icon"></a>
+	<!-- 继续添加其他图标链接 -->
 
-                <div class="collapse navbar-collapse" id="navbarText">
+    
+	<!-- 第二行图标链接 -->
+    <a href="hnmc.html" target="_blank"><img src="icon/hainmc.png" alt="Hainmc Icon" class="icon"></a>
+	<a href="files/pdfs.html" target="_blank"><img src="icon/file.png" alt="Hainmc Icon" class="icon"></a>
+    <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank"><img src="icon/pubmed.png" alt="PubMed Icon" class="icon"></a>
+	<a href="http://firebrowse.org/" target="_blank"><img src="icon/fire.png" alt="fire Icon" class="icon"></a>
+	<a href="https://www.cbioportal.org/" target="_blank"><img src="icon/bio.png" alt="cbio Icon" class="icon"></a>
+	<a href="http://gepia.cancer-pku.cn/index.html" target="_blank"><img src="icon/centre.png" alt="gepia Icon" class="icon"></a>
+	
+    <a href="https://cn.string-db.org/cgi/input?sessionId=br7Mgwo1uHj6&input_page_show_search=on" target="_blank"><img src="icon/string1.png" alt="String Icon" class="icon"></a>
+    <a href="https://bomics.com/enrich.html" target="_blank"><img src="icon/enrichment.png" alt="enrich Icon" class="icon"></a>
+	<a href="https://toppgene.cchmc.org/" target="_blank"><img src="icon/toppgene.png" alt="Toppgene Icon" class="icon"></a>
+	<a href="http://revigo.irb.hr/" target="_blank"><img src="icon/Revigo.png" alt="Revigo Icon" class="icon"></a>
+	<a href="https://fuma.ctglab.nl/gene2func" target="_blank"><img src="icon/fuma.png" alt="fuma Icon" class="icon"></a>
+	<a href="https://www.disgenet.org/" target="_blank"><img src="icon/dis.png" alt="disge Icon" class="icon"></a>
+	<a href="http://biogps.org/#goto=welcome" target="_blank"><img src="icon/biogps.png" alt="biogps Icon" class="icon"></a>
+	<a href="https://amigo.geneontology.org/amigo/landing" target="_blank"><img src="icon/amigo2.png" alt="aimigo2 Icon" class="icon"></a>
+	
+	<a href="http://www.tcmip.cn/TCMIP/index.php/Home/Login/login.html" target="_blank"><img src="icon/herbs.png" alt="Herbs Icon" class="icon"></a>
+	<a href="https://tcmsp-e.com/" target="_blank"><img src="icon/tcmsp.png" alt="tcmsp Icon" class="icon"></a>
+    <a href="https://www.ebi.ac.uk/chembl/" target="_blank"><img src="icon/chembl.png" alt="chembl Icon" class="icon"></a>	
+    <a href="https://www.lilab-ecust.cn/pharmmapper/submitfile.html" target="_blank"><img src="icon/pharm.png" alt="pharmIcon" class="icon"></a>		
 
-                    <ul class="navbar-nav mr-auto">
-                        <!--                        <li class="nav-item" style="padding-left: 20px">-->
-                        <!--                            <a class="nav-link nav-item"  href="#">首页 </a>-->
-                        <!--                        </li>-->
+	
+	<!-- 继续添加其他图标链接 -->
+	 
+</div>
 
-                    </ul>
+<script>
+    function handleEnter(event) {
+            if (event.key === "Enter") {
+                // 如果按下的是回车键，则执行 Bing 搜索
+                searchBing();
+            }
+        }
 
-                    <span class="navbar-nav">
-                        <a class="nav-link navbar-item active" href="#">个人中心</a>
+    function searchBing() {
+        window.open("https://www.bing.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    }
 
-                    </span>
-                </div>
-            </nav>
+    function searchGoogle() {
+        window.open("https://www.google.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    }
 
-        </div>
+    function searchBaidu() {
+        window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    }
+</script>
 
-    </div>
-
-    <div class="row" style="min-height: 10px"></div>
-
-    <div class="row">
-        <div class="col-md-1">
-
-
-        </div>
-
-        <div class="col-md-2" style="padding-right: 0px">
-
-            <div class="row">
-
-                <div class="col-md-3"></div>
-
-                <div class="col-md-9">
-                    <div class="card">
-
-                        <ul class="nav nav-pills nav-fill flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link active list-group-item" href="#">发布文章</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link liColor list-group-item" href="#">文章管理</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link liColor list-group-item" href="#">分类管理</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link liColor list-group-item" href="#">退出</a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="col-md-6" style="padding-left: 0px">
-            <div class="card">
-                <div class="card-header" style="background-color: white">
-                    <div class="row">
-                        <div class="col-md-3" style="font-size: 18px">发布文章</div>
-                        <!--                        <div class="col-md-9" style="margin-top: 8px;font-size: 12px;text-align: right">当前位置>专委会介绍>文件资料</div>-->
-                    </div>
-                </div>
-
-                <div class="card-body" style="min-height: 1000px">
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="input-group mb-1 mt-2 ml-0 mr-1" >
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"  >文章标题</span>
-                                </div>
-                                <input id="titleInput" type="text" class="form-control" placeholder="不多于100字" style="margin-right: 5px">
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div style="padding: 8px 0; color: #ccc"></div>
-                    <div id="div1" class="toolbar">
-                    </div>
-
-                    <div id="div2" class="text"> <!--可使用 min-height 实现编辑区域自动增加高度-->
-                        <!--                        <p>请输入内容</p>-->
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-5">
-                            <div class="input-group mb-3 mt-3 ml-0" >
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="inputGroup-sizing-default">文章分类</span>
-                                </div>
-                                <input id="categoryInput" type="text" class="form-control" >
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="row" style="padding: 15px">
-
-                        <div class="col-md-1"></div>
-                        <div class="col-md-2 ml-0">
-                            <button type="button" class="btn btn-primary" id="publishBtn">发布文章</button>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="button" class="btn btn-light">返回</button>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="col-md-2">
-
-
-        </div>
-    </div>
-
+<div class="bottom-text">
+    <img src="icon/footerlogo1.png" alt="BioMed Logo" class="logo">
+    <p>&copy; 2024 BioMed By Yinli</p>
 </div>
 
 </body>
