@@ -9,6 +9,16 @@
                 .catch(error => console.error('Error loading content:', error));
         }
 		
+// script.js
+
+function loadContent(url) {
+    var iframe = document.getElementById("contentFrame");
+    
+    iframe.src = url;
+
+    // 返回 false 阻止默认事件和冒泡
+    return false;
+}
 
         // Function to load content
  
