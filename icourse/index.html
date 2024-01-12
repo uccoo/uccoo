@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <!-- 使用本地 Bootstrap 文件 -->
+    <link href="../styles/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 使用本地 Font Awesome 文件 -->
+    <link rel="stylesheet" href="../styles/fontawesome-free-6.5.1-web/css/all.min.css">
+    <title>icourse</title>
+    <link rel="stylesheet" href="../css/nav2.css"> <!-- Link to external CSS file -->   
+</head>
+
+<body>
+    <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
+    <div id="sidebar">
+        <h2>OnlineCourse</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadContent('pages/home.html')">
+                    <i class="fas fa-home nav-icon"></i> Home
+                </a>
+            </li>
+            
+            
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#syllabusSubMenu" role="button"
+                    aria-expanded="false" aria-controls="syllabusSubMenu">
+                    <i class="fa-solid fa-list-check"></i>教学大纲
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="syllabusSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/timer.html')"> <i class="far fa-clock nav-icon"></i> timer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/venn.html')"> <i class="fa-solid fa-circle-half-stroke"></i> venn</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/merge.html')"> <i class="fas fa-code-branch nav-icon"></i> merge</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/id.html')"> <i class="fas fa-id-card nav-icon"></i> ID</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+          <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#SlidesSubMenu" role="button"
+                    aria-expanded="false" aria-controls="SlidesSubMenu">
+                    <i class="fa-regular fa-file-powerpoint"></i> Slides
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="SlidesSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/hainmu/hainmu.html')">
+                                <i class="fas fa-laptop nav-icon"></i>学习
+                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/hainmu/pdfs.html')">
+                                <i class="fas fa-file-pdf nav-icon"></i>pdfs
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#VideoSubMenu" role="button"
+                    aria-expanded="false" aria-controls="VideoSubMenu">
+                    <i class="fa-solid fa-video"></i>教学视频
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="VideoSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/Video/biotools.html')">
+							<i class="fa-solid fa-gear"></i> Video Tools</a>
+                        
+						
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#CasesSubMenu" role="button"
+                    aria-expanded="false" aria-controls="CasesSubMenu">
+                    <i class="fa-solid fa-briefcase-medical"></i>案例分析
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="CasesSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/Cases/prediction.html')">
+							<i class="fas fa-chart-line nav-icon"></i> prediciton</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#examSubMenu" role="button"
+                    aria-expanded="false" aria-controls="examSubMenu">
+                    <i class="fa-solid fa-user-pen"></i> 在线习题
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="examSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter1.html')">
+							<i class="fa-solid fa-droplet"></i>血液学一般检查</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter2.html')">
+							<i class="fa-solid fa-bone"></i>骨髓实验室检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter3.html')">
+							<i class="fa-solid fa-life-ring"></i>止血凝血检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter4.html')">
+							<i class="fa-solid fa-trash-arrow-up"></i>粪便检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter6.html')">
+							<i class="fa-solid fa-glass-water-droplet"></i>尿液检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter9.html')">
+							<i class="fa-solid fa-industry"></i> 肝功能检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter10.html')">
+							<i class="fas fa-map-marker nav-icon"></i> 肾功能检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter5.html')">
+							<i class="fa-solid fa-brain"></i> 脑脊液浆膜腔</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter7.html')">
+							<i class="fa-solid fa-venus-mars"></i>生殖系统</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter8.html')">
+							<i class="fa-solid fa-vial"></i> 临床生化</a>
+                        </li>
+						
+							<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter11.html')">
+							<i class="fa-solid fa-virus"></i>免疫学检查</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/chapter12.html')">
+							<i class="fa-solid fa-bacterium"></i>病原微生物</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/duoxuan.html')">
+							<i class="fa-solid fa-check-double"></i> 多选</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/jianda.html')">
+							<i class="fa-regular fa-pen-to-square"></i>简答</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/exam/bps.html')">
+							<i class="fa-regular fa-image"></i>骨髓图库</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#MedicalTestReportSubMenu" role="button"
+                    aria-expanded="false" aria-controls="MedicalTestReportSubMenu">
+                    <i class="fa-solid fa-hand-holding-droplet"></i> 化验单解读
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="MedicalTestReportSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/MedicalTestReport/MedicalTestReport.html')">
+							<i class="fa-solid fa-pills"></i> MedicalTestReport</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/MedicalTestReport/net Toxicology.html')">
+							<i class="fa-solid fa-skull-crossbones"></i>net Toxicology</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#IdeologicalPoliticalSubMenu" role="button"
+                    aria-expanded="false" aria-controls="IdeologicalPoliticalSubMenu">
+                    <i class="fa-solid fa-brain"></i> 课程思政
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="IdeologicalPoliticalSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/IdeologicalPolitical/Proteome.html')">
+							<i class="fa-solid fa-egg"></i>Proteome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/IdeologicalPolitical/Metabolome.html')">
+							<i class="fa-solid fa-cubes-stacked"></i>Metabolome</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/IdeologicalPolitical/other.html')">
+							<i class="fa-solid fa-chart-line"></i>other</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#paperTopicsSubMenu" role="button"
+                    aria-expanded="false" aria-controls="paperTopicsSubMenu">
+                    <i class="fa-solid fa-bolt"></i> 教学改革
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="paperTopicsSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Paper.html')">
+							<i class="far fa-file-alt nav-icon"></i>paper-relations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Research Project.html')">
+							<i class="fas fa-flask nav-icon"></i>Research Project</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#ProcrastinationSubMenu" role="button"
+                    aria-expanded="false" aria-controls="ProcrastinationSubMenu">
+                    <i class="fa-solid fa-file"></i> 拓展资源
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="ProcrastinationSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/Procrastination/Teaching.html')">
+							<i class="fa-solid fa-person-chalkboard"></i>Teaching</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+            
+            <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#smallToolsSubMenu" role="button"
+                    aria-expanded="false" aria-controls="smallToolsSubMenu" >
+                    <i class="fas fa-toolbox nav-icon"></i> 小工具
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="smallToolsSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/smallTools/smallTools.html')">
+                                <i class="fa-solid fa-anchor"></i> smallTools
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+			
+			<li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#RelaxSubMenu" role="button"
+                    aria-expanded="false" aria-controls="RelaxSubMenu" >
+                 <i class="fa-solid fa-mug-hot"></i> 学习之余 
+				 <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="RelaxSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/Relax/In leisure.html')">
+                                <i class="fas fa-coffee nav-icon"></i>In leisure
+                            </a>
+                        </li>
+                        
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/Relax/medTV.html')">
+                                <i class="fas fa-tv nav-icon"></i>medTV
+                            </a>
+                        </li> 
+						
+                    </ul>
+                </div>
+            </li>
+			
+           
+		   <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#aboutSubMenu" role="button"
+                    aria-expanded="false" aria-controls="aboutSubMenu">
+                    <i class="fa-solid fa-address-card"></i> About
+                    <i class="fas fa-caret-down ml-auto"></i>
+                </a>
+                <div class="collapse" id="aboutSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/about/team.html')">
+                                <i class="fas fa-users"></i> Team
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+		   
+		   
+		   <li class="nav-item">
+                <a class="nav-link" href="#" onclick="loadContent('pages/contact.html')">
+                    <i class="fas fa-envelope nav-icon"></i> Contact
+                </a>
+            </li> <!-- 继续添加其他导航项... -->
+        </ul>
+    </div>
+
+    <div id="content">
+	<iframe id="contentFrame" frameborder="0"></iframe>
+        
+    </div>
+
+
+    <script src="../styles/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 添加用于加载内容的 JavaScript 函数 -->
+    <script src="../scripts/nav2.js"></script>
+	<script>
+    // 页面加载完成时调用的函数
+    window.onload = function () {
+        // 加载“home”的内容
+        loadContent('pages/about/mission.html');
+    };
+</script>
+</body>
+
+</html>

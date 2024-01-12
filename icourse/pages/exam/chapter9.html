@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../allhtml.css">
+<link rel="stylesheet" href="examstyle.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</html>
+    <h2>肝功能检查</h2>
+    
+	<!-- 问题 1 到问题 5 -->
+    <!-- 问题 1 -->
+<div class="question">
+  <h3>1. 下列对直接胆红素的说法哪一项是错误的？</h3>
+  <form id="quizForm1">
+    <label>
+      <input type="radio" name="answer1" value="A"> A. 为胆红素葡萄糖醛酸二酯
+    </label>
+    <label>
+      <input type="radio" name="answer1" value="B"> B. 水溶性较大
+    </label>
+    <label>
+      <input type="radio" name="answer1" value="C"> C. 不易透过生物膜
+    </label>
+    <label>
+      <input type="radio" name="answer1" value="D"> D. 不能通过肾脏由尿排出
+    </label>
+    <label>
+      <input type="radio" name="answer1" value="E"> E. 与重氮试剂起反应的速度快，呈直接反应
+    </label>
+    <button type="button" onclick="checkAnswer(1)">提交答案</button>
+  </form>
+  <div id="feedback1"></div>
+</div>
+
+<!-- 问题 2 -->
+<div class="question">
+  <h3>2. 下列哪一项属于生物转化的第二相反应？</h3>
+  <form id="quizForm2">
+    <label>
+      <input type="radio" name="answer2" value="A"> A. 氧化反应
+    </label>
+    <label>
+      <input type="radio" name="answer2" value="B"> B. 还原反应
+    </label>
+    <label>
+      <input type="radio" name="answer2" value="C"> C. 水解反应
+    </label>
+    <label>
+      <input type="radio" name="answer2" value="D"> D. 结合反应
+    </label>
+    <label>
+      <input type="radio" name="answer2" value="E"> E. 加成反应
+    </label>
+    <button type="button" onclick="checkAnswer(2)">提交答案</button>
+  </form>
+  <div id="feedback2"></div>
+</div>
+
+<!-- 问题 3 -->
+<div class="question">
+  <h3>3. 正常人在肝合成血浆蛋白质，量最多的是？</h3>
+  <form id="quizForm3">
+    <label>
+      <input type="radio" name="answer3" value="A"> A. 凝血酶原
+    </label>
+    <label>
+      <input type="radio" name="answer3" value="B"> B. 纤维蛋白原
+    </label>
+    <label>
+      <input type="radio" name="answer3" value="C"> C. 清蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer3" value="D"> D. 球蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer3" value="E"> E. 脂蛋白
+    </label>
+    <button type="button" onclick="checkAnswer(3)">提交答案</button>
+  </form>
+  <div id="feedback3"></div>
+</div>
+
+<!-- 问题 4 -->
+<div class="question">
+  <h3>4. 肝内胆固醇代谢的主要终产物是？</h3>
+  <form id="quizForm4">
+    <label>
+      <input type="radio" name="answer4" value="A"> A. 7α-胆固醇
+    </label>
+    <label>
+      <input type="radio" name="answer4" value="B"> B. 胆色素
+    </label>
+    <label>
+      <input type="radio" name="answer4" value="C"> C. 胆酰CoA
+    </label>
+    <label>
+      <input type="radio" name="answer4" value="D"> D. 维生素D3
+    </label>
+    <label>
+      <input type="radio" name="answer4" value="E"> E. 结合胆汁酸
+    </label>
+    <button type="button" onclick="checkAnswer(4)">提交答案</button>
+  </form>
+  <div id="feedback4"></div>
+</div>
+
+<!-- 问题 5 -->
+<div class="question">
+  <h3>5. 最普遍进行的生物转化反应第二相反应是代谢物与？</h3>
+  <form id="quizForm5">
+    <label>
+      <input type="radio" name="answer5" value="A"> A. 乙酰基结合
+    </label>
+    <label>
+      <input type="radio" name="answer5" value="B"> B. 葡萄糖醛酸结合
+    </label>
+    <label>
+      <input type="radio" name="answer5" value="C"> C. 硫酸结合
+    </label>
+    <label>
+      <input type="radio" name="answer5" value="D"> D. 谷胱甘肽结合
+    </label>
+    <label>
+      <input type="radio" name="answer5" value="E"> E. 甲基结合
+    </label>
+    <button type="button" onclick="checkAnswer(5)">提交答案</button>
+  </form>
+  <div id="feedback5"></div>
+</div>
+<!-- ... （后续问题依此类推） -->
+<!-- 问题 6 -->
+<div class="question">
+  <h3>6. 溶血性黄疸的特点是？</h3>
+  <form id="quizForm6">
+    <label>
+      <input type="radio" name="answer6" value="A"> A. 血中结合胆红素含量增高
+    </label>
+    <label>
+      <input type="radio" name="answer6" value="B"> B. 血中胆素原剧减
+    </label>
+    <label>
+      <input type="radio" name="answer6" value="C"> C. 尿中胆红素增加
+    </label>
+    <label>
+      <input type="radio" name="answer6" value="D"> D. 未结合胆红素浓度增高
+    </label>
+    <label>
+      <input type="radio" name="answer6" value="E"> E. 粪便颜色变浅
+    </label>
+    <button type="button" onclick="checkAnswer(6)">提交答案</button>
+  </form>
+  <div id="feedback6"></div>
+</div>
+
+<!-- 问题 7 -->
+<div class="question">
+  <h3>7. 下列哪种物质是肠内细菌作用的产物？</h3>
+  <form id="quizForm7">
+    <label>
+      <input type="radio" name="answer7" value="A"> A. 胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer7" value="B"> B. 鹅脱氧胆酸
+    </label>
+    <label>
+      <input type="radio" name="answer7" value="C"> C. 胆红素-阴离子
+    </label>
+    <label>
+      <input type="radio" name="answer7" value="D"> D. 硫酸胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer7" value="E"> E. 胆素原
+    </label>
+    <button type="button" onclick="checkAnswer(7)">提交答案</button>
+  </form>
+  <div id="feedback7"></div>
+</div>
+
+<!-- 问题 8 -->
+<div class="question">
+  <h3>8. 阻塞性黄疸尿中主要的胆红素可能是？</h3>
+  <form id="quizForm8">
+    <label>
+      <input type="radio" name="answer8" value="A"> A. 游离胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer8" value="B"> B. 胆红素-Y蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer8" value="C"> C. 葡萄糖醛酸胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer8" value="D"> D. 胆红素-清蛋白复合物
+    </label>
+    <label>
+      <input type="radio" name="answer8" value="E"> E. 胆红素-Z蛋白
+    </label>
+    <button type="button" onclick="checkAnswer(8)">提交答案</button>
+  </form>
+  <div id="feedback8"></div>
+</div>
+
+<!-- 问题 9 -->
+<div class="question">
+  <h3>9. 下列哪项会导致尿胆素原排泄减少？</h3>
+  <form id="quizForm9">
+    <label>
+      <input type="radio" name="answer9" value="A"> A. 肠梗阻
+    </label>
+    <label>
+      <input type="radio" name="answer9" value="B"> B. 溶血
+    </label>
+    <label>
+      <input type="radio" name="answer9" value="C"> C. 碱中毒
+    </label>
+    <label>
+      <input type="radio" name="answer9" value="D"> D. 胆道梗阻
+    </label>
+    <label>
+      <input type="radio" name="answer9" value="E"> E. 肝细胞性黄疸
+    </label>
+    <button type="button" onclick="checkAnswer(9)">提交答案</button>
+  </form>
+  <div id="feedback9"></div>
+</div>
+
+<!-- 问题 10 -->
+<div class="question">
+  <h3>10. 关于胆汁酸盐的错误叙述是？</h3>
+  <form id="quizForm10">
+    <label>
+      <input type="radio" name="answer10" value="A"> A. 它在肝脏由胆固醇合成
+    </label>
+    <label>
+      <input type="radio" name="answer10" value="B"> B. 它为脂类吸收中的乳化剂
+    </label>
+    <label>
+      <input type="radio" name="answer10" value="C"> C. 它能抑制胆固醇结石的形成
+    </label>
+    <label>
+      <input type="radio" name="answer10" value="D"> D. 它是胆色素的代谢产物
+    </label>
+    <label>
+      <input type="radio" name="answer10" value="E"> E. 它能经肠肝循环被重吸收
+    </label>
+    <button type="button" onclick="checkAnswer(10)">提交答案</button>
+  </form>
+  <div id="feedback10"></div>
+</div>
+
+<!-- 问题 11 -->
+<div class="question">
+  <h3>11. 阻塞性黄疸的原因是？</h3>
+  <form id="quizForm11">
+    <label>
+      <input type="radio" name="answer11" value="A"> A. 肝细胞内胆红素代谢障碍
+    </label>
+    <label>
+      <input type="radio" name="answer11" value="B"> B. 大量红细胞破坏
+    </label>
+    <label>
+      <input type="radio" name="answer11" value="C"> C. 肝细胞膜通透性增大
+    </label>
+    <label>
+      <input type="radio" name="answer11" value="D"> D. 肝内外胆道阻塞
+    </label>
+    <label>
+      <input type="radio" name="answer11" value="E"> E. 以上都不是
+    </label>
+    <button type="button" onclick="checkAnswer(11)">提交答案</button>
+  </form>
+  <div id="feedback11"></div>
+</div>
+
+<!-- 问题 12 -->
+<div class="question">
+  <h3>12. 肝细胞对胆红素生物转化的实质是？</h3>
+  <form id="quizForm12">
+    <label>
+      <input type="radio" name="answer12" value="A"> A. 使胆红素与Y蛋白结合
+    </label>
+    <label>
+      <input type="radio" name="answer12" value="B"> B. 使胆红素与Z蛋白结合
+    </label>
+    <label>
+      <input type="radio" name="answer12" value="C"> C. 使胆红素的极性变小
+    </label>
+    <label>
+      <input type="radio" name="answer12" value="D"> D. 增强毛细胆管膜上载体转运系统，有利于胆红素排泄
+    </label>
+    <label>
+      <input type="radio" name="answer12" value="E"> E. 主要破坏胆红素分子内的氢键并进行结合反应，使极性增加利于排泄
+    </label>
+    <button type="button" onclick="checkAnswer(12)">提交答案</button>
+  </form>
+  <div id="feedback12"></div>
+</div>
+
+<!-- 问题 13 -->
+<div class="question">
+  <h3>13. 苯巴比妥治疗新生儿先天性黄疸的机制主要是？</h3>
+  <form id="quizForm13">
+    <label>
+      <input type="radio" name="answer13" value="A"> A. 诱导葡萄糖醛酸转移酶的生成
+    </label>
+    <label>
+      <input type="radio" name="answer13" value="B"> B. 使肝重量增加、体积增大
+    </label>
+    <label>
+      <input type="radio" name="answer13" value="C"> C. 肝血流量增多
+    </label>
+    <label>
+      <input type="radio" name="answer13" value="D"> D. 肝细胞摄取胆红素能力加强
+    </label>
+    <label>
+      <input type="radio" name="answer13" value="E"> E. 使Z蛋白的含量增加
+    </label>
+    <button type="button" onclick="checkAnswer(13)">提交答案</button>
+  </form>
+  <div id="feedback13"></div>
+</div>
+
+<!-- 问题 14 -->
+<div class="question">
+  <h3>14. 下列关于摄取、转化胆红素的机理中哪一项是错误的？</h3>
+  <form id="quizForm14">
+    <label>
+      <input type="radio" name="answer14" value="A"> A. 肝细胞膜能结合某些阴离子
+    </label>
+    <label>
+      <input type="radio" name="answer14" value="B"> B. 肝细胞膜上存在有特异载体系统
+    </label>
+    <label>
+      <input type="radio" name="answer14" value="C"> C. 肝细胞浆中存在有特异载体系统
+    </label>
+    <label>
+      <input type="radio" name="answer14" value="D"> D. 肝细胞能将胆红素转变为尿胆素原
+    </label>
+    <label>
+      <input type="radio" name="answer14" value="E"> E. 肝细胞能将胆红素转变为葡萄糖醛酸胆红素
+    </label>
+    <button type="button" onclick="checkAnswer(14)">提交答案</button>
+  </form>
+  <div id="feedback14"></div>
+</div>
+
+<!-- 问题 15 -->
+<div class="question">
+  <h3>15. 肝脏进行生物转化时葡萄糖醛酸的活性供体是？</h3>
+  <form id="quizForm15">
+    <label>
+      <input type="radio" name="answer15" value="A"> A. UDPGA
+    </label>
+    <label>
+      <input type="radio" name="answer15" value="B"> B. UDPG
+    </label>
+    <label>
+      <input type="radio" name="answer15" value="C"> C. ADPG
+    </label>
+    <label>
+      <input type="radio" name="answer15" value="D"> D. CDPG
+    </label>
+    <label>
+      <input type="radio" name="answer15" value="E"> E. CDPGA
+    </label>
+    <button type="button" onclick="checkAnswer(15)">提交答案</button>
+  </form>
+  <div id="feedback15"></div>
+</div>
+
+<!-- 问题 16 -->
+<div class="question">
+  <h3>16. 胆固醇结石与下列哪一种因素有关？</h3>
+  <form id="quizForm16">
+    <label>
+      <input type="radio" name="answer16" value="A"> A. 胆盐浓度
+    </label>
+    <label>
+      <input type="radio" name="answer16" value="B"> B. 卵磷脂浓度
+    </label>
+    <label>
+      <input type="radio" name="answer16" value="C"> C. 与胆盐和卵磷脂的比例
+    </label>
+    <label>
+      <input type="radio" name="answer16" value="D"> D. 胆固醇难溶于水
+    </label>
+    <label>
+      <input type="radio" name="answer16" value="E"> E. 以上都不是
+    </label>
+    <button type="button" onclick="checkAnswer(16)">提交答案</button>
+  </form>
+  <div id="feedback16"></div>
+</div>
+
+<!-- 问题 17 -->
+<div class="question">
+  <h3>17. 下列物质中哪一个不含血红素？</h3>
+  <form id="quizForm17">
+    <label>
+      <input type="radio" name="answer17" value="A"> A. 肌红蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer17" value="B"> B. 铜蓝蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer17" value="C"> C. 血红蛋白
+    </label>
+    <label>
+      <input type="radio" name="answer17" value="D"> D. 过氧化氢酶
+    </label>
+    <label>
+      <input type="radio" name="answer17" value="E"> E. 过氧化物酶
+    </label>
+    <button type="button" onclick="checkAnswer(17)">提交答案</button>
+  </form>
+  <div id="feedback17"></div>
+</div>
+
+<!-- 问题 18 -->
+<div class="question">
+  <h3>18. 血红素加氧酶系催化血红素原卟啉Ⅸ上哪个键断裂？</h3>
+  <form id="quizForm18">
+    <label>
+      <input type="radio" name="answer18" value="A"> A. α-次甲基桥
+    </label>
+    <label>
+      <input type="radio" name="answer18" value="B"> B. β-次甲基桥
+    </label>
+    <label>
+      <input type="radio" name="answer18" value="C"> C. γ-次甲基桥
+    </label>
+    <label>
+      <input type="radio" name="answer18" value="D"> D. δ-次甲基桥
+    </label>
+    <label>
+      <input type="radio" name="answer18" value="E"> E. 以上都不是
+    </label>
+    <button type="button" onclick="checkAnswer(18)">提交答案</button>
+  </form>
+  <div id="feedback18"></div>
+</div>
+
+<!-- 问题 19 -->
+<div class="question">
+  <h3>19. 下列关于胆红素代谢的叙述哪一项是正确的？</h3>
+  <form id="quizForm19">
+    <label>
+      <input type="radio" name="answer19" value="A"> A. 其乙烯基与葡萄糖醛酸结合
+    </label>
+    <label>
+      <input type="radio" name="answer19" value="B"> B. 在生理pH下，其双葡萄糖醛酸酯有两个阴离子基团
+    </label>
+    <label>
+      <input type="radio" name="answer19" value="C"> C. 葡萄糖醛酸酯在肠中转化
+    </label>
+    <label>
+      <input type="radio" name="answer19" value="D"> D. 在葡萄糖醛酸酶的作用下与葡萄糖醛酸结合
+    </label>
+    <label>
+      <input type="radio" name="answer19" value="E"> E. 血胆红素易通过肾脏排出体外
+    </label>
+    <button type="button" onclick="checkAnswer(19)">提交答案</button>
+  </form>
+  <div id="feedback19"></div>
+</div>
+
+<!-- 问题 20 -->
+<div class="question">
+  <h3>20. 血中哪一种胆红素增加会在尿中出现胆红素？</h3>
+  <form id="quizForm20">
+    <label>
+      <input type="radio" name="answer20" value="A"> A. 未结合胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer20" value="B"> B. 结合胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer20" value="C"> C. 肝前胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer20" value="D"> D. 间接反应胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer20" value="E"> E. 与清蛋白结合的胆红素
+    </label>
+    <button type="button" onclick="checkAnswer(20)">提交答案</button>
+  </form>
+  <div id="feedback20"></div>
+</div>
+
+<!-- 问题 21 -->
+<div class="question">
+  <h3>21. 对胆汁酸的描述错误的是？</h3>
+  <form id="quizForm21">
+    <label>
+      <input type="radio" name="answer21" value="A"> A. 胆汁酸具有疏水性
+    </label>
+    <label>
+      <input type="radio" name="answer21" value="B"> B. 羟基与羧基的空间配位为α型
+    </label>
+    <label>
+      <input type="radio" name="answer21" value="C"> C. 因为疏水基团在分子内部，所以只表现亲水性
+    </label>
+    <label>
+      <input type="radio" name="answer21" value="D"> D. 能降低油/水两相之间的表面张力
+    </label>
+    <label>
+      <input type="radio" name="answer21" value="E"> E. 能使脂类在水中乳化
+    </label>
+    <button type="button" onclick="checkAnswer(21)">提交答案</button>
+  </form>
+  <div id="feedback21"></div>
+</div>
+
+<!-- 问题 22 -->
+<div class="question">
+  <h3>22. 对胆汁酸的“肠肝循环”描述错误的是？</h3>
+  <form id="quizForm22">
+    <label>
+      <input type="radio" name="answer22" value="A"> A. 结合型胆汁酸在回肠和结肠中水解为游离型
+    </label>
+    <label>
+      <input type="radio" name="answer22" value="B"> B. 结合型胆汁酸的重吸收主要在回肠部
+    </label>
+    <label>
+      <input type="radio" name="answer22" value="C"> C. 重吸收的胆汁酸被肝细胞摄取并可转化成为结合型胆汁酸
+    </label>
+    <label>
+      <input type="radio" name="answer22" value="D"> D. 人体每天进行6~12次肠肝循环
+    </label>
+    <label>
+      <input type="radio" name="answer22" value="E"> E. “肠肝循环”障碍不影响对脂类的消化吸收
+    </label>
+    <button type="button" onclick="checkAnswer(22)">提交答案</button>
+  </form>
+  <div id="feedback22"></div>
+</div>
+
+<!-- 问题 23 -->
+<div class="question">
+  <h3>23. 影响胆素原排泄的主要因素下列哪一项除外？</h3>
+  <form id="quizForm23">
+    <label>
+      <input type="radio" name="answer23" value="A"> A. 肾功能状态
+    </label>
+    <label>
+      <input type="radio" name="answer23" value="B"> B. 胆道梗阻
+    </label>
+    <label>
+      <input type="radio" name="answer23" value="C"> C. 胆红素生成量
+    </label>
+    <label>
+      <input type="radio" name="answer23" value="D"> D. 尿pH
+    </label>
+    <label>
+      <input type="radio" name="answer23" value="E"> E. 肝功能状态
+    </label>
+    <button type="button" onclick="checkAnswer(23)">提交答案</button>
+  </form>
+  <div id="feedback23"></div>
+</div>
+
+<!-- 问题 24 -->
+<div class="question">
+  <h3>24. 下列有关尿胆素原的叙述哪一项是错误的？</h3>
+  <form id="quizForm24">
+    <label>
+      <input type="radio" name="answer24" value="A"> A. 溶血性黄疸时尿和粪中尿胆素原增加
+    </label>
+    <label>
+      <input type="radio" name="answer24" value="B"> B. 阻塞性黄疸时尿中尿胆素原减少或为阴性
+    </label>
+    <label>
+      <input type="radio" name="answer24" value="C"> C. 肝细胞性黄疸时尿中尿胆素原常常增加
+    </label>
+    <label>
+      <input type="radio" name="answer24" value="D"> D. 尿胆素原是黄色的
+    </label>
+    <label>
+      <input type="radio" name="answer24" value="E"> E. 能氧化为尿胆素
+    </label>
+    <button type="button" onclick="checkAnswer(24)">提交答案</button>
+  </form>
+  <div id="feedback24"></div>
+</div>
+
+<!-- 问题 25 -->
+<div class="question">
+  <h3>25. 正常人血清中的胆红素主要是？</h3>
+  <form id="quizForm25">
+    <label>
+      <input type="radio" name="answer25" value="A"> A. 结合胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer25" value="B"> B. 未结合胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer25" value="C"> C. 与球蛋白结合的胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer25" value="D"> D. 与总蛋白结合的胆红素
+    </label>
+    <label>
+      <input type="radio" name="answer25" value="E"> E. 与钙结合的胆红素
+    </label>
+    <button type="button" onclick="checkAnswer(25)">提交答案</button>
+  </form>
+  <div id="feedback25"></div>
+</div>
+
+<!-- 问题 26 -->
+<div class="question">
+
+<h3>26.关于未结合胆红素的叙述，哪一项是错误的</h3>
+<form id="quizForm26">
+  <label>
+    <input type="radio" name="answer26" value="A"> A. 大部分由衰老红细胞破坏后代谢、降解产生
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="B"> B. 在血浆中与白蛋白的结合是可逆的
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="C"> C. 在血浆中与白蛋白结合后毒性变小
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="D"> D. 未结合胆红素是水溶性的
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="E"> E. J-G法间接反应阳性
+  </label>
+  <button type="button" onclick="checkAnswer(26)">提交答案</button>
+</form>
+<div id="feedback26"></div>
+<div class="question">
+
+<h3>27.肝细胞中与胆红素结合的主要物质是</h3>
+<form id="quizForm27">
+  <label>
+    <input type="radio" name="answer27" value="A"> A. 乙酰基
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="B"> B. 硫酸根
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="C"> C. 甲基
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="D"> D. 葡萄糖醛酸
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="E"> E. 甘氨酸
+  </label>
+  <button type="button" onclick="checkAnswer(27)">提交答案</button>
+</form>
+<div id="feedback27"></div>
+<div class="question">
+
+<h3>28.下列化合物哪个不是胆色素</h3>
+<form id="quizForm28">
+  <label>
+    <input type="radio" name="answer28" value="A"> A. 胆素
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="B"> B. 胆素原
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="C"> C. 胆红素
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="D"> D. 血红素
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="E"> E. 胆绿素
+  </label>
+  <button type="button" onclick="checkAnswer(28)">提交答案</button>
+</form>
+<div id="feedback28"></div>
+<div class="question">
+
+<h3>29.溶血性黄疸时下列哪一项不存在</h3>
+<form id="quizForm29">
+  <label>
+    <input type="radio" name="answer29" value="A"> A. 血中游离胆红素增加
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="B"> B. 粪胆素原增加
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="C"> C. 尿胆素原增加
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="D"> D. 尿中出现胆红素
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="E"> E. 粪便颜色加深
+  </label>
+  <button type="button" onclick="checkAnswer(29)">提交答案</button>
+</form>
+<div id="feedback29"></div>
+<div class="question">
+<h3>30.关于胆红素测定，下列哪一项是正确的</h3>
+<form id="quizForm30">
+  <label>
+    <input type="radio" name="answer30" value="A"> A. 正常人尿中可阳性
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="B"> B. 肝细胞性黄疸时尿胆红素增加
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="C"> C. 阻塞性黄疸时尿胆红素阴性
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="D"> D. 溶血性黄疸时尿胆红素明显增加
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="E"> E. 严重肾损伤时尿胆红素明显增加
+  </label>
+  <button type="button" onclick="checkAnswer(30)">提交答案</button>
+</form>
+<div id="feedback30"></div>
+
+
+
+
+
+
+  </section>
+
+
+
+
+ <script>
+      function checkAnswer(questionNumber) {
+        var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+        var feedbackDiv = document.getElementById('feedback' + questionNumber);
+        var correctAnswer;
+
+        switch (questionNumber) {
+          case 1:
+        correctAnswer = 'D';
+        break;
+      case 2:
+        correctAnswer = 'D';
+        break;
+      case 3:
+        correctAnswer = 'C';
+        break;
+      case 4:
+        correctAnswer = 'E';
+        break;
+      case 5:
+        correctAnswer = 'B';
+        break;
+      case 6:
+        correctAnswer = 'D';
+        break;
+      case 7:
+        correctAnswer = 'E';
+        break;
+      case 8:
+        correctAnswer = 'C';
+        break;
+      case 9:
+        correctAnswer = 'D';
+        break;
+      case 10:
+        correctAnswer = 'D';
+        break;
+      case 11:
+        correctAnswer = 'D';
+        break;
+      case 12:
+        correctAnswer = 'E';
+        break;
+      case 13:
+        correctAnswer = 'A';
+        break;
+      case 14:
+        correctAnswer = 'D';
+        break;
+      case 15:
+        correctAnswer = 'A';
+        break;
+      case 16:
+        correctAnswer = 'C';
+        break;
+      case 17:
+        correctAnswer = 'B';
+        break;
+      case 18:
+        correctAnswer = 'A';
+        break;
+      case 19:
+        correctAnswer = 'B';
+        break;
+      case 20:
+        correctAnswer = 'B';
+        break;
+      case 21:
+        correctAnswer = 'C';
+        break;
+      case 22:
+        correctAnswer = 'E';
+        break;
+      case 23:
+        correctAnswer = 'A';
+        break;
+      case 24:
+        correctAnswer = 'D';
+        break;
+      case 25:
+        correctAnswer = 'B';
+        break;
+      case 26:
+        correctAnswer = 'D';
+        break;
+      case 27:
+        correctAnswer = 'D';
+        break;
+      case 28:
+        correctAnswer = 'D';
+        break;
+      case 29:
+        correctAnswer = 'D';
+        break;
+      case 30:
+        correctAnswer = 'B';
+        break;
+					
+          default:
+            break;
+        }
+
+        if (userAnswer) {
+          var userResponse = userAnswer.value;
+          if (userResponse === correctAnswer) {
+            feedbackDiv.textContent = '回答正确！';
+            feedbackDiv.style.color = 'green';
+          } else {
+            feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+            feedbackDiv.style.color = 'red';
+          }
+        } else {
+          feedbackDiv.textContent = '请选择一个答案。';
+          feedbackDiv.style.color = 'red';
+        }
+      }
+
+    
+    </script>
+
+  </section>
+
+
+</body>
+</html>

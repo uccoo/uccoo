@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../allhtml.css">
+<link rel="stylesheet" href="examstyle.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</html>
+    <h2>肾功能检查</h2>
+
+<h3>1.自由水清除率等于或接近0，则提示</h3>
+<form id="quizForm1">
+  <label>
+    <input type="radio" name="answer1" value="A"> A. 肾脏具有稀释功能
+  </label>
+  <label>
+    <input type="radio" name="answer1" value="B"> B. 肾脏具有浓缩功能
+  </label>
+  <label>
+    <input type="radio" name="answer1" value="C"> C. 肾脏既具有稀释功能，也具有浓缩功能
+  </label>
+  <label>
+    <input type="radio" name="answer1" value="D"> D. 肾脏稀释和浓缩功能严重受损
+  </label>
+  <label>
+    <input type="radio" name="answer1" value="E"> E. 肾小管损伤较轻，预后良好
+  </label>
+  <button type="button" onclick="checkAnswer(1)">提交答案</button>
+</form>
+<div id="feedback1"></div>
+
+<h3>2.肾病综合征时产生的蛋白尿为</h3>
+<form id="quizForm2">
+  <label>
+    <input type="radio" name="answer2" value="A"> A. 肾小球性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer2" value="B"> B. 肾小管性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer2" value="C"> C. 溢出性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer2" value="D"> D. 组织性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer2" value="E"> E. 其他
+  </label>
+  <button type="button" onclick="checkAnswer(2)">提交答案</button>
+</form>
+<div id="feedback2"></div>
+
+<h3>3.肾小球性蛋白尿的发生原因</h3>
+<form id="quizForm3">
+  <label>
+    <input type="radio" name="answer3" value="A"> A. 肾小管髓襻吸收功能损伤
+  </label>
+  <label>
+    <input type="radio" name="answer3" value="B"> B. 肾近曲小管上皮细胞受损
+  </label>
+  <label>
+    <input type="radio" name="answer3" value="C"> C. 肾小球通透性增加
+  </label>
+  <label>
+    <input type="radio" name="answer3" value="D"> D. 肾远端小管上皮细胞受损
+  </label>
+  <label>
+    <input type="radio" name="answer3" value="E"> E. 血浆中低分子量蛋白过量
+  </label>
+  <button type="button" onclick="checkAnswer(3)">提交答案</button>
+</form>
+<div id="feedback3"></div>
+
+<h3>4.下列属于常见的肾小球性蛋白尿的是</h3>
+<form id="quizForm4">
+  <label>
+    <input type="radio" name="answer4" value="A"> A. 转铁蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer4" value="B"> B. 尿蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer4" value="C"> C. 视黄醇结合蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer4" value="D"> D. α1微球蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer4" value="E"> E. 结合珠蛋白
+  </label>
+  <button type="button" onclick="checkAnswer(4)">提交答案</button>
+</form>
+<div id="feedback4"></div>
+
+<h3>5.微量肾小球性蛋白尿的描述中，错误的是</h3>
+<form id="quizForm5">
+  <label>
+    <input type="radio" name="answer5" value="A"> A. 微量肾小球性蛋白尿是早期诊断肾小球损伤的敏感指标
+  </label>
+  <label>
+    <input type="radio" name="answer5" value="B"> B. 微量白蛋白和转铁蛋白是最常检测的肾小球性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer5" value="C"> C. 微量白蛋白尿对肾间质性肾病的诊断指标
+  </label>
+  <label>
+    <input type="radio" name="answer5" value="D"> D. 微量肾小球性蛋白尿对监测糖尿病肾病意义重大
+  </label>
+  <label>
+    <input type="radio" name="answer5" value="E"> E. 微量白蛋白尿是指24h尿蛋白量<200mg
+  </label>
+  <button type="button" onclick="checkAnswer(5)">提交答案</button>
+</form>
+<div id="feedback5"></div>
+
+<h3>6.关于血Cr和血尿素的描述，错误的是</h3>
+<form id="quizForm6">
+  <label>
+    <input type="radio" name="answer6" value="A"> A. 血尿素浓度取决于机体含氮化合物的分解代谢和肾脏的排泄功能
+  </label>
+  <label>
+    <input type="radio" name="answer6" value="B"> B. 血Cr和血尿素可以反应肾小球的滤过功能
+  </label>
+  <label>
+    <input type="radio" name="answer6" value="C"> C. 血Cr和血尿素是肾小球滤过功能损伤的敏感指标
+  </label>
+  <label>
+    <input type="radio" name="answer6" value="D"> D. 血Cr比血尿素更能转却地反应肾小球滤过功能
+  </label>
+  <label>
+    <input type="radio" name="answer6" value="E"> E. CCr比Cr和血尿素更好地反应肾小球滤过功能
+  </label>
+  <button type="button" onclick="checkAnswer(6)">提交答案</button>
+</form>
+<div id="feedback6"></div>
+
+<h3>7.反应肾小管功能损伤的指标是</h3>
+<form id="quizForm7">
+  <label>
+    <input type="radio" name="answer7" value="A"> A. 血清白蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer7" value="B"> B. 血清前白蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer7" value="C"> C. 尿β2-微球蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer7" value="D"> D. 尿转铁蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer7" value="E"> E. 血清C反应蛋白
+  </label>
+  <button type="button" onclick="checkAnswer(7)">提交答案</button>
+</form>
+<div id="feedback7"></div>
+
+<h3>8.某患者血Cr为88.4μmol/L,尿Cr浓度为4420μmol/L，24h尿量为1584ml，其GFR为</h3>
+<form id="quizForm8">
+  <label>
+    <input type="radio" name="answer8" value="A"> A. 25ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer8" value="B"> B. 50ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer8" value="C"> C. 55ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer8" value="D"> D. 75ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer8" value="E"> E. 155ml/min
+  </label>
+  <button type="button" onclick="checkAnswer(8)">提交答案</button>
+</form>
+<div id="feedback8"></div>
+
+<h3>9.莫氏实验的结果，下列哪一项为正常</h3>
+<form id="quizForm9">
+  <label>
+    <input type="radio" name="answer9" value="A"> A. 24h尿量>3000ml
+  </label>
+  <label>
+    <input type="radio" name="answer9" value="B"> B. 日间与夜间尿量比<2：1
+  </label>
+  <label>
+    <input type="radio" name="answer9" value="C"> C. 最高与最低尿比重差<0.009
+  </label>
+  <label>
+    <input type="radio" name="answer9" value="D"> D. 夜间尿比重>1.020
+  </label>
+  <label>
+    <input type="radio" name="answer9" value="E"> E. 各次尿比重固定在1.010
+  </label>
+  <button type="button" onclick="checkAnswer(9)">提交答案</button>
+</form>
+<div id="feedback9"></div>
+
+<h3>10.目前临床用于糖尿病肾病的早期诊断和监测的首选项目是</h3>
+<form id="quizForm10">
+  <label>
+    <input type="radio" name="answer10" value="A"> A. 尿中Na+浓度
+  </label>
+  <label>
+    <input type="radio" name="answer10" value="B"> B. 尿中K+浓度
+  </label>
+  <label>
+    <input type="radio" name="answer10" value="C"> C. 尿中微量白蛋白含量
+  </label>
+  <label>
+    <input type="radio" name="answer10" value="D"> D. Ccr
+  </label>
+  <label>
+    <input type="radio" name="answer10" value="E"> E. 血肌酐水平
+  </label>
+  <button type="button" onclick="checkAnswer(10)">提交答案</button>
+</form>
+<div id="feedback10"></div>
+
+<h3>11.关于选择性指数的分析，正确的是</h3>
+<form id="quizForm11">
+  <label>
+    <input type="radio" name="answer11" value="A"> A. 选择性蛋白尿往往提示肾小球损伤严重，预后不佳
+  </label>
+  <label>
+    <input type="radio" name="answer11" value="B"> B. SPI>0.2为选择性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer11" value="C"> C. SPI能够确定肾小球滤过膜损伤原因
+  </label>
+  <label>
+    <input type="radio" name="answer11" value="D"> D. 非选择性蛋白尿中含有少量的大分子蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer11" value="E"> E. SPI与肾小球滤过膜损伤程度相关，也与病理类型相关
+  </label>
+  <button type="button" onclick="checkAnswer(11)">提交答案</button>
+</form>
+<div id="feedback11"></div>
+
+<h3>12.以下项目中可以反应肾小球滤过损伤，除外</h3>
+<form id="quizForm12">
+  <label>
+    <input type="radio" name="answer12" value="A"> A. 尿白蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer12" value="B"> B. 血Cr浓度
+  </label>
+  <label>
+    <input type="radio" name="answer12" value="C"> C. 血尿酸
+  </label>
+  <label>
+    <input type="radio" name="answer12" value="D"> D. CycS
+  </label>
+  <label>
+    <input type="radio" name="answer12" value="E"> E. 尿酶
+  </label>
+  <button type="button" onclick="checkAnswer(12)">提交答案</button>
+</form>
+<div id="feedback12"></div>
+
+<!-- 依此类推，继续生成剩余题目的 HTML 部分 -->
+<h3>13.肾小管性蛋白尿和尿酶的描述中，错误的是</h3>
+<form id="quizForm13">
+  <label>
+    <input type="radio" name="answer13" value="A"> A. 都可以反应肾小管部位的损伤
+  </label>
+  <label>
+    <input type="radio" name="answer13" value="B"> B. NAG等对肾移植术后排斥反应的早期诊断较敏感
+  </label>
+  <label>
+    <input type="radio" name="answer13" value="C"> C. 肾小管性尿蛋白和尿酶的来源不同
+  </label>
+  <label>
+    <input type="radio" name="answer13" value="D"> D. 尿酶可以进行肾疾病的定位诊断
+  </label>
+  <label>
+    <input type="radio" name="answer13" value="E"> E. 两者都是小分子量蛋白质，可以自由通过肾小球滤过
+  </label>
+  <button type="button" onclick="checkAnswer(13)">提交答案</button>
+</form>
+<div id="feedback13"></div>
+
+<h3>14.Ccr为系列哪项提示终末期肾衰</h3>
+<form id="quizForm14">
+  <label>
+    <input type="radio" name="answer14" value="A"> A. <50ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer14" value="B"> B. <40ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer14" value="C"> C. <30ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer14" value="D"> D. <20ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer14" value="E"> E. <10ml/min
+  </label>
+  <button type="button" onclick="checkAnswer(14)">提交答案</button>
+</form>
+<div id="feedback14"></div>
+
+<h3>15.关于自由水清除率的描述，错误的是</h3>
+<form id="quizForm15">
+  <label>
+    <input type="radio" name="answer15" value="A"> A. 反应肾髓质的尿液浓缩和稀释功能的指标
+  </label>
+  <label>
+    <input type="radio" name="answer15" value="B"> B. 正值代表低渗尿，负值代表高渗尿
+  </label>
+  <label>
+    <input type="radio" name="answer15" value="C"> C. 持续为0，提示为严重的肾功能损伤
+  </label>
+  <label>
+    <input type="radio" name="answer15" value="D"> D. 计算公式为[1-(Uosm/Posm)]×V
+  </label>
+  <label>
+    <input type="radio" name="answer15" value="E"> E. 反应水和溶质的相对排泄率
+  </label>
+  <button type="button" onclick="checkAnswer(15)">提交答案</button>
+</form>
+<div id="feedback15"></div>
+
+<!-- 依此类推，继续生成剩余题目的 HTML 部分 -->
+<h3>16.肾脏调节血液PH值的机制是</h3>
+<form id="quizForm16">
+  <label>
+    <input type="radio" name="answer16" value="A"> A. 排出过多的酸和碱，调节血浆的HCO3-浓度
+  </label>
+  <label>
+    <input type="radio" name="answer16" value="B"> B. Cl-重吸收
+  </label>
+  <label>
+    <input type="radio" name="answer16" value="C"> C. Na+与水重吸收
+  </label>
+  <label>
+    <input type="radio" name="answer16" value="D"> D. K+的重吸收
+  </label>
+  <label>
+    <input type="radio" name="answer16" value="E"> E. NH3及NH4+的排出
+  </label>
+  <button type="button" onclick="checkAnswer(16)">提交答案</button>
+</form>
+<div id="feedback16"></div>
+
+<h3>17.肾小管酸中毒的描述，错误的是</h3>
+<form id="quizForm17">
+  <label>
+    <input type="radio" name="answer17" value="A"> A. 肾小管酸中毒是由于肾小管受损而导致慢性酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer17" value="B"> B. 肾小管远端小管和近端小管都有排H+作用
+  </label>
+  <label>
+    <input type="radio" name="answer17" value="C"> C. HCO3-的重吸收多数在近端小管发生
+  </label>
+  <label>
+    <input type="radio" name="answer17" value="D"> D. 肾小管酸中毒是一种代谢性酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer17" value="E"> E. 肾小管有碱化尿液的作用
+  </label>
+  <button type="button" onclick="checkAnswer(17)">提交答案</button>
+</form>
+<div id="feedback17"></div>
+
+<h3>18.内生肌酐清除率参考值是</h3>
+<form id="quizForm18">
+  <label>
+    <input type="radio" name="answer18" value="A"> A. 50-70ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer18" value="B"> B. 70-90 ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer18" value="C"> C. 80-120 ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer18" value="D"> D. 120-130 ml/min
+  </label>
+  <label>
+    <input type="radio" name="answer18" value="E"> E. 130-150 ml/min
+  </label>
+  <button type="button" onclick="checkAnswer(18)">提交答案</button>
+</form>
+<div id="feedback18"></div>
+
+<h3>19.氯化铵负荷试验主要用于诊断</h3>
+<form id="quizForm19">
+  <label>
+    <input type="radio" name="answer19" value="A"> A. 近端肾小管酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer19" value="B"> B. 高钾性酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer19" value="C"> C. 远端肾小管酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer19" value="D"> D. 混合性酸中毒
+  </label>
+  <label>
+    <input type="radio" name="answer19" value="E"> E. 以上均不是
+  </label>
+  <button type="button" onclick="checkAnswer(19)">提交答案</button>
+</form>
+<div id="feedback19"></div>
+
+<h3>20.下列哪项最能反映肾浓缩功能损害程度</h3>
+<form id="quizForm20">
+  <label>
+    <input type="radio" name="answer20" value="A"> A. 肉眼血尿
+  </label>
+  <label>
+    <input type="radio" name="answer20" value="B"> B. 大量蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer20" value="C"> C. 管型尿
+  </label>
+  <label>
+    <input type="radio" name="answer20" value="D"> D. 等渗尿
+  </label>
+  <label>
+    <input type="radio" name="answer20" value="E"> E. 脓尿
+  </label>
+  <button type="button" onclick="checkAnswer(20)">提交答案</button>
+</form>
+<div id="feedback20"></div>
+
+<h3>21.肾小球功能损害最早见于下列哪项检查异常</h3>
+<form id="quizForm21">
+  <label>
+    <input type="radio" name="answer21" value="A"> A. 酚红排泄试验
+  </label>
+  <label>
+    <input type="radio" name="answer21" value="B"> B. 血尿素升高
+  </label>
+  <label>
+    <input type="radio" name="answer21" value="C"> C. 血肌酐升高
+  </label>
+  <label>
+    <input type="radio" name="answer21" value="D"> D. 内生肌酐清除率
+  </label>
+  <label>
+    <input type="radio" name="answer21" value="E"> E. 自由水清除率
+  </label>
+  <button type="button" onclick="checkAnswer(21)">提交答案</button>
+</form>
+<div id="feedback21"></div>
+
+<h3>22.反应远曲小管和集合管功能的试验是</h3>
+<form id="quizForm22">
+  <label>
+    <input type="radio" name="answer22" value="A"> A. 浓缩稀释试验
+  </label>
+  <label>
+    <input type="radio" name="answer22" value="B"> B. PSP排泄试验
+  </label>
+  <label>
+    <input type="radio" name="answer22" value="C"> C. 血肌酐、尿素测定
+  </label>
+  <label>
+    <input type="radio" name="answer22" value="D"> D. 内生肌酐清除率
+  </label>
+  <label>
+    <input type="radio" name="answer22" value="E"> E. 同位素肾图
+  </label>
+  <button type="button" onclick="checkAnswer(22)">提交答案</button>
+</form>
+<div id="feedback22"></div>
+
+<h3>23.尿液中β2微球蛋白升高，而血液中β2微球蛋白不升高，此时出现蛋白尿属于</h3>
+<form id="quizForm23">
+  <label>
+    <input type="radio" name="answer23" value="A"> A. 肾小球性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer23" value="B"> B. 溢出性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer23" value="C"> C. 分泌性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer23" value="D"> D. 肾小管性蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer23" value="E"> E. 组织性蛋白尿
+  </label>
+  <button type="button" onclick="checkAnswer(23)">提交答案</button>
+</form>
+<div id="feedback23"></div>
+
+<h3>24.原发性肾病综合征血浆蛋白电泳的变化是</h3>
+<form id="quizForm24">
+  <label>
+    <input type="radio" name="answer24" value="A"> A. 清蛋白升高
+  </label>
+  <label>
+    <input type="radio" name="answer24" value="B"> B. α1-球蛋白升高
+  </label>
+  <label>
+    <input type="radio" name="answer24" value="C"> C. α2和β-球蛋白升高
+  </label>
+  <label>
+    <input type="radio" name="answer24" value="D"> D. γ-球蛋白升高
+  </label>
+  <label>
+    <input type="radio" name="answer24" value="E"> E. α1-球蛋白和β-球蛋白升高
+  </label>
+  <button type="button" onclick="checkAnswer(24)">提交答案</button>
+</form>
+<div id="feedback24"></div>
+
+<h3>25.原发性肾病综合征，血中不升高的是</h3>
+<form id="quizForm25">
+  <label>
+    <input type="radio" name="answer25" value="A"> A. 脂蛋白
+  </label>
+  <label>
+    <input type="radio" name="answer25" value="B"> B. 胆固醇
+  </label>
+  <label>
+    <input type="radio" name="answer25" value="C"> C. IgG
+  </label>
+  <label>
+    <input type="radio" name="answer25" value="D"> D. 凝血因子
+  </label>
+  <label>
+    <input type="radio" name="answer25" value="E"> E. 甘油三酯
+  </label>
+  <button type="button" onclick="checkAnswer(25)">提交答案</button>
+</form>
+<div id="feedback25"></div>
+
+<h3>26.关于肾脏功能检测，下列那一项是不正确的</h3>
+<form id="quizForm26">
+  <label>
+    <input type="radio" name="answer26" value="A"> A. 菊粉清除率可准确代表肾小球滤过率
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="B"> B. β2-MG测定是诊断肾脏进曲小管受损的敏感指标
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="C"> C. 尿内出现大量蛋白尿并不能说明肾功能损伤严重
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="D"> D. 酚红排泌试验可反映肾小管的重吸收功能
+  </label>
+  <label>
+    <input type="radio" name="answer26" value="E"> E. 血尿素和肌酐主要反映肾小球滤过功能
+  </label>
+  <button type="button" onclick="checkAnswer(26)">提交答案</button>
+</form>
+<div id="feedback26"></div>
+
+<h3>27.能更好地反映肾脏浓缩稀释功能的指标是</h3>
+<form id="quizForm27">
+  <label>
+    <input type="radio" name="answer27" value="A"> A. 尿比重
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="B"> B. 夜尿量
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="C"> C. 尿渗量
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="D"> D. 蛋白尿
+  </label>
+  <label>
+    <input type="radio" name="answer27" value="E"> E. 24h尿量
+  </label>
+  <button type="button" onclick="checkAnswer(27)">提交答案</button>
+</form>
+
+<div id="feedback27"></div>
+
+<h3>28.尿液中含量不受饮食和尿量影响，排出量最为恒定的是</h3>
+<form id="quizForm28">
+  <label>
+    <input type="radio" name="answer28" value="A"> A. 肌酸
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="B"> B. 肌酐
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="C"> C. 尿素
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="D"> D. 尿酸
+  </label>
+  <label>
+    <input type="radio" name="answer28" value="E"> E. 尿酶
+  </label>
+  <button type="button" onclick="checkAnswer(28)">提交答案</button>
+</form>
+
+<div id="feedback28"></div>
+
+<h3>29.选择性蛋白尿主要用于检查</h3>
+<form id="quizForm29">
+  <label>
+    <input type="radio" name="answer29" value="A"> A. 肾小球滤过率改变
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="B"> B. 肾小管重吸收功能障碍
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="C"> C. 肾小球病变程度
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="D"> D. 肾间质病变程度
+  </label>
+  <label>
+    <input type="radio" name="answer29" value="E"> E. 肾小管病变程度
+  </label>
+  <button type="button" onclick="checkAnswer(29)">提交答案</button>
+</form>
+
+<div id="feedback29"></div>
+
+<h3>30.出现非选择性蛋白尿主要说明</h3>
+<form id="quizForm30">
+  <label>
+    <input type="radio" name="answer30" value="A"> A. 肾小球有严重病变
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="B"> B. 肾小球滤过膜孔径异常增大
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="C"> C. 肾小球与肾小管联合病变
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="D"> D. 肾小球滤过静电屏障受损
+  </label>
+  <label>
+    <input type="radio" name="answer30" value="E"> E. 以上都不是
+  </label>
+  <button type="button" onclick="checkAnswer(30)">提交答案</button>
+</form>
+
+<div id="feedback30"></div>
+
+<h3>31.GFR测定的参考方法是</h3>
+<form id="quizForm31">
+  <label>
+    <input type="radio" name="answer31" value="A"> A. 肌酐清除率
+  </label>
+  <label>
+    <input type="radio" name="answer31" value="B"> B. 对氨基马尿酸清除率
+  </label>
+  <label>
+    <input type="radio" name="answer31" value="C"> C. 尿素清除率
+  </label>
+  <label>
+    <input type="radio" name="answer31" value="D"> D. 尿酸清除率
+  </label>
+  <label>
+    <input type="radio" name="answer31" value="E"> E. 菊粉清除率
+  </label>
+  <button type="button" onclick="checkAnswer(31)">提交答案</button>
+</form>
+<div id="feedback31"></div>
+ 
+
+
+
+
+
+
+
+
+  </section>
+
+
+
+
+ <script>
+      function checkAnswer(questionNumber) {
+        var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+        var feedbackDiv = document.getElementById('feedback' + questionNumber);
+        var correctAnswer;
+
+        switch (questionNumber) {
+        case 1:
+  correctAnswer = 'D';
+  break;
+case 2:
+  correctAnswer = 'A';
+  break;
+case 3:
+  correctAnswer = 'C';
+  break;
+case 4:
+  correctAnswer = 'A';
+  break;
+case 5:
+  correctAnswer = 'C';
+  break;
+case 6:
+  correctAnswer = 'C';
+  break;
+case 7:
+  correctAnswer = 'C';
+  break;
+case 8:
+  correctAnswer = 'C';
+  break;
+case 9:
+  correctAnswer = 'D';
+  break;
+case 10:
+  correctAnswer = 'C';
+  break;
+case 11:
+  correctAnswer = 'E';
+  break;
+case 12:
+  correctAnswer = 'C';
+  break;
+case 13:
+  correctAnswer = 'E';
+  break;
+case 14:
+  correctAnswer = 'E';
+  break;
+case 15:
+  correctAnswer = 'B';
+  break;
+case 16:
+  correctAnswer = 'A';
+  break;
+case 17:
+  correctAnswer = 'E';
+  break;
+case 18:
+  correctAnswer = 'C';
+  break;
+case 19:
+  correctAnswer = 'C';
+  break;
+case 20:
+  correctAnswer = 'D';
+  break;
+case 21:
+  correctAnswer = 'D';
+  break;
+case 22:
+  correctAnswer = 'A';
+  break;
+case 23:
+  correctAnswer = 'D';
+  break;
+case 24:
+  correctAnswer = 'C';
+  break;
+case 25:
+  correctAnswer = 'C';
+  break;
+case 26:
+  correctAnswer = 'B';
+  break;
+case 27:
+  correctAnswer = 'C';
+  break;
+case 28:
+  correctAnswer = 'B';
+  break;
+case 29:
+  correctAnswer = 'C';
+  break;
+case 30:
+  correctAnswer = 'B';
+  break;
+case 31:
+  correctAnswer = 'E';
+  break;
+
+					
+          default:
+            break;
+        }
+
+        if (userAnswer) {
+          var userResponse = userAnswer.value;
+          if (userResponse === correctAnswer) {
+            feedbackDiv.textContent = '回答正确！';
+            feedbackDiv.style.color = 'green';
+          } else {
+            feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+            feedbackDiv.style.color = 'red';
+          }
+        } else {
+          feedbackDiv.textContent = '请选择一个答案。';
+          feedbackDiv.style.color = 'red';
+        }
+      }
+
+    
+    </script>
+
+  </section>
+
+
+</body>
+</html>

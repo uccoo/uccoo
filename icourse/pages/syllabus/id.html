@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提取身份证日期</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        .inputContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .inputContainer textarea {
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #79CDCD;
+            color: black;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #resultContainer {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            width: 60%;
+            box-sizing: border-box;
+            padding: 5px;
+            border: 1px solid #ddd;
+            white-space: pre-line;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: auto;
+        }
+
+        .copyButton {
+            padding: 8px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .copyButton:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="inputContainer">
+        <label for="inputNumbers">输入身份证号码（每行一个）：</label>
+        <textarea id="inputNumbers" placeholder="请输入，支持多行"></textarea>
+    </div>
+
+    <button onclick="extractAndGenerateDates()">提取年-月-日</button>
+    <button onclick="extractAndGenerateYearMonth()">提取年-月</button>
+
+    <div id="resultContainer"></div>
+
+    <button class="copyButton" onclick="copyResult()">Copy All</button>
+
+    <script>
+        function extractAndGenerateDates() {
+            const inputNumbers = document.getElementById('inputNumbers').value.split('\n').map(num => num.trim());
+
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerText = ''; // Clear previous results
+
+            inputNumbers.forEach((inputNumber, index) => {
+                if (inputNumber.length === 18) {
+                    const yearPart = inputNumber.substring(6, 10);
+                    const monthPart = inputNumber.substring(10, 12);
+                    const dayPart = inputNumber.substring(12, 14);
+
+                    const extractedDate = `${yearPart}-${monthPart}-${dayPart}`;
+                    resultContainer.innerText += `${extractedDate}\n`;
+                } else if (inputNumber.length > 0) {
+                    alert(`身份证 ${index + 1} 不是有效的18位数字！`);
+                }
+            });
+        }
+
+        function extractAndGenerateYearMonth() {
+            const inputNumbers = document.getElementById('inputNumbers').value.split('\n').map(num => num.trim());
+
+            const resultContainer = document.getElementById('resultContainer');
+            resultContainer.innerText = ''; // Clear previous results
+
+            inputNumbers.forEach((inputNumber, index) => {
+                if (inputNumber.length === 18) {
+                    const yearPart = inputNumber.substring(6, 10);
+                    const monthPart = inputNumber.substring(10, 12);
+
+                    const extractedDate = `${yearPart}-${monthPart}`;
+                    resultContainer.innerText += `${extractedDate}\n`;
+                } else if (inputNumber.length > 0) {
+                    alert(`身份证 ${index + 1} 不是有效的18位数字！`);
+                }
+            });
+        }
+
+        function copyResult() {
+            const resultText = document.getElementById('resultContainer').innerText;
+
+            const textArea = document.createElement('textarea');
+            textArea.value = resultText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            alert('已复制所有结果！');
+        }
+    </script>
+</body>
+
+</html>

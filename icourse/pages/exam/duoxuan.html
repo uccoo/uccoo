@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../allhtml.css">
+<link rel="stylesheet" href="examstyle.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+</html>
+    <h2>骨髓实验室检查多选题</h2>
+
+   <div class="question">
+      <h3>26、下列哪项是骨髓细胞学检查的适应症</h3>
+      <form id="question26">
+        <label>
+          <input type="checkbox" name="answer26[]" value="A"> A. 诊断造血系统疾病
+        </label>
+        <label>
+          <input type="checkbox" name="answer26[]" value="B"> B. 诊断某原虫感染
+        </label>
+        <label>
+          <input type="checkbox" name="answer26[]" value="C"> C. 诊断某些代谢病
+        </label>
+        <label>
+          <input type="checkbox" name="answer26[]" value="D"> D. 诊断某些原发或转移性肿瘤
+        </label>
+        <label>
+          <input type="checkbox" name="answer26[]" value="E"> E. 诊断B型血友病
+        </label>
+        <button type="button" onclick="checkAnswer(26)">提交答案</button>
+        <div class="feedback" id="feedback26"></div>
+      </form>
+    </div>
+
+    <!-- Question 27 -->
+    <div class="question">
+      <h3>27、骨髓穿刺成功标志</h3>
+      <form id="question27">
+        <label>
+          <input type="checkbox" name="answer27[]" value="A"> A. 可见骨髓小粒
+        </label>
+        <label>
+          <input type="checkbox" name="answer27[]" value="B"> B. 病人有特殊疼痛感
+        </label>
+        <label>
+          <input type="checkbox" name="answer27[]" value="C"> C. 镜下可见有核细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer27[]" value="D"> D. 骨髓液丰富
+        </label>
+        <label>
+          <input type="checkbox" name="answer27[]" value="E"> E. 粒/红比值小于2:1
+        </label>
+        <button type="button" onclick="checkAnswer(27)">提交答案</button>
+        <div class="feedback" id="feedback27"></div>
+      </form>
+    </div>
+
+    <!-- Question 28 -->
+    <div class="question">
+      <h3>28、作细胞形态学检查时骨髓标本采集的注意事项包括</h3>
+      <form id="question28">
+        <label>
+          <input type="checkbox" name="answer28[]" value="A"> A. 抽吸骨髓量不超过0.2ml
+        </label>
+        <label>
+          <input type="checkbox" name="answer28[]" value="B"> B. 多个项目检查时应优先抽吸形态学标本
+        </label>
+        <label>
+          <input type="checkbox" name="answer28[]" value="C"> C. 涂片薄厚适宜，不少于4片
+        </label>
+        <label>
+          <input type="checkbox" name="answer28[]" value="D"> D. 应同时血涂片
+        </label>
+        <label>
+          <input type="checkbox" name="answer28[]" value="E"> E. 骨髓片和血片应做好标记
+        </label>
+        <button type="button" onclick="checkAnswer(28)">提交答案</button>
+        <div class="feedback" id="feedback28"></div>
+      </form>
+    </div>
+
+    <!-- Question 29 -->
+    <div class="question">
+      <h3>29、正常人骨髓中可见原始细胞有</h3>
+      <form id="question29">
+        <label>
+          <input type="checkbox" name="answer29[]" value="A"> A. 原粒细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer29[]" value="B"> B. 原浆细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer29[]" value="C"> C. 原淋细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer29[]" value="D"> D. 原单细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer29[]" value="E"> E. 原红细胞
+        </label>
+        <button type="button" onclick="checkAnswer(29)">提交答案</button>
+        <div class="feedback" id="feedback29"></div>
+      </form>
+    </div>
+
+    <!-- Question 30 -->
+    <div class="question">
+      <h3>30、关于粒/红比值正确的是</h3>
+      <form id="question30">
+        <label>
+          <input type="checkbox" name="answer30[]" value="A"> A. 正常人2~4 :1
+        </label>
+        <label>
+          <input type="checkbox" name="answer30[]" value="B"> B. 各阶段粒系百分数总和/各阶段有核红细胞百分数总和
+        </label>
+        <label>
+          <input type="checkbox" name="answer30[]" value="C"> C. 增生性贫血粒/红比值减低
+        </label>
+        <label>
+          <input type="checkbox" name="answer30[]" value="D"> D. 再生障碍性贫血粒/红比值减低
+        </label>
+        <label>
+          <input type="checkbox" name="answer30[]" value="E"> E. 各类白血病粒/红比值均增高
+        </label>
+        <button type="button" onclick="checkAnswer(30)">提交答案</button>
+        <div class="feedback" id="feedback30"></div>
+      </form>
+    </div>
+
+    <!-- Question 31 -->
+    <div class="question">
+      <h3>31、骨髓中粒细胞与有核红细胞比例降低见于</h3>
+      <form id="question31">
+        <label>
+          <input type="checkbox" name="answer31[]" value="A"> A. 急性化脓性感染
+        </label>
+        <label>
+          <input type="checkbox" name="answer31[]" value="B"> B. 急性髓系白血病
+        </label>
+        <label>
+          <input type="checkbox" name="answer31[]" value="C"> C. 慢性髓系白血病
+        </label>
+        <label>
+          <input type="checkbox" name="answer31[]" value="D"> D. 溶血性贫血
+        </label>
+        <label>
+          <input type="checkbox" name="answer31[]" value="E"> E. 再生障碍贫血
+        </label>
+        <button type="button" onclick="checkAnswer(31)">提交答案</button>
+        <div class="feedback" id="feedback31"></div>
+      </form>
+    </div>
+
+    <!-- Question 32 -->
+    <div class="question">
+      <h3>32、造血祖细胞的特点是</h3>
+      <form id="question32">
+        <label>
+          <input type="checkbox" name="answer32[]" value="A"> A. 形态可以辨认
+        </label>
+        <label>
+          <input type="checkbox" name="answer32[]" value="B"> B. 具有高度自我更新能力
+        </label>
+        <label>
+          <input type="checkbox" name="answer32[]" value="C"> C. 有进一步分化成熟的潜能
+        </label>
+        <label>
+          <input type="checkbox" name="answer32[]" value="D"> D. 可同时分化成各类血细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer32[]" value="E"> E. 受造血因子的正负调控
+        </label>
+        <button type="button" onclick="checkAnswer(32)">提交答案</button>
+        <div class="feedback" id="feedback32"></div>
+      </form>
+    </div>
+
+    <!-- Question 33 -->
+    <div class="question">
+      <h3>33、骨髓增生程度的分级是</h3>
+      <form id="question33">
+        <label>
+          <input type="checkbox" name="answer33[]" value="A"> A. 增生极度活跃
+        </label>
+        <label>
+          <input type="checkbox" name="answer33[]" value="B"> B. 增生明显活跃
+        </label>
+        <label>
+          <input type="checkbox" name="answer33[]" value="C"> C. 增生活跃
+        </label>
+        <label>
+          <input type="checkbox" name="answer33[]" value="D"> D. 增生减低
+        </label>
+        <label>
+          <input type="checkbox" name="answer33[]" value="E"> E. 增生严重减低
+        </label>
+        <button type="button" onclick="checkAnswer(33)">提交答案</button>
+        <div class "feedback" id="feedback33"></div>
+      </form>
+    </div>
+
+    <!-- Question 34 -->
+    <div class="question">
+      <h3>34、增生性贫血见于</h3>
+      <form id="question34">
+        <label>
+          <input type="checkbox" name="answer34[]" value="A"> A. 缺铁性贫血
+        </label>
+        <label>
+          <input type="checkbox" name="answer34[]" value="B"> B. 自身免疫性溶血性贫血
+        </label>
+        <label>
+          <input type="checkbox" name="answer34[]" value="C"> C. 失血性贫血
+        </label>
+        <label>
+          <input type="checkbox" name="answer34[]" value="D"> D. 再生障碍性贫血
+        </label>
+        <label>
+          <input type="checkbox" name="answer34[]" value="E"> E. G-6-PD缺乏症
+        </label>
+        <button type="button" onclick="checkAnswer(34)">提交答案</button>
+        <div class="feedback" id="feedback34"></div>
+      </form>
+    </div>
+
+        <!-- Question 35 -->
+    <div class="question">
+      <h3>35、下列哪些项目支持急性白血病诊断</h3>
+      <form id="question35">
+        <label>
+          <input type="checkbox" name="answer35[]" value="A"> A. 外周三系细胞减少
+        </label>
+        <label>
+          <input type="checkbox" name="answer35[]" value="B"> B. 骨髓增生极度活跃，伴早幼粒细胞比例大于30％
+        </label>
+        <label>
+          <input type="checkbox" name="answer35[]" value="C"> C. 骨髓增生明显活跃，早幼粒细胞比例12％
+        </label>
+        <label>
+          <input type="checkbox" name="answer35[]" value="D"> D. 有肝，脾肿大
+        </label>
+        <label>
+          <input type="checkbox" name="answer35[]" value="E"> E. 有发热，出血征象
+        </label>
+        <button type="button" onclick="checkAnswer(35)">提交答案</button>
+        <div class="feedback" id="feedback35"></div>
+      </form>
+    </div>
+
+    <!-- Question 36 -->
+    <div class="question">
+      <h3>36、中性中幼粒细胞的形态学特点是</h3>
+      <form id="question36">
+        <label>
+          <input type="checkbox" name="answer36[]" value="A"> A. 核圆形
+        </label>
+        <label>
+          <input type="checkbox" name="answer36[]" value="B"> B. 有核仁
+        </label>
+        <label>
+          <input type="checkbox" name="answer36[]" value="C"> C. 核一侧平坦
+        </label>
+        <label>
+          <input type="checkbox" name="answer36[]" value="D"> D. 可有嗜天青颗粒
+        </label>
+        <label>
+          <input type="checkbox" name="answer36[]" value="E"> E. 胞浆呈淡粉红色
+        </label>
+        <button type="button" onclick="checkAnswer(36)">提交答案</button>
+        <div class="feedback" id="feedback36"></div>
+      </form>
+    </div>
+
+    <!-- Question 37 -->
+    <div class="question">
+      <h3>37、成熟浆细胞的形态学特点是</h3>
+      <form id="question37">
+        <label>
+          <input type="checkbox" name="answer37[]" value="A"> A. 核位胞浆中部
+        </label>
+        <label>
+          <input type="checkbox" name="answer37[]" value="B"> B. 核偏于一侧
+        </label>
+        <label>
+          <input type="checkbox" name="answer37[]" value="C"> C. 胞浆着色均匀一致
+        </label>
+        <label>
+          <input type="checkbox" name="answer37[]" value="D"> D. 胞浆近核处有淡染区
+        </label>
+        <label>
+          <input type="checkbox" name="answer37[]" value="E"> E. 核染色质细致
+        </label>
+        <button type="button" onclick="checkAnswer(37)">提交答案</button>
+        <div class="feedback" id="feedback37"></div>
+      </form>
+    </div>
+
+    <!-- Question 38 -->
+    <div class="question">
+      <h3>38、细胞化学染色临床上常用于</h3>
+      <form id="question38">
+        <label>
+          <input type="checkbox" name="answer38[]" value="A"> A. 辅助判断急性白血病的细胞类型
+        </label>
+        <label>
+          <input type="checkbox" name="answer38[]" value="B"> B. 辅助血液系统疾病的诊断与鉴别诊断
+        </label>
+        <label>
+          <input type="checkbox" name="answer38[]" value="C"> C. 慢性白血病的确诊
+        </label>
+        <label>
+          <input type="checkbox" name="answer38[]" value="D"> D. 鉴别良恶性肿瘤
+        </label>
+        <label>
+          <input type="checkbox" name="answer38[]" value="E"> E. 观察疾病的疗效与预后
+        </label>
+        <button type="button" onclick="checkAnswer(38)">提交答案</button>
+        <div class="feedback" id="feedback38"></div>
+      </form>
+    </div>
+
+    <!-- Question 39 -->
+    <div class="question">
+      <h3>39、常用于急性白血病鉴别的细胞化学染色有</h3>
+      <form id="question39">
+        <label>
+          <input type="checkbox" name="answer39[]" value="A"> A. 铁染色
+        </label>
+        <label>
+          <input type="checkbox" name="answer39[]" value="B"> B. POX染色
+        </label>
+        <label>
+          <input type="checkbox" name="answer39[]" value="C"> C. PAS染色
+        </label>
+        <label>
+          <input type="checkbox" name="answer39[]" value="D"> D. NAP染色
+        </label>
+        <label>
+          <input type="checkbox" name="answer39[]" value="E"> E. a-NAE染色
+        </label>
+        <button type="button" onclick="checkAnswer(39)">提交答案</button>
+        <div class="feedback" id="feedback39"></div>
+      </form>
+    </div>
+
+    <!-- Question 40 -->
+    <div class="question">
+      <h3>40、骨髓细胞过氧化物酶反应阳性，见于</h3>
+      <form id="question40">
+        <label>
+          <input type="checkbox" name="answer40[]" value="A"> A. 粒细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer40[]" value="B"> B. 单核细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer40[]" value="C"> C. 淋巴细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer40[]" value="D"> D. 红细胞
+        </label>
+        <label>
+          <input type="checkbox" name="answer40[]" value="E"> E. 巨核细胞
+        </label>
+        <button type="button" onclick="checkAnswer(40)">提交答案</button>
+        <div class="feedback" id="feedback40"></div>
+      </form>
+    </div>
+
+
+
+
+    
+
+  </section>
+
+  <script>
+    function checkAnswer(questionNumber) {
+      var userAnswers = document.querySelectorAll('input[name="answer' + questionNumber + '[]"]:checked');
+      var feedbackDiv = document.getElementById('feedback' + questionNumber);
+      var correctAnswers = [];
+
+      switch (questionNumber) {
+          case 26:
+    correctAnswers = ['A', 'B', 'C', 'D'];
+    break;
+  case 27:
+    correctAnswers = ['A', 'B', 'C'];
+    break;
+  case 28:
+    correctAnswers = ['A', 'B', 'C', 'D', 'E'];
+    break;
+  // Add similar structures for other questions
+  case 29:
+    correctAnswers = ['A', 'E'];
+    break;
+  case 30:
+    correctAnswers = ['A', 'B', 'C'];
+    break;
+  // Continue this pattern for the remaining questions
+  // Remember to adjust the case number and correct answers accordingly
+  case 31:
+    correctAnswers = ['A', 'B', 'C'];
+    break;
+  case 32:
+    correctAnswers = ['C', 'E'];
+    break;
+  case 33:
+    correctAnswers = ['A', 'B', 'C', 'D', 'E'];
+    break;
+  case 34:
+    correctAnswers = ['A', 'B', 'C'];
+    break;
+  case 35:
+    correctAnswers = ['A', 'B', 'D', 'E'];
+    break;
+  case 36:
+    correctAnswers = ['C', 'E'];
+    break;
+  case 37:
+    correctAnswers = ['B', 'D'];
+    break;
+  case 38:
+    correctAnswers = ['A', 'B'];
+    break;
+  case 39:
+    correctAnswers = ['B', 'C', 'E'];
+    break;
+  case 40:
+    correctAnswers = ['A', 'B'];
+    break;
+
+      }
+
+      if (userAnswers.length > 0) {
+        var userResponses = Array.from(userAnswers).map(answer => answer.value);
+        var isCorrect = correctAnswers.length === userResponses.length && correctAnswers.every(response => userResponses.includes(response));
+
+        if (isCorrect) {
+          feedbackDiv.textContent = '回答正确！';
+          feedbackDiv.style.color = 'green';
+        } else {
+          feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+          feedbackDiv.style.color = 'red';
+        }
+      } else {
+        feedbackDiv.textContent = '请选择一个或多个答案。';
+        feedbackDiv.style.color = 'red';
+      }
+    }
+  </script>
+
+</body>
+
+</html>

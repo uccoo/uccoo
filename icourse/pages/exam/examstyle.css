@@ -1,0 +1,22 @@
+h2 {
+      color: blue;
+	  font-size:26px;
+    }
+    button {
+      padding: 5px 10px;
+      font-size: 14px;
+      background-color: #79CDCD;
+      color: black;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }

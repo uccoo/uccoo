@@ -1,0 +1,34 @@
+.category {
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.subcategory a {
+    margin: 10px 0;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.third-level a {
+    margin-top: 10px;
+    padding-left: 20px;
+    display: block;
+    text-decoration: none;
+    color: grey;
+    font-size: 16px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 500px;
+    height: 4px;
+    /* 线的高度 */
+    background-color: #E8E8E8;
+    /* 灰色 */
+    margin-top: 10px;
+    /* 与h1之间的间距，可根据需要调整 */
+}
