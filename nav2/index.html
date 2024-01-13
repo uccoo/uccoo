@@ -9,13 +9,17 @@
     <link href="../styles/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 使用本地 Font Awesome 文件 -->
     <link rel="stylesheet" href="../styles/fontawesome-free-6.5.1-web/css/all.min.css">
-    <title>BioMed</title>
+    <title>MedNav</title>
     <link rel="stylesheet" href="../css/nav2.css"> <!-- Link to external CSS file -->   
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
 </head>
 
 <body>
     <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
     <div id="sidebar">
+	    <a href="../index.html" target="_blank"><img src="../icon/mednav1.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
+		<a href="../index.html" target="_blank"><img src="../icon/gene-therapy.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
         <h2>Mednav2</h2>
         <ul class="nav flex-column">
             <li class="nav-item">
@@ -31,7 +35,7 @@
 					<i class="fa-solid fa-y"></i>
                     <i class="fa-brands fa-linkedin-in"></i>
                     <i class="fa-solid fa-anchor"></i>Tools
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="myToolsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -54,7 +58,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#haiyirenSubMenu" role="button"
                     aria-expanded="false" aria-controls="haiyirenSubMenu">
                     <i class="fas fa-hospital nav-icon"></i> 海医人
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="haiyirenSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -74,7 +78,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#bioinformaticsSubMenu" role="button"
                     aria-expanded="false" aria-controls="bioinformaticsSubMenu">
                     <i class="fas fa-dna nav-icon"></i> 生信通用工具
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="bioinformaticsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -90,7 +94,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#predictionsSubMenu" role="button"
                     aria-expanded="false" aria-controls="predictionsSubMenu">
                     <i class="fas fa-bullseye nav-icon"></i> 各种预测
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="predictionsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -106,7 +110,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#transcriptomicsSubMenu" role="button"
                     aria-expanded="false" aria-controls="transcriptomicsSubMenu">
                     <i class="fas fa-dna nav-icon"></i> 转录组
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="transcriptomicsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -157,7 +161,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#pharmacologySubMenu" role="button"
                     aria-expanded="false" aria-controls="pharmacologySubMenu">
                     <i class="fa-solid fa-capsules"></i> 网络药毒理学
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="pharmacologySubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -176,7 +180,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#otherAnalysesSubMenu" role="button"
                     aria-expanded="false" aria-controls="otherAnalysesSubMenu">
                     <i class="fas fa-cogs nav-icon"></i> 其他分析
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="otherAnalysesSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -199,7 +203,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#paperTopicsSubMenu" role="button"
                     aria-expanded="false" aria-controls="paperTopicsSubMenu">
                     <i class="fa-solid fa-file-pen"></i> 论文课题
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="paperTopicsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -218,7 +222,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#educationTeachingSubMenu" role="button"
                     aria-expanded="false" aria-controls="educationTeachingSubMenu">
                     <i class="fa-solid fa-chalkboard-user"></i> 教育教学
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="educationTeachingSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -234,7 +238,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#examSubMenu" role="button"
                     aria-expanded="false" aria-controls="examSubMenu">
                     <i class="fa-solid fa-user-pen"></i> 在线习题
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="examSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -306,7 +310,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#smallToolsSubMenu" role="button"
                     aria-expanded="false" aria-controls="smallToolsSubMenu" >
                     <i class="fas fa-toolbox nav-icon"></i> 小工具
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="smallToolsSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -324,7 +328,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#RelaxSubMenu" role="button"
                     aria-expanded="false" aria-controls="RelaxSubMenu" >
                  <i class="fas fa-music nav-icon"></i> Relax 
-				 <i class="fas fa-caret-down ml-auto"></i>
+				 <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="RelaxSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -342,7 +346,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#PersonalSubMenu" role="button"
                     aria-expanded="false" aria-controls="PersonalSubMenu" >
                  <i class="fas fa-user nav-icon"></i> Personal
-                 <i class="fas fa-caret-down ml-auto"></i>
+                 <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="PersonalSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -360,7 +364,7 @@
                 <a class="nav-link" data-bs-toggle="collapse" href="#aboutSubMenu" role="button"
                     aria-expanded="false" aria-controls="aboutSubMenu">
                     <i class="fas fa-info-circle nav-icon"></i> About
-                    <i class="fas fa-caret-down ml-auto"></i>
+                    <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <div class="collapse" id="aboutSubMenu">
                     <ul class="nav flex-column nav-second-level">
