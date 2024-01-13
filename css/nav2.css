@@ -68,29 +68,4 @@ body {
             color: #ddd;
         }
 /* CSS 样式中添加媒体查询，根据屏幕宽度调整样式 */
-@media (max-width: 768px) {
-    /* 隐藏侧边栏 */
-    #sidebar {
-        display: none;
-    }
 
-    /* 调整内容区域的宽度 */
-    #content {
-        margin-left: 0;
-    }
-
-    /* 添加导航栏按钮，用于切换显示/隐藏侧边栏 */
-    #navbar-toggler {
-        display: block;
-    }
-
-    /* 隐藏 iframe 内容区域 */
-    #contentFrame {
-        display: none;
-    }
-}
-
-/* 样式用于小屏幕时的导航栏按钮 */
-#navbar-toggler {
-    display: none;
-}

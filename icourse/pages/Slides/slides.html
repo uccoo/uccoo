@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Local PowerPoint</title>
+    <script src="https://cdn.jsdelivr.net/npm/pptx-js@2.1.2/dist/pptx.js"></script>
+</head>
+<body>
+
+<div id="pptx-container"></div>
+
+<script>
+    function loadAndPlayPptx() {
+        var pptxContainer = document.getElementById('pptx-container');
+        var pptx = new PptxGenJS();
+
+        // 异步加载本地的 example.pptx 文件
+        pptx.loadRemote("slides/example.pptx", function () {
+            var slides = pptx.slides();
+
+            // 递归函数用于播放每张幻灯片
+            function playSlide(index) {
+                var slide = slides[index];
+                var slideElement = document.createElement('div');
+                slideElement.innerHTML = slide.toHtml();
+                pptxContainer.innerHTML = '';
+                pptxContainer.appendChild(slideElement);
+
+                // 设置每张幻灯片的显示时间间隔（以毫秒为单位）
+                var delay = 3000;
+
+                // 设置定时器，每隔一定时间切换到下一张幻灯片
+                setTimeout(function () {
+                    index = (index + 1) % slides.length;
+                    playSlide(index);
+                }, delay);
+            }
+
+            // 开始播放第一张幻灯片
+            playSlide(0);
+        });
+    }
+
+    window.onload = function () {
+        loadAndPlayPptx();
+    };
+</script>
+
+</body>
+</html>

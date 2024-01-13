@@ -16,12 +16,7 @@
 </head>
 
 <body>
-    <button id="navbar-toggler" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
+  <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
     <div id="sidebar">
 	    <a href="../index.html" target="_blank"><img src="../icon/mednav1.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
 		<a href="../index.html" target="_blank"><img src="../icon/gene-therapy.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
@@ -373,7 +368,11 @@
                 </a>
                 <div class="collapse" id="aboutSubMenu">
                     <ul class="nav flex-column nav-second-level">
-                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/about/ucco.html')">
+                                <i class="fas fa-users"></i> Personal
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="loadContent('pages/about/team.html')">
                                 <i class="fas fa-users"></i> Team
