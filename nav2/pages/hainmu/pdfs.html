@@ -41,9 +41,12 @@
     <iframe id="pdfViewer" name="pdfViewer" src="" frameborder="0"></iframe>
   </div>
 
-  <script>
-    // 默认加载第一个PDF文件
-    document.getElementById('pdfViewer').src = document.getElementById('fileList').querySelector('a').href;
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 默认加载第二个PDF文件
+      var secondLink = document.getElementById('fileList').querySelectorAll('a')[1].href;
+      document.getElementById('pdfViewer').src = secondLink;
+    });
   </script>
 
 </body>
