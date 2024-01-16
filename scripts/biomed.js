@@ -1,29 +1,35 @@
-/* biomed.js */
+document.addEventListener("DOMContentLoaded", function () {
+    var mainContentDiv = document.getElementById('main-content');
+
+    // Fetch and insert the content
+    fetch('main-content.html')
+        .then(response => response.text())
+        .then(html => {
+            mainContentDiv.innerHTML = html;
+        })
+        .catch(error => console.error('Error loading content:', error));
+});
 
 function handleEnter(event) {
-    if (event.key === "Enter") {
-        searchBing();
-    }
+    // Handle Enter key press
 }
 
 function searchBing() {
-    window.open("https://www.bing.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-}
-
-function searchGoogle() {
-    window.open("https://www.google.com/search?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    // Handle Bing search
 }
 
 function searchBaidu() {
-    window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-	
+    // Handle Baidu search
+}
+
+function searchGoogle() {
+    // Handle Google search
+}
+
+function searchPerplexity() {
+    // Handle Perplexity search
 }
 
 function searchChatGPT() {
-        window.open("https://www.chatgpt.com/?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-    }
-
-function searchPerplexity() {
-        window.open("https://www.perplexity.ai/?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
-    }
-   
+    // Handle ChatGPT search
+}
