@@ -16,6 +16,14 @@ function searchGoogle() {
 
 function searchBaidu() {
     window.open("https://www.baidu.com/s?wd=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+	
 }
 
+function searchChatGPT() {
+        window.open("https://www.chatgpt.com/?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    }
+
+function searchPerplexity() {
+        window.open("https://www.perplexity.ai/?q=" + encodeURIComponent(document.querySelector('input').value), "_blank");
+    }
    

@@ -19,16 +19,16 @@
             display: flex;
             justify-content: center;
             width: 100%;
-            padding: 20px;
-            margin-bottom: 20px; /* Add margin-bottom to separate from the search container */
+            padding: 2px;
+            margin-bottom: 0px; /* Add margin-bottom to separate from the search container */
         }
 
         .top-icons a {
             margin: 5px;
         }
         .top-icons img {
-             width: 65px; /* Adjust the size as needed */
-             height: 65px; /* Adjust the size as needed */
+             width: 60px; /* Adjust the size as needed */
+             height: 60px; /* Adjust the size as needed */
 }
         .search-container {
             text-align: center;
