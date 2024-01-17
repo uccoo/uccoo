@@ -1,0 +1,32 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: brown;
+            text-align: center;
+        }
+			h1::after {
+    content: '';
+    display: block;
+    width: relative;
+    height: 2px;
+    background-color: #CCCCCC;
+    position: relative;
+    bottom: -5px;
+    left: 0;
+}
+		h2 {
+            color: #333;
+            text-align: center;
+        }
+        strong {
+            color: #007BFF;
+        }
+        p {
+            margin-bottom: 15px;
+        }
