@@ -22,6 +22,14 @@
 		<a href="../index.html" target="_blank"><img src="../icon/gene-therapy.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
         <h2>Mednav2</h2>
         <ul class="nav flex-column">
+		
+		   <li class="nav-item">
+               <a class="nav-link" href="https://www.nsfc.gov.cn/" style="color: red;">
+                     <i class="fas fa-fire nav-icon"></i> 置顶：国基金
+               </a>
+           </li>
+
+		
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="loadContent('../../index.html')">
                     <i class="fas fa-home nav-icon"></i> Home
@@ -82,11 +90,35 @@
                 </div>
             </li>
 			
+			<li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#paperTopicsSubMenu" role="button"
+                    aria-expanded="false" aria-controls="paperTopicsSubMenu">
+                    <i class="fa-solid fa-file-pen"></i> 论文课题
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="paperTopicsSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Paper.html')">
+							<i class="far fa-file-alt nav-icon"></i>paper-relations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Research Project.html')">
+							<i class="fas fa-flask nav-icon"></i>Research Project</a>
+                        </li>
+						<li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/patents.html')">
+							<i class="fa-brands fa-product-hunt"></i>Patents</a>
+                        </li>
+						
+                    </ul>
+                </div>
+            </li>
+			
             <li class="nav-item nav-item-has-submenu">
                 <a class="nav-link" data-bs-toggle="collapse" href="#myToolsSubMenu" role="button"
                     aria-expanded="false" aria-controls="myToolsSubMenu">
-					<i class="fa-solid fa-y"></i>
-                    <i class="fa-brands fa-linkedin-in"></i>
+					<i class="fa-solid fa-y"></i>                 
                     <i class="fa-solid fa-anchor"></i>Tools
                     <i class="fa-solid fa-angle-down"></i>
                 </a>
@@ -233,30 +265,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="nav-item nav-item-has-submenu">
-                <a class="nav-link" data-bs-toggle="collapse" href="#paperTopicsSubMenu" role="button"
-                    aria-expanded="false" aria-controls="paperTopicsSubMenu">
-                    <i class="fa-solid fa-file-pen"></i> 论文课题
-                    <i class="fa-solid fa-angle-down"></i>
-                </a>
-                <div class="collapse" id="paperTopicsSubMenu">
-                    <ul class="nav flex-column nav-second-level">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Paper.html')">
-							<i class="far fa-file-alt nav-icon"></i>paper-relations</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/Research Project.html')">
-							<i class="fas fa-flask nav-icon"></i>Research Project</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/paperTopics/patents.html')">
-							<i class="fa-brands fa-product-hunt"></i>Patents</a>
-                        </li>
-						
-                    </ul>
-                </div>
-            </li>
+            
             <li class="nav-item nav-item-has-submenu">
                 <a class="nav-link" data-bs-toggle="collapse" href="#educationTeachingSubMenu" role="button"
                     aria-expanded="false" aria-controls="educationTeachingSubMenu">
