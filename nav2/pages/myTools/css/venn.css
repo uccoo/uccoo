@@ -1,0 +1,99 @@
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+    }
+
+    input, textarea {
+      width: 90%;
+      height: 200px;
+      margin: 5px;
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 45%;
+      height: 40px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .result-column {
+      width: 30%;
+    }
+
+    .result {
+      position: relative;
+      width: 60%;
+      padding: 20px;
+      margin: 5px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .result strong {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    #copyLink {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-decoration: none;
+      color: #4caf50;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #vennDiagram {
+      margin-top: 20px;
+    }
+
+    .home-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .home-link a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .home-link a:hover {
+      color: #4caf50;
+    }
