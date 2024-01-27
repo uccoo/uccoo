@@ -5,8 +5,9 @@
             flex-direction: column; /* 让内容垂直居中 */
             height: 100vh;
             margin: 0;
-            background-image: url('../icon/bj.jpg');
+            /* background-image: url('../icon/bj.jpg'); */
             background-size: cover;
+			background: white;
         }
          #welcome-text {
             position: fixed;
