@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ab</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1><a href="https://www.jianshu.com/p/18b4d56dc516"target="_blank">>更加详细的分子对接看这里</a></h1>
+<h1 id="分子对接">8 分子对接</h1>
+<p>分子对接的基因是关键基因，比如degree前五等。一般认为结合能&lt;0
+kcal/mol的配体与受体可自发结合，结合能≤-5.0
+kcal/mol说明活性成分与作用靶标之间有较好的结合活性</p>
+<h2 id="autodock-vina">8.1 autodock vina</h2>
+<p>1 设置工作目录（一定英文）</p>
+<p>File-Preferences-Set</p>
+<p><img src="media/image017.jpg"
+style="width:3.45863in;height:3.21695in" /></p>
+<h2 id="导入蛋白质和小分子"><br />
+8.2 导入蛋白质和小分子</h2>
+<p>8.2.1 读入蛋白文件</p>
+<p>File-readmolecule-选择PDB文件</p>
+<p>8.2.2去水加氢</p>
+<p>Edit-delete water</p>
+<p>Edit-hydrogens-add</p>
+<p><img src="media/image018.jpg"
+style="width:1.42069in;height:1.25328in" /></p>
+<h2 id="把这个蛋白选为受体">8.2.3把这个蛋白选为受体</h2>
+<p>Gird-macromolecule-choose</p>
+<p><img src="media/image019.jpg"
+style="width:0.78412in;height:1.43809in" /></p>
+<p>点击确定后，自动保存</p>
+<p><img src="media/image020.jpg"
+style="width:1.95017in;height:2.17519in" /></p>
+<h2 id="选ligand配体">8.2.4选ligand配体</h2>
+<p>第一步得到小分子pdb文件</p>
+<p>先从pubchem得到SMILES文件，复制，</p>
+<p><a
+href="https://www.novopro.cn/tools/smiles2pdb">https://www.novopro.cn/tools/smiles2pdb</a></p>
+<p>进行转换，下载</p>
+<p>然后回到主界面</p>
+<p>和上面一样read</p>
+<p>1, 加氢Edit-hydrogens-add</p>
+<p>2，选为配体，ligand-input-choose-</p>
+<p><img src="media/image021.jpg"
+style="width:1.56191in;height:2.62997in" /></p>
+<p>检测扭转中心和键</p>
+<p><img src="media/image022.jpg"
+style="width:3.24031in;height:2.15241in" /></p>
+<p>Ligand-torsion tree-</p>
+<p>接下来</p>
+<p><img src="media/image023.jpg"
+style="width:5.1644in;height:2.38945in" /></p>
+<p>红色不可旋转的键，绿色可旋转</p>
+<p>出现以下界面</p>
+<p><img src="media/image024.jpg"
+style="width:2.59189in;height:2.90858in" /></p>
+<p>2个可以旋转的键</p>
+<p>导出为pdbqt文件</p>
+<p>Ligand-output-</p>
+<p><img src="media/image025.jpg"
+style="width:4.83375in;height:2.70857in" /></p>
+<p>然后删除</p>
+<h2 id="设置对接参数">8.2.5设置对接参数</h2>
+<p>Grid-macromolecule-open-选择刚才的蛋白文件，yes-确定</p>
+<p>再导入小分子</p>
+<p>Grid-set map types-openligand-</p>
+<h2 id="设置对接box">8.2.6 设置对接box</h2>
+<p><img src="media/image026.jpg"
+style="width:5.76806in;height:2.95694in" /></p>
+<p>Grid-gridbox设置成正好包裹分子的长方体</p>
+<p>拖曳小分子出来长方体</p>
+<p><img src="media/image027.jpg"
+style="width:5.76806in;height:4.46944in" /></p>
+<p>再重新把刚才的勾回去mouse那个框</p>
+<p><img src="media/image028.jpg"
+style="width:5.37547in;height:4.69207in" /></p>
+<p>File-close savingcurrent</p>
+<h2 id="选择vinus参数">8.2.7选择vinus参数</h2>
+<p>Docking-output-vinaconfig</p>
+<p><img src="media/image029.jpg"
+style="width:4.75875in;height:3.80866in" /></p>
+<p><img src="media/image030.jpg"
+style="width:5.76806in;height:5.33125in" /></p>
+<p><img src="media/image031.jpg"
+style="width:5.76806in;height:2.93403in" /></p>
+<p>工作目录多了一个文件txt</p>
+<p><img src="media/image032.jpg"
+style="width:3.65865in;height:5.10878in" /></p>
+<h2 id="运行dockvina">8.2.8运行dockvina</h2>
+<p>Run—run autodock vina</p>
+<p><img src="media/image033.jpg"
+style="width:5.76806in;height:2.49931in" /></p>
+<p>Launch后需要等待</p>
+<p>出现结果</p>
+<p><img src="media/image034.jpg"
+style="width:5.76806in;height:3.01667in" /></p>
+<p>结果不好 4次 能量也高</p>
+<h2 id="删除所有">8.2.9删除所有</h2>
+<p>Edit-delete-delete all molecules</p>
+<p>Then</p>
+<p>Analyze-docking-</p>
+<p><img src="media/image035.jpg"
+style="width:5.76806in;height:3.42778in" /> 继续打开大分子的文件</p>
+<p><img src="media/image036.jpg"
+style="width:3.07527in;height:1.83349in" /></p>
+<p>为了显示明显，换模型</p>
+<p><img src="media/image037.jpg"
+style="width:5.76806in;height:2.77083in" /></p>
+<p>还可以继续</p>
+<p><img src="media/image038.jpg"
+style="width:5.76806in;height:3.19306in" /></p>
+<p><img src="media/image039.jpg"
+style="width:5.76806in;height:4.93819in" /></p>
+<p><img src="media/image040.jpg"
+style="width:5.13378in;height:5.49214in" /></p>
+<p>G:\00docker\workD&gt;vina --config config.txt</p>
+<h1 id="拓展">拓展</h1>
+<h2 id="拓展一">拓展一</h2>
+<p>前面一样第五步开始</p>
+<p>疾病基因打底，构建大网络，各药物（复方的话），各成分（单方），所对应的靶点自成一体，一个颜色，各成分交集一种颜色，直接映射到网络。看投射的位置在哪里。</p>
+<p>关注某药或某成分是各自作用于一个bp或kegg的不同位点，还是相关的几个位点？联合用药。意义大。</p>
+<h2 id="拓展二">拓展二</h2>
+<p>和拓展1一样，但针对细菌的话，代表性应该更好。</p>
+<p>同上面。</p>
+<h2 id="拓展三">拓展三</h2>
+<p>Toppgene（<a
+href="https://toppgene.cchmc.org/">https://toppgene.cchmc.org/</a>）</p>
+<p>上面这个网站可以通过查找能和多个蛋白作用的化合物。</p>
+<p>所以可以找到和某个疾病或确定的和cancer有关的蛋白，共同输入Toppgene，然后查找相应的化合物。</p>
+<h1 id="section"><img src="media/image041.jpg"
+style="width:5.76806in;height:3.66389in" /></h1>
+<h1 id="详细分子对接">详细分子对接</h1>
+<h2
+id="蛋白质受体的选择与结构文件下载">1蛋白质受体的选择与结构文件下载</h2>
+<p>如果要做对接，那要知道受体蛋白的三维结构，生物化学学过，三级结构包括所有原子的空间排列，碳链，侧链等。</p>
+<h3 id="pdb">1.1 PDB</h3>
+<p>现在三维结构获得主要还是X-ray。PDB数据库（http://www.rcsb.org/）大都这种方法，另外还有核磁共振等。</p>
+<p><img src="media/image042.jpg"
+style="width:5.76806in;height:1.07569in" /></p>
+<p>做网络药理学，基本都是PPI等得到受体蛋白，所以我们通过蛋白名称来搜索，后续再讲其他方式。比如EGFR</p>
+<p><img src="media/image043.jpg"
+style="width:4.15258in;height:2.8862in" /></p>
+<p><img src="media/image044.jpg"
+style="width:5.76806in;height:3.77986in" /></p>
+<p>出现很多结果，有些结构非常相似，该选择哪一个？先确定物种，左边勾选。我们选择分辨率较好的在前。这里的0.9Å，<strong>Å是光波长度和分子直径的常用计量单位，值越小，分辨率越高，结构越准确。页面往下拉，可以看见这个值越来越大，我们优先选择值小的</strong>。我们可以从页面里面看见一下基本信息，比如方法，物种以及被解析的时间等。这里5GJI这个结构获取的方法就是X-RAY。<img
+src="media/image045.jpg" style="width:5.76806in;height:2.10139in" /></p>
+<h3 id="unipro">1.2 unipro</h3>
+<p>为了进一步确定，我们去unipro数据库http://www.uniprot.org/</p>
+<p><img src="media/image046.jpg"
+style="width:5.76806in;height:3.34722in" /></p>
+<p>下载的PDB文件可以用pymol或者VMD观察结构</p>
+<h3 id="vmd">1.3 VMD</h3>
+<p>同样强大的免费蛋白质三维结构可视化软件，VMD（<a
+href="http://www.ks.uiuc.edu/Research/vmd">http://www.ks.uiuc.edu/Research/vmd</a>）</p>
+<h3 id="没有结构的对接蛋白">1.4 没有结构的对接蛋白</h3>
+<p><strong>如果要对接的蛋白没有结构</strong>，我们又要对接，那就只能是自己通过软件预测了。蛋白质结构预测的方法有从头计算法，同源建模法，穿线法和综合法。常用的是同源建模法，SWISS-MODEL（<u>www.swissmodel.expasy.org</u>）就是一款用同源建模法预测蛋白质三级结构的全自动软件，这里不详细介绍了，预测的模型还要涉及模型好坏的评价，后续有时间，再介绍蛋白质三级结构的预测</p>
+<h2 id="准备格式正确的配体分子">2 准备格式正确的配体分子</h2>
+<p>AutoDock不识别SDF，只识别mol2或PDB格式。</p>
+<h3 id="mol2格式小分子下载">2.1 mol2格式小分子下载</h3>
+<p>2.1 TCMSP可以下载mol2格式。</p>
+<h3 id="zinchttpzinc.docking.org">2.2 ZINC(<a
+href="http://zinc.docking.org/">http://zinc.docking.org/</a>)</h3>
+<h3 id="下载sdf进行格式转换">2.3下载SDF进行格式转换</h3>
+<p>pubchem下载3D conformer SDF格式，然后OpenBabel软件（下载）转换</p>
+<h3 id="下载similes转换成pdb">2.4 下载SIMILES转换成PDB</h3>
+<p>PUBMED下载similes文件，到<a
+href="https://www.novopro.cn/tools/smiles2pdb">https://www.novopro.cn/tools/smiles2pdb</a>直接转变。</p>
+<h2 id="蛋白受体预处理">3 蛋白受体预处理</h2>
+<p>通过上面过程，受体和小分子的pdb格式都有了。接下来要进行蛋白受体预处理。比如去水，加氢，导出PDBQT为受体文件。</p>
+<p>3.1 pyMOL软件导入PDB文件</p>
+<p>直接用代码fetch 8A27（后者是蛋白名字）</p>
+<p>或者file-get PDB,不出现就点击右下角S。</p>
+<p>然后file-export molecule</p>
+<p><img src="media/image047.jpg"
+style="width:3.04193in;height:2.88358in" /></p>
+<p>上传pdb文件send</p>
+<p><a
+href="https://swift.cmbi.umcn.nl/servers/html/model.html">https://swift.cmbi.umcn.nl/servers/html/model.html</a></p>
+<p>继续保存为新pdb文件</p>
+<p>3.2 ADT打开刚才的pbd文件</p>
+<p>File-read molecule，</p>
+<p>Delete water,hydrogens-add,ok</p>
+<p>保存为pdb文件</p>
+<p>Grid-macromolecule-choose-select molecule,保存</p>
+<p>处理完了，就delete，方便处理其他小分子</p>
+<h2 id="配体小分子的预处理">4 配体小分子的预处理</h2>
+<p>4.1 读入小分子文件</p>
+<p>File-read molecule-mol2或pdb文件</p>
+<p>在选择一个分子作为配体或受体之前，必须把所有的氢都加到这个分子上。所以这里我们打开小分子文件后，加氢这一步弹出的窗口默认就行</p>
+<p>Edit-hydorgens-add</p>
+<p>4.2选为配体</p>
+<p>Ligand-input-choose-选择-确定</p>
+<p>接下来检测扭转键和中心，输出PDBQT格式的配体文件，</p>
+<p>Ligand-torsion tree-detect root done</p>
+<p>Ligand-output-save as PDBQT</p>
+<p>4 AUTODOCK对接操作与对接结果解读</p>
+<p>Grid-macromolecule-open-蛋白的pdbqt文件-打开-yes</p>
+<p>导入小分子</p>
+<p>Grid-set map types-小分子pdbqt</p>
+<p>Grid-grid box</p>
+<p>全包括 拖曳出小分子</p>
+<p>File-close saving current</p>
+<p>Grid-output-save GPF..</p>
+<p>Grid</p>
+<p>Run-run autogrid-browse gpf文件。接下来log
+filename会自动填写，一定要和前面目录一样，launch</p>
+<h2 id="对接">5 对接</h2>
+<p>Docking-macromolecule-set rigid filename选择pdbqt文件</p>
+<p>Docking-ligand-choose-select ligand-accept</p>
+<p>Docking-output-lamarckian GA</p>
+<p>输出DPF文件</p>
+<p>运行autodock</p>
+<p>Run-run autodock-browse-dpf-launch生成dlg文件，这就是对接结果。</p>
+<h1 id="ucco分子对接的思路与操作">Ucco分子对接的思路与操作</h1>
+<p>得到受体和配体的格式文件（让软件识别）</p>
+<h1 id="a-受体蛋白和小分子配体的准备">A 受体蛋白和小分子配体的准备</h1>
+<h2 id="蛋白文件获取">1 蛋白文件获取</h2>
+<p>PDB+unipro下载pdb格式文件，这个文件会包括有配体或水分子等文件，所以得先去除。导入pymol软件，右击删除多余分子。导出为pymol处理过的pdb文件。</p>
+<h2 id="小分子配体获取">2小分子配体获取</h2>
+<p>获取mol2或pdb格式，不识别sdf文件。</p>
+<h2 id="先用autodock-vina读入文件得到pdbqt文件">3 先用autodock
+vina读入文件得到pdbqt文件</h2>
+<p>先读蛋白文件，读入后加氢，加氢后分子会显示有白色结构</p>
+<p>然后grid选为受体文件</p>
+<p>删除后再导入小分子</p>
+<p>Read后，加氢，也会显示白色</p>
+<p>然后ligand选为配体</p>
+<p>因为配体分子除了双键是可以旋转的，所以接下来要检测可旋转的键。</p>
+<p>然后导出为pdbqt文件</p>
+<p>4 grid box</p>
+<p>Grid-macromolecule-open-选择刚才的蛋白文件，yes-确定</p>
+<p>再导入小分子</p>
+<p>Grid-set map types-openligand-</p>
+<p>设置对接box</p>
+<p>。。。</p>
+<p>Docking-output-vinaconfig</p>
+<p>Run—run autodock vina</p>
+<p>Edit-delete-delete all molecules</p>
+<p>Then</p>
+<p>Analyze-docking</p>
+<p>继续打开大分子的文件</p>
+<p>通过对接我们均可以得到配体和受体的结合能，我们挑选最低的结合能构象去进行结果分析。首先我们要清楚结合能的评判标准，对于Autodock系列的结合能评判标准为：通常情况下结合能越小，结合作用越好。结合能大于-4kcal/mol表明配体和受体结合作用较差，结合能在-4~-7kcal/mol表明配体和受体结合作用中等，结合能小于-7kcal/mol表明配体和受体之间结合能力较强。我们可以以此来分析所对接分子的效果。</p>
+</body>
+</html>

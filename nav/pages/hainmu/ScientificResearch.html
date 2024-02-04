@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pdfs</title>
+  <link rel="stylesheet" href="pdfs.css">
+  <link rel="stylesheet" href="../../../styles/fontawesome-free-6.5.1-web/css/all.min.css">
+</head>
+
+<body>
+
+  <div id="fileList">
+    <ul>
+      <div class="link-container">
+        <a href="../../../index.html" target="_blank"><img src="../../../icon/mednav1.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
+      </div>
+
+      <li><a href="ScientificResearch/海南医学院关于组织开展2023年度省高等学校科研项目申报校内通知.pdf" target="pdfViewer">2023年度省高等学校科研项目</a></li>
+      <li><a href="ScientificResearch/海医学创〔2023〕20号 关于开展海南医学院2024年大学生创新创业训练计划项目的通知.pdf" target="pdfViewer">2024年大创131</a></li>
+      <li><a href="ScientificResearch/2024年度省高等学校科研项目申报校内通知.pdf" target="pdfViewer">2024年度省高等学校科研项目</a></li>
+      <li><a href="ScientificResearch/TCGA33肿瘤名称.pdf" target="pdfViewer">TCGA33肿瘤名称</a></li>
+	  <li><a href="ScientificResearch/分子对接流程.pdf" onclick="openPasswordPrompt('ScientificResearch/分子对接流程.pdf'); return false;"><i class="fa-solid fa-lock"></i>分子对接流程</a></li>
+      <li><a href="ScientificResearch/网络药理常规分析流程1.pdf" onclick="openPasswordPrompt('ScientificResearch/网络药理常规分析流程1.pdf'); return false;"><i class="fa-solid fa-lock"></i>网药理常规分析流程1</a></li>
+	  
+	  <div class="link-container">
+          <a href="ScientificResearch/patents/海南医学院专利、计算机软件著作权申请流程.pdf" target="pdfViewer">软著申请流程</a>
+          <a href="ScientificResearch/patents/专利申请等文件.zip" onclick="openPasswordPrompt('TScientificResearch/patents/专利申请等文件.zip'); return false;"><i class="fa-solid fa-lock"></i><i class="fas fa-download"></i>zip</a>
+	  </div>
+	
+	
+	
+      <!-- Add more files as needed -->
+    </ul>
+  </div>
+
+  <div id="pdfContainer">
+    <iframe id="pdfViewer" name="pdfViewer" src="" frameborder="0"></iframe>
+  </div>
+<script src="../yette/crypto-js.js"></script>
+ <script src="../yette/rs.js"></script>
+<script src="../yette/tea.js"></script>
+</body>
+
+</html>

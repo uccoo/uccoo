@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Submission</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            height: 100vh;
+        }
+
+        #left-panel, #right-panel {
+            flex: 1;
+            background-color: #ccc;
+        }
+
+        #center-panel {
+            flex: 7;
+            padding: 20px;
+        }
+
+        #center-panel label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #center-panel input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        #submitBtn {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #submitBtn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="left-panel"></div>
+
+    <div id="center-panel">
+        <h2>Data Submission</h2>
+        <form action="/submit" method="post" onsubmit="return validateForm()">
+            <label for="username">用户名:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">密码:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="summary">概括信息:</label>
+            <input type="text" id="summary" name="summary" required>
+            
+            <label for="link">链接:</label>
+            <input type="text" id="link" name="link" required>
+            
+            <button id="submitBtn" type="submit">提交</button>
+        </form>
+    </div>
+
+    <div id="right-panel"></div>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // 实际应用中，应该使用安全的身份验证机制，此处仅作演示
+            if (username === "hena" && password === "11") {
+                return true;
+            } else {
+                alert("用户名或密码不正确，无法提交表单");
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>
