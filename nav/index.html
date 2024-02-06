@@ -150,8 +150,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="loadContent('pages/mito/mito.html')">
 							<i class="fas fa-fire nav-icon"></i>Mito related</a>                       						
-                    </ul>
-					
+                    </ul>					
                 </div>
 				<div class="collapse" id="mitoSubMenu">
                     <ul class="nav flex-column nav-second-level">
@@ -159,12 +158,34 @@
                             <a class="nav-link" href="#" onclick="loadContent('pages/mito/mito.html')">
 							<i class="fas fa-trash-alt nav-icon"></i> Lysome related</a>                       						
                     </ul>
-					
                 </div>
-				
-				
             </li>
 		   
+		     <li class="nav-item nav-item-has-submenu">
+                <a class="nav-link" data-bs-toggle="collapse" href="#scSubMenu" role="button"
+                    aria-expanded="false" aria-controls="scSubMenu">
+                    <i class="fas fa-globe"></i>单空转录组
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+                <div class="collapse" id="scSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/scrna/Single-cell.html')">
+							<i class="fas fa-circle nav-icon"></i>单细胞转录组</a>  
+                        </li> 							
+                    </ul>					
+                </div>
+				
+				<div class="collapse" id="scSubMenu">
+                    <ul class="nav flex-column nav-second-level">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="loadContent('pages/sprna/sp.html')">
+							<i class="fas fa-sitemap"></i>空间转录组</a>  
+                        </li> 							
+                    </ul>					
+                </div>
+				
+            </li>		   
 		   
             <li class="nav-item nav-item-has-submenu">
                 <a class="nav-link" data-bs-toggle="collapse" href="#transcriptomicsSubMenu" role="button"
@@ -206,10 +227,7 @@
                             <a class="nav-link" href="#" onclick="loadContent('pages/transcriptomics/ncRNA.html')">
 							<i class="fa-solid fa-cannabis"></i>  非编码RNA</a>
                         </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/transcriptomics/Single-cell.html')">
-							<i class="fas fa-circle nav-icon"></i>  Single-cell</a>
-                        </li>
+						
 						<li class="nav-item">
                             <a class="nav-link" href="#" onclick="loadContent('pages/transcriptomics/Spatial transcriptomics.html')">
 							<i class="fas fa-map-marker nav-icon"></i> Spatial trans</a>
