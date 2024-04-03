@@ -1,0 +1,17 @@
+/* styles.css */
+
+body {
+    margin-left: 20%; /* 添加左侧留空 20% */
+}
+
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); /* 设置透明背景色 */
+    z-index: -1; /* 将伪元素置于页面背后 */
+}
