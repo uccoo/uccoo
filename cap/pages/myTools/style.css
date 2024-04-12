@@ -1,0 +1,17 @@
+.hide {
+  display: none;
+}
+
+#alertBox {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #f5c6cb;
+  font-size: 20px;
+  text-align: center;
+}
