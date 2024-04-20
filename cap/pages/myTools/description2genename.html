@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gene Description to Gene Name Converter</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    margin-left: 20%;
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+  }
+
+  label, button, textarea, pre {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-top: 5px;
+  }
+
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  pre {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+  }
+</style>
+<script>
+const geneMapping = {
+  "Prostaglandin G/H synthase 1": "PTGS1",
+  "Estrogen receptor": "ESR1",
+  "Prostaglandin G/H synthase 2": "PTGS2",
+  "Heat shock protein HSP 90": "HSP90AA1",
+  "Beta-lactamase": "LACTBL1",
+  "Progesterone receptor": "PGR",
+  "Mineralocorticoid receptor": "NR3C2",
+  "Glucocorticoid receptor": "NR3C1",
+  "Urokinase-type plasminogen activator": "PLAU",
+  "Cathepsin B": "CTSB",
+  "Transcription factor p65": "RELA",
+  "Signal transducer and activator of transcription 3": "STAT3",
+  "Vascular endothelial growth factor A": "VEGFC",
+  "G1/S-specific cyclin-D1": "CCND1",
+  "Apoptosis regulator Bcl-2": "BCL2",
+  "Bcl-2-like protein 1": "BCL2L1",
+  "Proto-oncogene c-Fos": "FOS",
+  "Cyclin-dependent kinase inhibitor 1": "CDKN1A",
+  "Apoptosis regulator BAX": "BAX",
+  "Caspase-9": "CASP9",
+  "72 kDa type IV collagenase": "MMP2",
+  "Matrix metalloproteinase-9": "MMP9",
+  "Cell division protein kinase 4": "CDK4",
+  "Tumor necrosis factor": "TNF",
+  "Transcription factor AP-1": "JUN",
+  "Interleukin-6": "IL6",
+  "Cell division protein kinase 6": "CDK6",
+  "Caspase-3": "CASP3",
+  "Cellular tumor antigen p53": "TP53",
+  "Mitogen-activated protein kinase 8": "MAPK8",
+  "NF-kappa-B inhibitor alpha": "NFKBIA",
+  "Caspase-8": "CASP8",
+  "Fatty acid synthase": "FASN",
+  "Interstitial collagenase": "MMP1",
+  "Stromelysin-1": "MMP3",
+  "Heparin-binding growth factor 2": "FGF2",
+  "Stromelysin-2": "MMP10",
+  "Intercellular adhesion molecule 1": "ICAM1",
+  "Interleukin-1 beta": "IL1B",
+  "Cyclic AMP-responsive element-binding protein 1": "CREB1",
+  "E-selectin": "SELE",
+  "Prostaglandin E2 receptor EP3 subtype": "PTGER3",
+  "Induced myeloid leukemia cell differentiation protein Mcl-1": "MCL1",
+  "Protein kinase C gamma type": "PRKCG",
+  "Cyclic AMP-dependent transcription factor ATF-2": "ATF2",
+  "Granulocyte-macrophage colony-stimulating factor": "CSF2",
+  "Platelet endothelial cell adhesion molecule": "PECAM1",
+  "C-Jun-amino-terminal kinase-interacting protein 2": "MAPK8IP2",
+  "Baculoviral IAP repeat-containing protein 5": "BIRC5",
+  "Tyrosine-protein phosphatase non-receptor type 6": "PTPN6",
+  "Neuromodulin": "GAP43",
+  "Dual oxidase 2": "DUOX2",
+  "Nitric oxide synthase, endothelial": "NOS3",
+  "Tyrosine-protein phosphatase non-receptor type 1": "PTPN1",
+  "Phosphatidylinositol-3,4,5-trisphosphate 5-phosphatase 2": "INPPL1",
+  "Lipopolysaccharide-induced tumor necrosis factor-alpha factor": "LITAF",
+  "G1/S-specific cyclin-D2": "CCND2",
+  "Tumor necrosis factor ligand superfamily member 6": "FASLG",
+  "Caspase-1": "CASP1",
+  "Muscarinic acetylcholine receptor M3": "CHRM3",
+  "Muscarinic acetylcholine receptor M1": "CHRM1",
+  "Sodium channel protein type 5 subunit alpha": "SCN5A",
+  "Muscarinic acetylcholine receptor M5": "CHRM5",
+  "5-hydroxytryptamine receptor 3A": "HTR3A",
+  "Muscarinic acetylcholine receptor M4": "CHRM4",
+  "Delta-type opioid receptor": "OPRD1",
+  "5-hydroxytryptamine 2A receptor": "HTR2A",
+  "Alpha-1B adrenergic receptor": "ADRA1B",
+  "Beta-2 adrenergic receptor": "ADRB2",
+  "Alpha-1D adrenergic receptor": "ADRA1D",
+  "Sodium-dependent serotonin transporter": "SLC6A4",
+  "Mu-type opioid receptor": "OPRM1",
+  "Calmodulin": "CALM3",
+  "Thrombin": "SERPIND1",
+  "Carbonic anhydrase II": "CA2",
+  "Dipeptidyl peptidase IV": "DPP4",
+  "Gamma-aminobutyric acid receptor subunit alpha-1": "GABRA1",
+  "Trypsin-1": "PRSS1",
+  "Glutamate receptor 2": "GRIA2",
+  "Neutrophil collagenase": "MMP8",
+  "Nitric oxide synthase, inducible": "NOS2",
+  "Androgen receptor": "AR",
+  "Peroxisome proliferator activated receptor gamma": "PPARG",
+  "Coagulation factor Xa": "F7",
+  "Coagulation factor VII": "F7",
+  "DNA topoisomerase II": "TOP2B",
+  "Estrogen receptor beta": "ESR2",
+  "Glycogen synthase kinase-3 beta": "GSK3B",
+  "Cyclin-A2": "CCNA2",
+  "Nuclear receptor coactivator 2": "NCOA2",
+  "Muscarinic acetylcholine receptor M2": "CHRM2",
+  "D(2) dopamine receptor": "DRD2",
+  "Potassium voltage-gated channel subfamily H member 2": "KCNH2",
+  "Peroxisome proliferator activated receptor delta": "PPARD",
+  "Histamine H1 receptor": "HRH1",
+  "Retinoic acid receptor RXR-alpha": "RXRA",
+  "cAMP-dependent protein kinase inhibitor alpha": "PKIA",
+  "Mitogen-activated protein kinase 10": "MAP3K10",
+  "Mitogen-activated protein kinase 1": "MAPK1",
+  "Protein kinase C beta type": "PRKCB",
+  "D(1B) dopamine receptor": "DRD5",
+  "Alpha-1A adrenergic receptor": "ADRA1D",
+  "Acetylcholinesterase": "ACHE",
+  "5-hydroxytryptamine 7 receptor": "HTR7",
+  "Neuronal acetylcholine receptor subunit alpha-2": "CHRNA2",
+  "Alcohol dehydrogenase 1C": "ADH1C",
+  "Nuclear receptor coactivator 1": "NCOA1",
+  "Alpha-2A adrenergic receptor": "ADRA2A",
+  "Sodium-dependent noradrenaline transporter": "SLC6A2",
+  "Sodium-dependent dopamine transporter": "SLC6A3",
+  "Aldose reductase": "AKR1B1",
+  "Leukotriene A-4 hydrolase": "LTA4H",
+  "Amine oxidase [flavin-containing] B": "MAOB",
+  "Amine oxidase [flavin-containing] A": "MAOA",
+  "Chymotrypsinogen B": "CTRB1",
+  "Beta-1 adrenergic receptor": "ADRB1",
+  "Lysozyme": "LYZ",
+  "Alcohol dehydrogenase 1B": "ADH1B",
+  "Group IIE secretory phospholipase A2": "PLA2G2E",
+  "Alpha-2C adrenergic receptor": "ADRA2C",
+  "Cytochrome P450 1A1": "CYP1A1",
+  "Tyrosine-protein kinase BTK": "BTK",
+  "Glial fibrillary acidic protein": "GFAP",
+  "Insulin-like growth factor II": "IGF2",
+  "P-selectin": "SELP",
+  "Ras-related C3 botulinum toxin substrate 1": "RAC1",
+  "Superoxide dismutase [Cu-Zn]": "SOD1",
+  "Cell division control protein 2 homolog": "CDK1",
+  "G2/mitotic-specific cyclin-B1": "CCNB1",
+  "M-phase inducer phosphatase 3": "CDC25C",
+  "Apoptotic protease-activating factor 1": "APAF1",
+  "Serine/threonine-protein kinase PLK1": "PLK1",
+  "14-3-3 protein sigma": "SFN",
+  "Carnitine O-acetyltransferase": "CRAT",
+  "Catalase": "CAT",
+  "Hyaluronan synthase 2": "HAS2",
+  "Purine nucleoside phosphorylase": "PNP",
+  "Adenosine A2a receptor": "ADORA2A",
+  "Adenosine deaminase": "ADA",
+};
+
+
+function findGeneName() {
+  const descriptions = document.getElementById("gene-description").value.split('\n');
+  const geneNames = descriptions.map(desc => geneMapping[desc.trim()] || "No match found").join('\n');
+  document.getElementById("gene-name").textContent = geneNames;
+}
+
+function copyToClipboard() {
+  const geneNameText = document.getElementById("gene-name").textContent;
+  navigator.clipboard.writeText(geneNameText).then(() => {
+    // 可选：复制成功后可以给出通知或更改按钮文本等
+    alert('Copied to clipboard');
+  }).catch(err => {
+    // 错误处理
+    console.error('Error copying text to clipboard', err);
+  });
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+  <h1>Gene Description to Gene Name Converter</h1>
+
+  <label for="gene-description">Enter Gene Description (one per line):</label>
+  <textarea id="gene-description" rows="10"></textarea>
+  <button onclick="findGeneName()">Convert to Gene Names</button>
+  <button onclick="copyToClipboard()">Copy Results</button>
+
+  <h2>Gene Names:</h2>
+  <pre id="gene-name">...</pre>
+</div>
+
+</body>
+</html>
