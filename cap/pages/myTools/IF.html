@@ -9555,20 +9555,25 @@ const geneMapping = {
 
 function findGeneName() {
   const descriptions = document.getElementById("gene-description").value.split('\n');
-  const geneNames = descriptions.map(desc => geneMapping[desc.trim()] || "No match found").join('\n');
+  const geneNames = descriptions.map(desc => {
+    const normalizedDesc = desc.trim().toLowerCase(); // Normalize the input to lower case
+    const geneName = Object.keys(geneMapping).find(key => key.toLowerCase() === normalizedDesc); // Find the key in a case-insensitive manner
+    return geneMapping[geneName] || "No match found";
+  }).join('\n');
   document.getElementById("gene-name").textContent = geneNames;
 }
 
 function copyToClipboard() {
   const geneNameText = document.getElementById("gene-name").textContent;
   navigator.clipboard.writeText(geneNameText).then(() => {
-    // 可选：复制成功后可以给出通知或更改按钮文本等
+    // Optional: Provide notification or change button text upon successful copying
     alert('Copied to clipboard');
   }).catch(err => {
-    // 错误处理
+    // Error handling
     console.error('Error copying text to clipboard', err);
   });
 }
+
 </script>
 </head>
 <body>
