@@ -1,30 +1,48 @@
-  function search() {
-    var mainData = document.getElementById("mainData").value.trim().split('\n');
-    var searchData = document.getElementById("searchData").value.trim().split('\n');
-    var additionalData = document.getElementById("additionalData").value.trim().split('\n');
+function search() {
+    var mainData = document.getElementById("mainData").value.trim().split('\n').map(x => x.trim());
+    var searchData = document.getElementById("searchData").value.trim().split('\n').map(x => x.trim());
+    var additionalDataInput = document.getElementById("additionalData").value.trim();
+    var additionalData = additionalDataInput ? additionalDataInput.split('\n').map(x => x.trim()) : null;
 
-    var results = [];
+    var intersection = searchData.filter(item => mainData.includes(item));
 
-    searchData.forEach(function(item) {
-      var result = mainData.filter(value => value.trim() === item.trim());
-      results.push(...result);
-    });
+    if (additionalData) {
+      intersection = intersection.filter(item => additionalData.includes(item));
+    }
 
-    additionalData.forEach(function(item) {
-      var result = mainData.filter(value => value.trim() === item.trim());
-      results.push(...result);
-    });
+    document.getElementById("searchResult").value = intersection.join('\n');
+    var mainSize = mainData.length;
+    var searchSize = searchData.length;
+    var addSize = additionalData ? additionalData.length : 0;
 
     var dataSummary = document.getElementById("dataSummary");
-    dataSummary.innerHTML = `第一列数据数量: ${mainData.length}<br>
-                             第二列数据数量: ${searchData.length}<br>
-                             第三列数据数量: ${additionalData.length}<br>
-                             交集数量: ${results.length}<br>
-                             交集占比: ${((results.length / mainData.length) * 100).toFixed(2)}%`;
-    
-    document.getElementById("searchResult").value = results.join('\n');
+    dataSummary.innerHTML = `第一列数据数量: ${mainSize}<br>
+                             第二列数据数量: ${searchSize}<br>` +
+                             (additionalData ? `第三列数据数量: ${addSize}<br>` : "") +
+                             `交集数量: ${intersection.length}`;
 
-    drawVennDiagram(mainData.length, searchData.length, additionalData.length, results.length);
+    drawVennDiagram(mainSize, searchSize, addSize, intersection.length);
+  }
+
+  function drawVennDiagram(mainCount, searchCount, additionalCount, interSize) {
+    var sets = [
+      {sets: ['第一列数据'], size: mainCount},
+      {sets: ['第二列数据'], size: searchCount},
+      {sets: ['第一列数据', '第二列数据'], size: interSize}
+    ];
+
+    if (additionalCount) {
+      sets.push(
+        {sets: ['第三列数据'], size: additionalCount},
+        {sets: ['第一列数据', '第三列数据'], size: interSize},
+        {sets: ['第二列数据', '第三列数据'], size: 0},
+        {sets: ['第一列数据', '第二列数据', '第三列数据'], size: interSize}
+      );
+    }
+
+    var diagram = venn.VennDiagram();
+    var div = d3.select("#vennDiagram").datum(sets);
+    div.call(diagram);
   }
 
   function clearData() {
@@ -34,23 +52,6 @@
     document.getElementById("searchResult").value = "";
     document.getElementById("dataSummary").innerHTML = "";
     d3.select("#vennDiagram").selectAll("*").remove();
-  }
-
-  function drawVennDiagram(mainDataCount, searchDataCount, additionalDataCount, intersectionCount) {
-    var diagram = venn.VennDiagram();
-
-    var vennData = [
-      {sets: ['第一列数据'], size: mainDataCount},
-      {sets: ['第二列数据'], size: searchDataCount},
-      {sets: ['第三列数据'], size: additionalDataCount},
-      {sets: ['第一列数据', '第二列数据'], size: intersectionCount - additionalDataCount},
-      {sets: ['第一列数据', '第三列数据'], size: additionalDataCount},
-      {sets: ['第二列数据', '第三列数据'], size: 0}, // No intersection between second and third columns
-      {sets: ['第一列数据', '第二列数据', '第三列数据'], size: additionalDataCount}
-    ];
-
-    var div = d3.select("#vennDiagram");
-    div.datum(vennData).call(diagram);
   }
 
   function copyToClipboard() {

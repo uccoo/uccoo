@@ -1,4 +1,4 @@
-    body {
+body {
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       margin: 0;
@@ -25,7 +25,7 @@
       text-align: center;
     }
 
-    input, textarea {
+    textarea {
       width: 90%;
       height: 200px;
       margin: 5px;
