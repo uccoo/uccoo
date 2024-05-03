@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>上课计时</title>
+<link rel="stylesheet" href="css/timer-min.css">
+</head>
+<body>
+<div class="timer-container">
+    <div class="settings">
+        <label for="duration">设定时间 (分钟):</label>
+        <input type="number" id="duration" min="1" max="60" value="60">
+        <button id="startTimer">开始计时</button>
+    </div>
+    <div id="progressContainer">
+        <div id="progressBar"></div>
+    </div>
+    <div id="timeDisplay">剩余时间（分钟）: 60:00</div>
+    <audio id="alarmSound" src="timer.mp3"></audio>
+</div>
+<script src="js/timer-min.js"></script>
+</body>
+</html>

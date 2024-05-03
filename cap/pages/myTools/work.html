@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上班打卡</title>
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    
+    <div class="timer-container">
+        <div class="settings">
+            <label for="duration">设定时间 (小时):</label>
+            <input type="number" id="duration" min="1" max="5" value="1">
+            <button id="startTimer">开始计时</button>
+        </div>
+        <div id="progressContainer">
+            <div id="progressBar"></div>
+        </div>
+        <div id="timeDisplay">剩余时间: 1:00:00</div>
+        <audio id="alarmSound" src="timer.mp3"></audio>
+    </div>
+    <script src="work.js"></script>
+</body>
+</html>
