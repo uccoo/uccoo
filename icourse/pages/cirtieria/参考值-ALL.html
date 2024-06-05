@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验诊断学参考值范围</title>
+    <style>
+        body {
+            margin-left: 20%;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        #searchInput {
+            width: 60%;
+            padding: 8px;
+            margin-bottom: 12px;
+        }
+    </style>
+    <script>
+        function searchTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                const trs = table.getElementsByTagName('tr');
+                for (let i = 1; i < trs.length; i++) { // start from 1 to skip the header row
+                    const tds = trs[i].getElementsByTagName('td');
+                    let found = false;
+                    for (let j = 0; j < tds.length; j++) {
+                        if (tds[j].textContent.toLowerCase().includes(filter)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    trs[i].style.display = found ? '' : 'none';
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>实验诊断学参考值范围</h1>
+    <input type="text" id="searchInput" onkeyup="searchTable()" placeholder="输入你想查询的词(可模糊查询)...">
+
+    <h1>血常规检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>WBC</td>
+            <td>白细胞计数</td>
+            <td>3.5-9.5 × 10^9/L</td>
+            <td>White Blood Cells</td>
+        </tr>
+        <tr>
+            <td>RBC</td>
+            <td>红细胞计数</td>
+            <td>男性：4.3-5.8 × 10^12/L<br>女性：3.8-5.1 × 10^12/L</td>
+            <td>Red Blood Cells</td>
+        </tr>
+        <tr>
+            <td>HGB</td>
+            <td>血红蛋白</td>
+            <td>男性：130-175 g/L<br>女性：120-150 g/L</td>
+            <td>Hemoglobin</td>
+        </tr>
+        <tr>
+            <td>HCT</td>
+            <td>红细胞比容</td>
+            <td>男性：40-50%<br>女性：35-45%</td>
+            <td>Hematocrit</td>
+        </tr>
+        <tr>
+            <td>MCV</td>
+            <td>平均红细胞体积</td>
+            <td>82-100 fL</td>
+            <td>Mean Corpuscular Volume</td>
+        </tr>
+        <tr>
+            <td>MCH</td>
+            <td>平均红细胞血红蛋白量</td>
+            <td>27-34 pg</td>
+            <td>Mean Corpuscular Hemoglobin</td>
+        </tr>
+        <tr>
+            <td>MCHC</td>
+            <td>平均红细胞血红蛋白浓度</td>
+            <td>316-354 g/L</td>
+            <td>Mean Corpuscular Hemoglobin Conc.</td>
+        </tr>
+        <tr>
+            <td>RDW-SD</td>
+            <td>红细胞分布宽度</td>
+            <td>39-46 fL</td>
+            <td>Red Cell Distribution Width (SD)</td>
+        </tr>
+        <tr>
+            <td>RDW-CV</td>
+            <td>红细胞分布宽度变异系数</td>
+            <td>11.5-14.5%</td>
+            <td>Red Cell Distribution Width (CV)</td>
+        </tr>
+        <tr>
+            <td>PLT</td>
+            <td>血小板计数</td>
+            <td>100-300 × 10^9/L</td>
+            <td>Platelets</td>
+        </tr>
+        <tr>
+            <td>MPV</td>
+            <td>平均血小板体积</td>
+            <td>6.5-12 fL</td>
+            <td>Mean Platelet Volume</td>
+        </tr>
+        <tr>
+            <td>PCT</td>
+            <td>血小板压积</td>
+            <td>0.1-0.4%</td>
+            <td>Plateletcrit</td>
+        </tr>
+        <tr>
+            <td>PDW</td>
+            <td>血小板分布宽度</td>
+            <td>10-18%</td>
+            <td>Platelet Distribution Width</td>
+        </tr>
+        <tr>
+            <td>NE#</td>
+            <td>中性粒细胞数</td>
+            <td>1.8-6.3 × 10^9/L</td>
+            <td>Neutrophil Count</td>
+        </tr>
+        <tr>
+            <td>NE%</td>
+            <td>中性粒细胞比率</td>
+            <td>50-70%</td>
+            <td>Neutrophil Percentage</td>
+        </tr>
+        <tr>
+            <td>LY#</td>
+            <td>淋巴细胞数</td>
+            <td>1.1-3.2 × 10^9/L</td>
+            <td>Lymphocyte Count</td>
+        </tr>
+        <tr>
+            <td>LY%</td>
+            <td>淋巴细胞比率</td>
+            <td>20-40%</td>
+            <td>Lymphocyte Percentage</td>
+        </tr>
+        <tr>
+            <td>MO#</td>
+            <td>单核细胞数</td>
+            <td>0.1-0.6 × 10^9/L</td>
+            <td>Monocyte Count</td>
+        </tr>
+        <tr>
+            <td>MO%</td>
+            <td>单核细胞比率</td>
+            <td>3-10%</td>
+            <td>Monocyte Percentage</td>
+        </tr>
+        <tr>
+            <td>EO#</td>
+            <td>嗜酸性粒细胞数</td>
+            <td>0.02-0.52 × 10^9/L</td>
+            <td>Eosinophil Count</td>
+        </tr>
+        <tr>
+            <td>EO%</td>
+            <td>嗜酸性粒细胞比率</td>
+            <td>0.5-5%</td>
+            <td>Eosinophil Percentage</td>
+        </tr>
+        <tr>
+            <td>BA#</td>
+            <td>嗜碱性粒细胞数</td>
+            <td>0.00-0.06 × 10^9/L</td>
+            <td>Basophil Count</td>
+        </tr>
+        <tr>
+            <td>BA%</td>
+            <td>嗜碱性粒细胞比率</td>
+            <td>0-1%</td>
+            <td>Basophil Percentage</td>
+        </tr>
+    </table>
+
+    <h1>铁生化检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>SI</td><td>血清铁</td><td>男性：11-30 μmol/L<br>女性：6.6-26 μmol/L</td><td>Serum Iron</td></tr>
+        <tr><td>TIBC</td><td>总铁结合力</td><td>45-70 μmol/L</td><td>Total Iron Binding Capacity</td></tr>
+        <tr><td>UIBC</td><td>不饱和铁结合力</td><td>27-60 μmol/L</td><td>Unsaturated Iron Binding Capacity</td></tr>
+        <tr><td>Ferritin</td><td>铁蛋白</td><td>男性：20-250 ng/mL<br>女性：10-120 ng/mL</td><td>Ferritin</td></tr>
+    </table>
+
+    <h1>血脂七项参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>TC</td><td>总胆固醇</td><td>< 5.2 mmol/L</td><td>Total Cholesterol</td></tr>
+        <tr><td>TG</td><td>甘油三酯</td><td>< 1.7 mmol/L</td><td>Triglycerides</td></tr>
+        <tr><td>HDL-C</td><td>高密度脂蛋白</td><td>> 1.0 mmol/L</td><td>High-Density Lipoprotein</td></tr>
+        <tr><td>LDL-C</td><td>低密度脂蛋白</td><td>< 3.4 mmol/L</td><td>Low-Density Lipoprotein</td></tr>
+        <tr><td>VLDL</td><td>极低密度脂蛋白</td><td>0.05-0.3 mmol/L</td><td>Very Low-Density Lipoprotein</td></tr>
+        <tr><td>ApoA1</td><td>载脂蛋白A1</td><td>1.0-1.6 g/L</td><td>Apolipoprotein A1</td></tr>
+        <tr><td>ApoB</td><td>载脂蛋白B</td><td>0.6-1.1 g/L</td><td>Apolipoprotein B</td></tr>
+    </table>
+
+    <h1>肝功能检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>ALT</td><td>谷丙转氨酶</td><td>7-40 U/L</td><td>Alanine Aminotransferase</td></tr>
+        <tr><td>AST</td><td>谷草转氨酶</td><td>10-40 U/L</td><td>Aspartate Aminotransferase</td></tr>
+        <tr><td>ALP</td><td>碱性磷酸酶</td><td>30-120 U/L</td><td>Alkaline Phosphatase</td></tr>
+        <tr><td>GGT</td><td>γ-谷氨酰转肽酶</td><td>7-50 U/L</td><td>Gamma-Glutamyl Transferase</td></tr>
+        <tr><td>TBIL</td><td>总胆红素</td><td>5-21 μmol/L</td><td>Total Bilirubin</td></tr>
+        <tr><td>DBIL</td><td>直接胆红素</td><td>0-6 μmol/L</td><td>Direct Bilirubin</td></tr>
+        <tr><td>TP</td><td>总蛋白</td><td>60-80 g/L</td><td>Total Protein</td></tr>
+        <tr><td>ALB</td><td>白蛋白</td><td>35-50 g/L</td><td>Albumin</td></tr>
+        <tr><td>GLB</td><td>球蛋白</td><td>20-35 g/L</td><td>Globulin</td></tr>
+    </table>
+
+    <h1>肾功能检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>BUN</td><td>血尿素氮</td><td>2.1-7.1 mmol/L</td><td>Blood Urea Nitrogen</td></tr>
+        <tr><td>CREA</td><td>肌酐</td><td>男性：62-115 μmol/L<br>女性：53-97 μmol/L</td><td>Creatinine</td></tr>
+        <tr><td>UA</td><td>尿酸</td><td>男性：210-420 μmol/L<br>女性：150-350 μmol/L</td><td>Uric Acid</td></tr>
+    </table>
+
+    <h1>血糖检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>GLU</td><td>血糖</td><td>3.9-6.1 mmol/L</td><td>Glucose</td></tr>
+        <tr><td>HbA1c</td><td>糖化血红蛋白</td><td>4.0-6.0%</td><td>Hemoglobin A1c</td></tr>
+    </table>
+
+    <h1>电解质检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>Na</td><td>钠</td><td>135-145 mmol/L</td><td>Sodium</td></tr>
+        <tr><td>K</td><td>钾</td><td>3.5-5.5 mmol/L</td><td>Potassium</td></tr>
+        <tr><td>Cl</td><td>氯</td><td>96-108 mmol/L</td><td>Chloride</td></tr>
+        <tr><td>Ca</td><td>钙</td><td>2.2-2.6 mmol/L</td><td>Calcium</td></tr>
+        <tr><td>Mg</td><td>镁</td><td>0.7-1.1 mmol/L</td><td>Magnesium</td></tr>
+    </table>
+
+    <h1>尿液分析参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>PH</td><td>尿液酸碱度</td><td>4.6-8.0</td><td>pH</td></tr>
+        <tr><td>SG</td><td>尿比重</td><td>1.005-1.030</td><td>Specific Gravity</td></tr>
+        <tr><td>PRO</td><td>尿蛋白</td><td>阴性</td><td>Protein</td></tr>
+        <tr><td>GLU</td><td>尿糖</td><td>阴性</td><td>Glucose</td></tr>
+        <tr><td>BIL</td><td>尿胆红素</td><td>阴性</td><td>Bilirubin</td></tr>
+        <tr><td>URO</td><td>尿胆原</td><td>0.1-1.0 mg/dL</td><td>Urobilinogen</td></tr>
+        <tr><td>KET</td><td>尿酮体</td><td>阴性</td><td>Ketone</td></tr>
+        <tr><td>BLD</td><td>尿潜血</td><td>阴性</td><td>Blood</td></tr>
+    </table>
+
+    <h1>凝血功能检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr><td>PT</td><td>凝血酶原时间</td><td>11-15秒</td><td>Prothrombin Time</td></tr>
+        <tr><td>APTT</td><td>部分活化凝血酶原时间</td><td>25-35秒</td><td>Activated Partial Thromboplastin Time</td></tr>
+        <tr><td>TT</td><td>凝血酶时间</td><td>14-21秒</td><td>Thrombin Time</td></tr>
+        <tr><td>FIB</td><td>纤维蛋白原</td><td>2-4 g/L</td><td>Fibrinogen</td></tr>
+        <tr><td>INR</td><td>国际标准化比值</td><td>0.8-1.2</td><td>International Normalized Ratio</td></tr>
+    </table>
+	
+	<h1>甲功检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>FT3</td>
+            <td>游离三碘甲状腺原氨酸</td>
+            <td>2.3-4.2 pg/mL</td>
+            <td>Free Triiodothyronine</td>
+        </tr>
+        <tr>
+            <td>FT4</td>
+            <td>游离甲状腺素</td>
+            <td>0.89-1.76 ng/dL</td>
+            <td>Free Thyroxine</td>
+        </tr>
+        <tr>
+            <td>TSH</td>
+            <td>促甲状腺激素</td>
+            <td>0.4-4.0 μIU/mL</td>
+            <td>Thyroid Stimulating Hormone</td>
+        </tr>
+        <tr>
+            <td>TPOAb</td>
+            <td>甲状腺过氧化物酶抗体</td>
+            <td>< 35 IU/mL</td>
+            <td>Thyroid Peroxidase Antibody</td>
+        </tr>
+        <tr>
+            <td>TgAb</td>
+            <td>甲状腺球蛋白抗体</td>
+            <td>< 115 IU/mL</td>
+            <td>Thyroglobulin Antibody</td>
+        </tr>
+    </table>
+
+    <h1>C肽检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>C-Peptide</td>
+            <td>C肽</td>
+            <td>0.78-1.89 ng/mL</td>
+            <td>C-Peptide</td>
+        </tr>
+    </table>
+
+    <h1>胰岛素检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>Insulin</td>
+            <td>胰岛素</td>
+            <td>2.6-24.9 μIU/mL</td>
+            <td>Insulin</td>
+        </tr>
+    </table>
+
+    <h1>胰岛素抗体检查参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>IAA</td>
+            <td>胰岛素抗体</td>
+            <td>阴性</td>
+            <td>Insulin Autoantibodies</td>
+        </tr>
+    </table>
+	
+	<h1>骨髓中各种血细胞比例参考值范围</h1>
+    <table>
+        <tr>
+            <th>英文简称</th>
+            <th>中文简称</th>
+            <th>参考范围</th>
+            <th>英文全称</th>
+        </tr>
+        <tr>
+            <td>MY%</td>
+            <td>早幼粒细胞</td>
+            <td>0-3%</td>
+            <td>Myeloblasts</td>
+        </tr>
+        <tr>
+            <td>MM%</td>
+            <td>中幼粒细胞</td>
+            <td>0-5%</td>
+            <td>Promyelocytes</td>
+        </tr>
+        <tr>
+            <td>PM%</td>
+            <td>晚幼粒细胞</td>
+            <td>5-10%</td>
+            <td>Myelocytes</td>
+        </tr>
+        <tr>
+            <td>Met%</td>
+            <td>中性中幼粒细胞</td>
+            <td>5-15%</td>
+            <td>Metamyelocytes</td>
+        </tr>
+        <tr>
+            <td>Band%</td>
+            <td>中性杆状核粒细胞</td>
+            <td>10-20%</td>
+            <td>Band Neutrophils</td>
+        </tr>
+        <tr>
+            <td>Seg%</td>
+            <td>中性分叶核粒细胞</td>
+            <td>20-30%</td>
+            <td>Segmented Neutrophils</td>
+        </tr>
+        <tr>
+            <td>LY%</td>
+            <td>淋巴细胞</td>
+            <td>15-40%</td>
+            <td>Lymphocytes</td>
+        </tr>
+        <tr>
+            <td>MO%</td>
+            <td>单核细胞</td>
+            <td>0-10%</td>
+            <td>Monocytes</td>
+        </tr>
+        <tr>
+            <td>EO%</td>
+            <td>嗜酸性粒细胞</td>
+            <td>0-6%</td>
+            <td>Eosinophils</td>
+        </tr>
+        <tr>
+            <td>BA%</td>
+            <td>嗜碱性粒细胞</td>
+            <td>0-1%</td>
+            <td>Basophils</td>
+        </tr>
+        <tr>
+            <td>ER%</td>
+            <td>红细胞系</td>
+            <td>15-25%</td>
+            <td>Erythroid Series</td>
+        </tr>
+        <tr>
+            <td>Meg%</td>
+            <td>巨核细胞</td>
+            <td>0.05-0.1%</td>
+            <td>Megakaryocytes</td>
+        </tr>
+    </table>
+</body>
+</html>
