@@ -607,7 +607,51 @@
       </form>
       <div id="feedback26"></div>
     </div>
+<div class="question">
+    <h3>27. 骨髓增生程度呈极度活跃的病理状态，最常出现于：</h3>
+    <form id="quizForm27">
+        <label>
+            <input type="radio" name="answer27" value="A" onclick="checkAnswer(27, 'A')"> A.再生障碍性贫血
+        </label></br>
+        <label>
+            <input type="radio" name="answer27" value="B" onclick="checkAnswer(27, 'B')"> B.大手术后
+        </label></br>
+        <label>
+            <input type="radio" name="answer27" value="C" onclick="checkAnswer(27, 'C')"> C.各种类型白血病
+        </label></br>
+        <label>
+            <input type="radio" name="answer27" value="D" onclick="checkAnswer(27, 'D')"> D. 溶血性贫血
+        </label></br>
+        <label>
+            <input type="radio" name="answer27" value="E" onclick="checkAnswer(27, 'E')"> E. 严重化脓性感染
+        </label></br>
+        <button type="button" onclick="checkAnswer(27)">提交答案</button>
+    </form>
+    <div id="feedback27"></div>
+</div>
 
+<div class="question">
+    <h3>28. 正常骨髓象的增生程度是下列哪一项？</h3>
+    <form id="quizForm28">
+        <label>
+            <input type="radio" name="answer28" value="A" onclick="checkAnswer(28, 'A')"> A.增生明显活跃
+        </label></br>
+        <label>
+            <input type="radio" name="answer28" value="B" onclick="checkAnswer(28, 'B')"> B.增生活跃
+        </label></br>
+        <label>
+            <input type="radio" name="answer28" value="C" onclick="checkAnswer(28, 'C')"> C.增生减低
+        </label></br>
+        <label>
+            <input type="radio" name="answer28" value="D" onclick="checkAnswer(28, 'D')"> D.增生明显减低
+        </label></br>
+        <label>
+            <input type="radio" name="answer28" value="E" onclick="checkAnswer(28, 'E')"> E.增生极度活跃
+        </label></br>
+        <button type="button" onclick="checkAnswer(28)">提交答案</button>
+    </form>
+    <div id="feedback28"></div>
+</div>
   </section>
 
   <script>
@@ -695,7 +739,12 @@
     case 26:
         correctAnswer = 'A';
         break;
-
+case 27:
+    correctAnswer = 'C';
+    break;
+case 28:
+    correctAnswer = 'B';
+    break;
         // Add cases for other questions
 
         default:

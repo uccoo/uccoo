@@ -123,7 +123,28 @@
       </form>
       <div id="feedback5"></div>
     </div>
-
+<div class="question">
+    <h3>6. 白陶土样便常见于：</h3>
+    <form id="quizForm6">
+        <label>
+            <input type="radio" name="answer6" value="A" onclick="checkAnswer(6, 'A')"> A. 梗阻性黄疸
+        </label></br>
+        <label>
+            <input type="radio" name="answer6" value="B" onclick="checkAnswer(6, 'B')"> B. 阿米巴痢疾
+        </label></br>
+        <label>
+            <input type="radio" name="answer6" value="C" onclick="checkAnswer(6, 'C')"> C. 细菌性痢疾
+        </label></br>
+        <label>
+            <input type="radio" name="answer6" value="D" onclick="checkAnswer(6, 'D')"> D. 消化道溃疡
+        </label></br>
+        <label>
+            <input type="radio" name="answer6" value="E" onclick="checkAnswer(6, 'E')"> E. 霍乱
+        </label></br>
+        <button type="button" onclick="checkAnswer(6)">提交答案</button>
+    </form>
+    <div id="feedback6"></div>
+</div>
    
 
   </section>
@@ -153,7 +174,9 @@
           case 5:
             correctAnswer = 'E';
             break;
-					
+		case 6:
+    correctAnswer = 'A';
+    break;			
 			
 			
 			
