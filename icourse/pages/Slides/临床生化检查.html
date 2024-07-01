@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPT Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .ppt-container {
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .ppt-slide {
+            display: none;
+            width: 100%;
+            height: 450px;
+        }
+        .ppt-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .ppt-controls {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .ppt-controls button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .ppt-controls button:hover {
+            background: #0056b3;
+        }
+        .ppt-controls button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="ppt-container">
+        <div class="ppt-slide">
+            <img src="slide1.jpg" alt="Slide 1">
+        </div>
+        <div class="ppt-slide">
+            <img src="slide2.jpg" alt="Slide 2">
+        </div>
+        <div class="ppt-slide">
+            <img src="slide3.jpg" alt="Slide 3">
+        </div>
+        <div class="ppt-controls">
+            <button id="prevBtn" onclick="prevSlide()">上一页</button>
+            <button id="nextBtn" onclick="nextSlide()">下一页</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.ppt-slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+            prevBtn.disabled = index === 0;
+            nextBtn.disabled = index === slides.length - 1;
+        }
+
+        function prevSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        }
+
+        // 初始化显示第一张幻灯片
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
