@@ -870,7 +870,20 @@
 
   </section>
 
+<section>
 
+  <!-- 留言功能 -->
+  <h3>留言</h3>
+  <form id="messageForm">
+    <label for="name">姓名 (可选):</label></br>
+    <input type="text" id="name" name="name"></br></br>
+    <label for="message">留言:</label></br>
+    <textarea id="message" name="message" required></textarea></br></br>
+    <button type="button" onclick="submitMessage()">提交留言</button>
+  </form>
+  <div id="messageBoard"></div>
+
+</section>
 
 
  <script>
@@ -1006,7 +1019,20 @@ case 36:
         }
       }
 
-    
+      function submitMessage() {
+    var name = document.getElementById('name').value || '匿名';
+    var message = document.getElementById('message').value;
+    var messageBoard = document.getElementById('messageBoard');
+    if (message) {
+      var newMessage = document.createElement('div');
+      newMessage.innerHTML = '<strong>' + name + ':</strong> ' + message;
+      messageBoard.appendChild(newMessage);
+      document.getElementById('messageForm').reset();
+    } else {
+      alert('请填写留言。');
+    }
+  }
+	
     </script>
 
   </section>

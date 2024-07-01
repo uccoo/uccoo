@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../allhtml.css">
+<link rel="stylesheet" href="examstyle.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <h2>肾功能检查</h2>
+
+<h3>1.自由水清除率等于或接近0，则提示</h3>
+<form id="quizForm1">
+  <label>
+    <input type="radio" name="answer1" value="A"> A. 肾脏具有稀释功能
+  </label></br>
+  <label>
+    <input type="radio" name="answer1" value="B"> B. 肾脏具有浓缩功能
+  </label></br>
+  <label>
+    <input type="radio" name="answer1" value="C"> C. 肾脏既具有稀释功能，也具有浓缩功能
+  </label></br>
+  <label>
+    <input type="radio" name="answer1" value="D"> D. 肾脏稀释和浓缩功能严重受损
+  </label></br>
+  <label>
+    <input type="radio" name="answer1" value="E"> E. 肾小管损伤较轻，预后良好
+  </label></br>
+  <button type="button" onclick="checkAnswer(1)">提交答案</button>
+</form>
+<div id="feedback1"></div>
+
+<section>
+
+  <!-- 留言功能 -->
+  <h3>留言</h3>
+  <form id="messageForm">
+    <label for="name">姓名 (可选):</label></br>
+    <input type="text" id="name" name="name"></br></br>
+    <label for="message">留言:</label></br>
+    <textarea id="message" name="message" required></textarea></br></br>
+    <button type="button" onclick="submitMessage()">提交留言</button>
+  </form>
+  <div id="messageBoard"></div>
+
+</section>
+
+<script>
+  function checkAnswer(questionNumber) {
+    var userAnswer = document.querySelector('input[name="answer' + questionNumber + '"]:checked');
+    var feedbackDiv = document.getElementById('feedback' + questionNumber);
+    var correctAnswer;
+
+    switch (questionNumber) {
+    case 1:
+      correctAnswer = 'D';
+      break;
+
+      default:
+        break;
+    }
+
+    if (userAnswer) {
+      var userResponse = userAnswer.value;
+      if (userResponse === correctAnswer) {
+        feedbackDiv.textContent = '回答正确！';
+        feedbackDiv.style.color = 'green';
+      } else {
+        feedbackDiv.textContent = '回答错误，正确答案请仔细查阅资料。';
+        feedbackDiv.style.color = 'red';
+      }
+    } else {
+      feedbackDiv.textContent = '请选择一个答案。';
+      feedbackDiv.style.color = 'red';
+    }
+  }
+
+  function submitMessage() {
+    var name = document.getElementById('name').value || '匿名';
+    var message = document.getElementById('message').value;
+    var messageBoard = document.getElementById('messageBoard');
+    if (message) {
+      var newMessage = document.createElement('div');
+      newMessage.innerHTML = '<strong>' + name + ':</strong> ' + message;
+      messageBoard.appendChild(newMessage);
+      document.getElementById('messageForm').reset();
+    } else {
+      alert('请填写留言。');
+    }
+  }
+</script>
+
+</body>
+</html>
