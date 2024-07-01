@@ -15,10 +15,10 @@
 
 <body>
     <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
-    <div id="sidebar">
+    <div id="sidebar" class="sidebar">
 	    <a href="../index.html" target="_blank"><img src="../icon/blood-test.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
 		<a href="../index.html" target="_blank"><img src="../icon/educational-video.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
-        <h2 style="color: orange; text-align: left; font-size: 20px; font-weight: bold;">  </h2>
+        <h2 style="color: orange; text-align: left; font-size: 20px; font-weight: bold;"></h2>
 		<h2 style="color: yellow; text-align: left; font-size: 20px; font-weight: bold;">实验诊断学自主学习平台</h2>
         <ul class="nav flex-column">
             <li class="nav-item">
@@ -32,76 +32,13 @@
                     <i class="fa-solid fa-cloud-rain"></i> 海医雨课堂
                 </a>
             </li> 
-			
-			
-            <li class="nav-item nav-item-has-submenu">
-                <a class="nav-link" data-bs-toggle="collapse" href="#smallToolsSubMenu" role="button"
-                    aria-expanded="false" aria-controls="smallToolsSubMenu" >
-                    <i class="fas fa-toolbox nav-icon"></i> 教学小工具
-                    <i class="fas fa-caret-down ml-auto"></i>
-                </a>
-                <div class="collapse" id="smallToolsSubMenu">
-                    <ul class="nav flex-column nav-second-level">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/timer.html')"> <i class="fa-regular fa-clock"></i> 学习计时器</a>
-                        </li>
-						
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/venn.html')"> <i class="fa-solid fa-circle-half-stroke"></i> venn</a>
-                        </li>
-						<li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/merge.html')"> <i class="fas fa-code-branch nav-icon"></i> merge</a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </li>
-			
-
-			
-			<li class="nav-item nav-item-has-submenu">
-                <a class="nav-link" data-bs-toggle="collapse" href="#TrainingProgramSubMenu" role="button"
-                    aria-expanded="false" aria-controls="TrainingProgramSubMenu">
-                    <i class="fa-solid fa-house-medical-flag"></i>专业培养方案
-                    <i class="fas fa-caret-down ml-auto"></i>
-                </a>
-                <div class="collapse" id="TrainingProgramSubMenu">
-                    <ul class="nav flex-column nav-second-level">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('../jie/pages/hainmu/TrainingProgram.html')"> <i class="fas fa-file-pdf nav-icon"></i>临床医学</a>
-                        </li>
-						
-						
-                    </ul>
-                </div>
-            </li>
-			
-					
-            <li class="nav-item nav-item-has-submenu">
-                <a class="nav-link" data-bs-toggle="collapse" href="#syllabusSubMenu" role="button"
-                    aria-expanded="false" aria-controls="syllabusSubMenu">
-                    <i class="fa-solid fa-file-circle-check"></i>教学大纲
-                    <i class="fas fa-caret-down ml-auto"></i>
-                </a>
-                <div class="collapse" id="syllabusSubMenu">
-                    <ul class="nav flex-column nav-second-level">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="loadContent('../jie/pages/hainmu/CourseSyllabus.html')"> <i class="fas fa-file-pdf nav-icon"></i> 模版</a>
-                        </li>	
-                    </ul>
-                </div>
-				
-            </li>
-			
-            
         </ul>
     </div>
 
-    <div id="content">
-	<iframe id="contentFrame" frameborder="0"></iframe>
-        
+    <div id="content" class="content">
+        <button id="toggleSidebarBtn" class="btn btn-primary" onclick="toggleSidebar()" style="position: absolute; top: 10px; left: 10px; z-index: 1000;">☰</button>
+	    <iframe id="contentFrame" frameborder="0" style="width: 100%; height: 100%;"></iframe>
     </div>
-
 
     <script src="../styles/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <!-- 添加用于加载内容的 JavaScript 函数 -->
@@ -112,7 +49,43 @@
         // 加载“home”的内容
         loadContent('pages/home.html');
     };
-</script>
+
+    // 切换侧边栏的显示状态
+    function toggleSidebar() {
+        var sidebar = document.getElementById("sidebar");
+        var content = document.getElementById("content");
+        sidebar.classList.toggle("collapsed");
+        content.classList.toggle("expanded");
+    }
+    </script>
+
+    <style>
+    /* 添加侧边栏收缩和展开的样式 */
+    .sidebar {
+        width: 250px;
+        transition: width 0.3s;
+        float: left; /* 确保侧边栏在左侧 */
+    }
+
+    .sidebar.collapsed {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .content {
+        transition: margin-left 0.3s;
+        margin-left: 250px;
+    }
+
+    .content.expanded {
+        margin-left: 0;
+    }
+
+    #contentFrame {
+        width: 100%;
+        height: 100vh; /* 使iframe占据整个视口高度 */
+    }
+    </style>
 </body>
 
 </html>
