@@ -4,36 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
     <!-- 使用本地 Bootstrap 文件 -->
     <link href="../styles/bootstrap-5.3.2-dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- 使用本地 Font Awesome 文件 -->
     <link rel="stylesheet" href="../styles/fontawesome-free-6.5.1-web/css/all.min.css">
     <title>icourse</title>
-    <link rel="stylesheet" href="../css/nav2.css"> <!-- Link to external CSS file -->   
+    <link rel="stylesheet" href="../css/nav2.css"> <!-- Link to external CSS file -->
+    <style>
+        #sidebar {
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        #sidebar.collapsed {
+            transform: translateX(-100%);
+        }
+
+        #toggle-btn {
+            position: absolute;
+            top: 10px;
+			color:red;
+			font-weight: bold;
+            left: 15px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #content {
+            margin-left: 250px;
+            transition: margin-left 0.3s ease;
+        }
+
+        #content.collapsed {
+            margin-left: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <i class="fas fa-home" onclick="loadContent('pages/home.html')"></i>
+    <i id="toggle-btn" class="fas fa-bars"></i>
+	
     <div id="sidebar">
-	    <a href="../index.html" target="_blank"><img src="../icon/blood-test.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
-		<a href="../index.html" target="_blank"><img src="../icon/educational-video.png" alt="nav Icon" class="icon" style="width: 30px;"></a>
-        <h2 style="color: orange; text-align: left; font-size: 20px; font-weight: bold;">  </h2>
-		<h2 style="color: yellow; text-align: left; font-size: 20px; font-weight: bold;">实验诊断学自主学习平台</h2>
+        <h2 style="color:#EE2C2C; text-align: center; font-size: 18px; font-weight: bold;">海南医科大学</h2>
+        <h2 style="color:#1E90FF; text-align: center; font-size: 16px; font-weight: bold;">实验诊断学自主学习平台</h2>
         <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link" href="#" onclick="loadContent('pages/home.html')">
                     <i class="fas fa-home nav-icon"></i> Home
                 </a>
             </li>
-            
-			<li class="nav-item">
-                <a class="nav-link" href="https://hainmu.yuketang.cn/" target="_blank">
-                    <i class="fa-solid fa-cloud-rain"></i> 海医雨课堂
-                </a>
-            </li> 
-			
-			
             <li class="nav-item nav-item-has-submenu">
                 <a class="nav-link" data-bs-toggle="collapse" href="#smallToolsSubMenu" role="button"
                     aria-expanded="false" aria-controls="smallToolsSubMenu" >
@@ -42,6 +61,10 @@
                 </a>
                 <div class="collapse" id="smallToolsSubMenu">
                     <ul class="nav flex-column nav-second-level">
+					    <li class="nav-item">
+                <a class="nav-link" href="https://hainmu.yuketang.cn/" target="_blank">
+                        <i class="fa-solid fa-cloud-rain"></i> 海医雨课堂</a>
+                        </li> 
                         <li class="nav-item">
                             <a class="nav-link" href="#" onclick="loadContent('pages/syllabus/timer.html')"> <i class="fa-regular fa-clock"></i> 学习计时器</a>
                         </li>
@@ -592,27 +615,25 @@
                     <i class="fas fa-envelope nav-icon"></i> Contact
                 </a>
             </li> 
-		   
-		   <!-- 继续添加其他导航项... -->
         </ul>
     </div>
 
     <div id="content">
-	<iframe id="contentFrame" frameborder="0"></iframe>
-        
+        <iframe id="contentFrame" frameborder="0"></iframe>
     </div>
 
-
     <script src="../styles/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- 添加用于加载内容的 JavaScript 函数 -->
     <script src="../scripts/nav2.js"></script>
-	<script>
-    // 页面加载完成时调用的函数
-    window.onload = function () {
-        // 加载“home”的内容
-        loadContent('pages/home.html');
-    };
-</script>
+    <script>
+        document.getElementById('toggle-btn').addEventListener('click', function () {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+            document.getElementById('content').classList.toggle('collapsed');
+        });
+
+        window.onload = function () {
+            loadContent('pages/home.html');
+        };
+    </script>
 </body>
 
 </html>
